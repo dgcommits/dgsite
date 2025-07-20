@@ -1,0 +1,20 @@
+uuid: 1e621310-8fc3-4c0f-9ef9-eefd01e1840e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gravelle1
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: gravelle1_primary_admin_actions
+theme: gravelle1
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

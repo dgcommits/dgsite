@@ -1,0 +1,26 @@
+uuid: 19180b48-30ac-4cb1-a96e-3481948dc604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_body
+    - filter.format.restricted_html
+    - node.type.page_config
+  module:
+    - text
+id: node.page_config.field_page_body
+field_name: field_page_body
+entity_type: node
+bundle: page_config
+label: 'Page Body'
+description: 'Enter content for the page body.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - restricted_html
+field_type: text_with_summary

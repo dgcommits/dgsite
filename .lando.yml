@@ -1,0 +1,30 @@
+name: devgravellecreativecom3
+recipe: drupal11
+config:
+  webroot: web
+
+services:
+  node:
+    type: node:20
+
+tooling:
+  node:
+    service: node
+    cmd: node
+    dir: /app/web/themes/custom/gravelle1/
+  npm:
+    service: node
+    cmd: npm
+    dir: /app/web/themes/custom/gravelle1/
+  npx:
+    service: node
+    cmd: npx
+    dir: /app/web/themes/custom/gravelle1/
+  gulp:
+    service: node
+    cmd: npm run build
+    dir: /app/web/themes/custom/gravelle1/
+  watch:
+    service: node
+    cmd: npm run watch
+    dir: /app/web/themes/custom/gravelle1/

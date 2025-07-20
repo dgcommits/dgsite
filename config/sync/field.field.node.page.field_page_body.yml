@@ -1,0 +1,26 @@
+uuid: b372cd51-a8a5-4477-8939-5b46b544b250
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_body
+    - filter.format.plain_text
+    - node.type.page
+  module:
+    - text
+id: node.page.field_page_body
+field_name: field_page_body
+entity_type: node
+bundle: page
+label: 'Page Body'
+description: 'Enter content for the page body.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - plain_text
+field_type: text_with_summary

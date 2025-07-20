@@ -1,0 +1,25 @@
+uuid: a23831d3-5c3c-437b-8a62-b006311cf702
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - gravelle1
+id: gravelle1_mainnavigation
+theme: gravelle1
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Sidebar menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 83f2a25d-5cb3-4500-b5ef-da10f8845890
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gravelle1
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: gravelle1_help
+theme: gravelle1
+region: content
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

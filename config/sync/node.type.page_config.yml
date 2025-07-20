@@ -1,0 +1,17 @@
+uuid: a2b83e3e-ea78-482c-97f6-86946ef611ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page Config'
+type: page_config
+description: 'Page used for site features, editable by admins only.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: a053ee38-3d21-4fa2-911e-9feeb6595d8d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gravelle1
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: gravelle1_secondary_local_tasks
+theme: gravelle1
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 345b51a5-9d8e-40e2-8493-d6ed26fa6bf6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gravelle1
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: gravelle1_content
+theme: gravelle1
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
