@@ -1,0 +1,8 @@
+uuid: d17da82b-49ac-4313-aac5-1bc863c3d7dd
+langcode: en
+status: true
+dependencies: {  }
+id: manage
+label: Manage
+description: 'Management links'
+locked: false

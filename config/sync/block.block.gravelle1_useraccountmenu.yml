@@ -1,6 +1,6 @@
-uuid: bbc3846d-b5c6-4100-ac4d-d5b5db1f70b8
+uuid: b2ce6b2f-f696-4ef2-920b-91c2173e33d2
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.account
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - gravelle1
-_core:
-  default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
-id: gravelle1_account_menu
+id: gravelle1_useraccountmenu
 theme: gravelle1
-region: header
-weight: -4
+region: manage
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -22,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
+  depth: null
   expand_all_items: false
 visibility: {  }

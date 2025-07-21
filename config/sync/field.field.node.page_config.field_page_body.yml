@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_page_body
-    - filter.format.restricted_html
+    - filter.format.content
     - node.type.page_config
   module:
     - text
@@ -22,5 +22,5 @@ settings:
   display_summary: true
   required_summary: false
   allowed_formats:
-    - restricted_html
+    - content
 field_type: text_with_summary

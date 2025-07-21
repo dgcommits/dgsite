@@ -1,92 +1,53 @@
 @use '../base' as *;
 
-/* Off-canvas menu (sidebar_first) */
-.offcanvas-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80vw;
-  max-width: 360px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1001;
-  overflow-y: auto;
-  padding: 1rem;
-}
-
-/* Menu slides in from the right */
-.offcanvas-menu.is-active {
-  transform: translateX(0);
-}
-
-/* Overlay that appears behind the menu */
-.site-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-/* When overlay is active */
-.site-overlay.is-active {
-  display: block;
-  opacity: 1;
-}
-
-/* Optional: prevent background scroll when menu is open */
-body.menu-open {
-  overflow: hidden;
-}
-
-/* ************************************************************** */
+/* basic defaults for theme styling */
 
 body {
   margin: 0;
-  background-color: #fffff5;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a#main-content {
+  /* anchor link to main content has no height */
+  height: 0px;
 }
 
 body * {
   box-sizing: border-box; /* padding and margin won't effect the width */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-ul,
-ol,
-li {
-  margin-top: 0;
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  @include headingtext;
+.pagep {
+  /* set padding for elements that set the site width */
+  padding: 0 $m-pagep;
 }
 
-h2 {
-  font-size: 4em;
+@media all and (min-width: 768px) {
+  /* set for desktop screens */
+  .pagep {
+    padding: 0 $d-pagep;
+  }
+}
+/* main regions */
+
+.page-header,
+.page-main,
+.page-footer {
+  width: 100%;
 }
 
-a:link,
-a:visited {
-  color: $link-color;
-}
-
-.btn a,
-a.btn {
-  @include btn;
+.page-main {
+  flex-grow: 1;
 }
 
 /********************/
@@ -100,33 +61,25 @@ a.btn {
   }
 
   .sitew {
-    width: 100%;
-  }
-
-  .pagew {
-    width: $m-pagew;
+    width: 100vw;
   }
   /* /handheld */
 }
 
 /* desktop - small - 768 - 1024 */
-@media all and (min-width: 768px) {
+@media all and (max-width: 1023px) and (min-width: 768px) {
   html {
-    font-size: 8.8px; /* 100% */
+    font-size: 8.8px; /* 40% */
   }
 
   .sitew {
     width: 768px;
   }
-
-  .pagew {
-    width: $d-pagew;
-  }
   /* /small */
 }
 
 /* desktop - medium - 1024 - 1366 */
-@media all and (min-width: 1024px) {
+@media all and (max-width: 1364px) and (min-width: 1024px) {
   html {
     font-size: 11.733333333333333px; /* 53.333333333333336% */
   }
@@ -138,7 +91,7 @@ a.btn {
 }
 
 /* desktop -large - 1366+ */
-@media all and (min-width: 1365px) {
+@media all and (max-width: 1919px) and (min-width: 1365px) {
   html {
     font-size: 15.640625px; /* 71.09375% */
   }
@@ -165,170 +118,6 @@ a.btn {
 /* /site breakpoints */
 /********************/
 
-.layout-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* main content regions */
-
-main,
-.breadcrumb,
-footer {
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  display: flex;
-  justify-content: center;
-}
-
-.header-content,
-/* .breadcrumb-content */
-.main-content,
-.footer-content {
-  padding-left: $m-pagep;
-  padding-right: $m-pagep;
-  display: flex;
-  flex-direction: column;
-  flex-basis: $m-pagew;
-  /* border: 1px solid red; */
-  @include desktop-small {
-    flex-basis: $d-pagew;
-    padding-left: $d-pagep;
-    padding-right: $d-pagep;
-  }
-}
-
-/* /main content regions */
-
-/* start- header contents */
-
-header {
-  background-color: #fffff5;
-  z-index: 5;
-  height: $m-page-header;
-  /* sticky */
-  position: sticky;
-  top: 0;
-  overflow-y: visible;
-  width: 100vw !important;
-  // border: 1px solid green;
-  display: flex;
-  justify-content: center;
-  border: 1px solid red;
-  overflow: hidden;
-  @include desktop-small {
-    height: $d-page-header;
-  }
-  /* /sticky */
-  .header-content {
-    margin: 0 auto;
-    flex-direction: row;
-    max-width: $d-pagew;
-    justify-content: space-between;
-    .block-superfishmain {
-      // border: 1px solid orange;
-      align-content: center;
-      display: none;
-      ul.menu {
-        display: flex;
-        gap: 1em;
-        margin: 0;
-        li {
-          @include headingtext;
-          font-weight: 500;
-          letter-spacing: 0.05em;
-          a,
-          a:visited {
-            text-decoration: none;
-            color: black;
-            text-transform: uppercase;
-          }
-        }
-      }
-      @include desktop-small {
-        display: block;
-      }
-    }
-    .navburger {
-      display: flex;
-      justify-content: center;
-      justify-self: flex-end;
-      @include desktop-small {
-        display: none;
-      }
-      button.menu-btn {
-        /* remove button style */
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-        /* set size */
-        font-size: 2.5em;
-      }
-      /* /navburger */
-    }
-  }
-}
-
-/* /end - header contents */
-/* start - breadcrumb contents */
-.breadcrumb {
-  display: flex;
-  justify-content: center;
-}
-
-.breadcrumb-content {
-  display: flex;
-  justify-content: start;
-  flex-grow: 1;
-}
-
-/* /end - breadcrumb contents */
-/* start - main contents */
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.main-content {
-}
-
-/* /end - main contents */
-
-/* start - footer contents */
-footer {
-  background-color: $violet;
-}
-
-.footer-content {
-}
-
-/* /end - footer contents */
-
-img {
-  max-width: 100% !important;
-  height: auto;
-}
-
-.menu.sidebar {
-}
-
-/* basic defaults for theme styling */
-
-a#main-content {
-  /* anchor link to main content has no height */
-  height: 0px;
-}
-
 /**
 * Responsive tables.
 */
@@ -341,7 +130,6 @@ a#main-content {
     display: none;
   }
 }
-
 @media all and (max-width: 1023px) and (min-width: 768px) {
   /* small 768px - 1024p */
   th.priority-low,
@@ -350,55 +138,266 @@ a#main-content {
   }
 }
 
-/* top-level blocks layout, fill view-width and include classes */
+/********************/
+/* site layout */
+/********************/
 
-.node__content .layout .layout__region--content {
-  .block {
-    width: 100vw;
+.page-header {
+  position: sticky; /* Allocates space for the element, but moves it with you when you scroll */
+  top: 0; /* specifies the start position for the sticky behavior - 0 is pretty common */
+  z-index: 2;
+  height: $m-page-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header button.menu-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  color: $white;
+  border: 0px solid #ccc;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 2em;
+  padding: 0;
+  z-index: 2;
+}
+
+.page-header button.menu-btn:hover {
+  background-color: rgba($color-1, 0.75);
+}
+
+.page-header button.menu-btn:active {
+  background-color: rgba($color-1, 1);
+}
+
+.page-header .block.menu--main {
+  display: none;
+}
+
+.page-content {
+  /* all page content starts here */
+}
+
+.region.region-content {
+  padding-top: $pagepad;
+  padding-bottom: $pagepad;
+}
+
+.block.block-system-main-block {
+}
+
+.page-content .page-title {
+}
+
+.utility-belt {
+  padding-top: $siteg * 0.5;
+  padding-bottom: $siteg * 0.25;
+  margin-right: -$m-pagep;
+  margin-left: -$m-pagep;
+  padding-right: $m-pagep;
+  padding-left: $m-pagep;
+  display: none; /* hide on handheld */
+}
+
+.mgr-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mgr-links {
+  /* display: none;  hide this on mobile */
+}
+
+.region.region-actions {
+  padding-top: $siteg * 0.25;
+  padding-right: $m-pagep;
+  padding-bottom: $siteg * 0.25;
+  padding-left: $m-pagep;
+  margin-right: -$m-pagep;
+  margin-left: -$m-pagep;
+}
+
+.region-highlighted {
+  margin-right: -$m-pagep;
+  margin-left: -$m-pagep;
+  padding-top: 0;
+  padding-right: $m-pagep;
+  padding-bottom: 0;
+  padding-left: $m-pagep;
+}
+
+.region-highlighted .messages {
+  margin-top: $siteg * 0.5;
+  margin-bottom: $siteg * 0.5;
+}
+
+.region.region-actions .block {
+  margin-bottom: 0;
+}
+
+.page-footer {
+}
+
+.page-footer {
+  margin: 0 $m-pagep 0 $m-pagep;
+  margin-top: auto;
+  width: 100%;
+}
+
+.page-header nav.menu--footer {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+}
+
+.region.region-title {
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -$m-page-header;
+  visibility: hidden;
+}
+
+.pushy {
+  background-color: $site-bgcolor;
+}
+
+.sidebar {
+  font-size: 1.4em;
+  /* begin nested sidebar styles */
+
+  h4 {
+    background-color: rgba($color-1, 1);
+    margin-bottom: 0;
+    padding: 0 1em;
+    line-height: 2em;
+    vertical-align: middle;
+    color: rgba($white, 1);
+    font-size: 1em;
+  }
+
+  nav ul.menu > li,
+  nav ul.tabs > li,
+  nav.action-links ul > li {
+    margin-bottom: 0;
+  }
+  /* end nested sidebar styles */
+}
+
+/* ***************************************** */
+@media all and (min-width: 768px) {
+  /* page layout for desktop screens */
+
+  .page-header {
+    height: $d-page-header;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    .block-content {
-      margin-right: auto;
-      margin-left: auto;
-      max-width: $m-pagew;
-      padding-left: $m-pagep;
-      padding-right: $m-pagep;
-      @include desktop-small {
-        max-width: $d-pagew;
-        padding-left: $d-pagep;
-        padding-right: $d-pagep;
-      }
-    }
-    &.block-width-full {
-      width: 100vw;
-      padding: 0;
-      max-width: unset;
-      .block-content {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: unset;
-      }
-    }
+    display: flex; /* on desktop flex-items are in columns */
+    flex-direction: column;
+    justify-content: space-evenly;
   }
-}
 
-.node__content {
-  .block.block-width-full {
-    & > * {
-      // @include fitwidth;
-      width: 100vw;
-      max-width: unset;
-    }
+  .page-header button.menu-btn {
+    display: none;
   }
-}
 
-/* /top-level blocks layout, fill view-width and include classes */
-
-ul#uan_mainnavigation_2 {
-  li {
-    border: 2px solid yellow;
+  .page-header .block.menu--main {
+    display: flex;
+    justify-content: center;
   }
+
+  .page-footer .block.menu--footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-header ul {
+    margin: 0 auto;
+  }
+
+  .utility-belt {
+    margin-right: -$d-pagep;
+    margin-left: -$d-pagep;
+    padding-right: $d-pagep;
+    padding-left: $d-pagep;
+    display: block; /* show on desktop */
+  }
+
+  .mgr-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .mgr-links > .block {
+    /* remove margin from blocks in this region */
+    margin-bottom: 0;
+  }
+
+  /* define child blocks within mgr-links -- assume managemenu and breadcrumb are not present */
+
+  .mgr-links .block.menu--account {
+    flex-basis: 100%;
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* breadcrumb is present - managemenu is not */
+
+  .mgr-links.crumbs .block.menu--account {
+    flex-basis: 28%;
+    order: 2;
+  }
+
+  .mgr-links.crumbs .block.block-system-breadcrumb-block {
+    flex-basis: 72%;
+    order: 1;
+  }
+
+  /* managemenu is present */
+
+  .mgr-links.manager nav.menu--manage,
+  .mgr-links.manager .block.block-superfishmanage {
+    width: auto;
+    flex-basis: 72%;
+    order: 1;
+  }
+
+  .mgr-links.manager nav.menu--account {
+    flex-basis: 28%;
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  .mgr-links.manager.crumbs .block.block-system-breadcrumb-block {
+    order: 3;
+    flex-basis: 100%;
+  }
+  /* define child blocks within mgr-links -- assume managemenu and breadcrumb are not present */
+
+  .region.region-actions {
+    margin-right: -$d-pagep;
+    margin-left: -$d-pagep;
+    padding-right: $d-pagep;
+    padding-left: $d-pagep;
+  }
+
+  .region-highlighted {
+    margin-right: -$d-pagep;
+    margin-left: -$d-pagep;
+    padding-right: $d-pagep;
+    padding-left: $d-pagep;
+  }
+
+  /********************/
+  /* /end site layout for desktop screens */
+  /********************/
 }

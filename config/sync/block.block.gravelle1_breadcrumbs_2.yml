@@ -1,4 +1,4 @@
-uuid: bb47f9db-385b-4b41-ba9e-979b1c5b705e
+uuid: d683403f-132a-4581-8a37-11ad139f04ec
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - gravelle1
-_core:
-  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
-id: gravelle1_breadcrumbs
+id: gravelle1_breadcrumbs_2
 theme: gravelle1
-region: breadcrumb
-weight: 0
+region: manage
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:

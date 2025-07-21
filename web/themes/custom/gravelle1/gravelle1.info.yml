@@ -3,16 +3,16 @@ type: theme
 'base theme': stable9
 version: 1.0.0
 regions:
-  header: 'Header'
-  breadcrumb: 'Breadcrumb'
-  sidebar_first: 'Right sidebar'
-  sidebar_second: 'Left sidebar'
-  help: 'Help'
-  highlighted: 'Highlighted'
-  content: 'Content'
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
-  footer: 'Footer'
+  header: Header
+  show: Slideshow
+  manage: Manage
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  title: Title
+  actions: Page actions
+  content: Content
+  footer: Footer
 libraries:
   - gravelle1/base
   - gravelle1/messages
@@ -34,3 +34,5 @@ libraries-extend:
 description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.2'
+ckeditor5-stylesheets:
+  - css/ckstyles.css

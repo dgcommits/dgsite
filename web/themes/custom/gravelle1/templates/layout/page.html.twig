@@ -50,56 +50,47 @@
 {% endif %}
 <!-- Site Overlay -->
 <div class="site-overlay"></div>
-<div class="layout-container" id="container">
-  <header role="banner">
-    <div class="header-content">
-    {{ page.header }}
-      <div class="navburger">
-        <button class="menu-btn" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">&#9776;</button>
-      <!-- /navburger -->
+<div id="container" class="sitew"><!-- required for pushy menu -->
+<header class="page-header pagep" role="banner">
+{{ page.header }}
+{{ page.primary_menu }}
+<button class="menu-btn">☰</button>
+{# /header #}
+</header>
+{{ page.show }}
+<div class="page-main pagep">
+    <div class="utility-belt">
+      <div class="mgr-links
+        {% if page.manage.gravelle1_manage %} manager{% endif %}
+        {% if page.manage.gravelle1_breadcrumbs %} crumbs{% endif %}
+        {% if page.manage.gravelle1_useraccountmenu %} account{% endif %}
+        clearfix">
+      {{ page.manage }}
+      {{ page.breadcrumbs }}
+      {# /mgr-links #}
       </div>
+    {# /utility-belt #}
     </div>
-  </header>
-
-{% if page.breadcrumb|render|striptags|trim is not empty %}
-  <div class="breadcrumb">
-    <div class="breadcrumb-content">
-     {{ page.breadcrumb }}
-   </div>
-    {# /breadcrumb #}
- </div>
- {% endif %}
-
-  <main role="main">
-    <div class="main-content">
-      {{ page.primary_menu }}
-      {{ page.secondary_menu }}
-      {{ page.highlighted }}
-      {{ page.help }}
+  <main class="main-wrapper" role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      <div class="layout-content">
+      <div class="page-content clearfix">
+        {{ page.actions }}
+        {% if page.highlighted|render|striptags('<img><video><drupal-render-placeholder>')|trim is not empty %}
+        {{ page.highlighted }}
+        {% endif %}
+        {{ page.help }}
+        {{ page.title }}
+        {{ page.secondary_menu }}
         {{ page.content }}
-      </div>{# /.layout-content #}
-
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-
-      {# /main-content #}
+      {# /page-content #}
       </div>
+    {# /main-wrapper #}
     </main>
-
-  {% if page.footer %}
-  <footer role="contentinfo">
-    <div class="footer-content">
-      {{ page.footer }}
-    </div>
-  </footer>
-  {% endif %}
-
-
-{# /.layout-container #}
+{# /page-main #}
+</div>
+<footer class="page-footer pagep" role="contentinfo">
+{{ page.footer }}
+{# /page-footer #}
+</footer>
+{# /container - required for pushy menu #}
 </div>

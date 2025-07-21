@@ -1,24 +1,35 @@
-// Inside your _body-copy.scss (or another mixins partial)
-@use '../../base/var/var_default' as *;
-@use '../../base/var/mixins' as *;
+@use 'var_default' as vars;
+@use 'mixins' as *;
 
 @mixin body-style {
-  h1, h2, h3, h4, h5, h6, p, ul, li, blockquote {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  li,
+  blockquote {
     margin-top: 0;
     padding: 0;
   }
- h2 {}
 
- h3 {
-  font-size: 2.4em;
- }
+  h2 {
+    // Optional h2 style override can go here
+  }
+
+  h3 {
+    font-size: 2.4em;
+  }
 
   p,
   li {
     font-size: 1.6em;
     line-height: 1.5em;
     text-align: left;
-    font-family: "basic-sans", sans-serif;
+    font-family: vars.$font-body;
     font-weight: 400;
   }
 
@@ -26,27 +37,32 @@
   .text-align-center {
     text-align: center;
   }
-  
+
   a.button {
-    color: $white;
+    color: vars.$white;
     padding: 1em 1.75em;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: .125em;
+    letter-spacing: 0.125em;
     @include headingtext;
     border-radius: 2em;
+
     &.teal {
-      background-color: $teal;
+      background-color: vars.$color-3; // Adjust if $teal is defined elsewhere
     }
+
     &.orange {
-      background-color: $orange;
+      background-color: vars.$color-2;
     }
+
     &.violet {
-      background-color: $violet;
+      background-color: vars.$color-1;
     }
+
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
+
     &:active {
       opacity: 1;
     }

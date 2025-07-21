@@ -1,22 +1,22 @@
-uuid: a23831d3-5c3c-437b-8a62-b006311cf702
+uuid: 077d1d1e-3406-44df-beee-138168af23df
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.manage
   module:
     - system
   theme:
     - gravelle1
-id: gravelle1_mainnavigation
+id: gravelle1_manage
 theme: gravelle1
-region: header
+region: manage
 weight: -6
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:manage'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Sidebar menu'
+  id: 'system_menu_block:manage'
+  label: Manage
   label_display: '0'
   provider: system
   level: 1

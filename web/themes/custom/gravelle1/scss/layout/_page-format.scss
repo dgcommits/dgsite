@@ -1,0 +1,303 @@
+@use '../base' as *;
+
+/********************/
+/* site formatting for handheld sites */
+/********************/
+
+/* layout formatting */
+
+html {
+}
+
+body {
+  font-weight: $font-weight-body;
+  background-color: rgba($site-bgcolor, 1);
+  color: $color-text;
+}
+
+a:link,
+a:visited {
+  color: $color-text;
+}
+
+a:hover {
+  color: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+pre {
+  /* unset normalize to set for geshifilter */
+  font-size: unset;
+}
+
+/* define table styles for tables that appear in content */
+.cke_editable table,
+.region-content table,
+table.responsive-enabled,
+table.views-table {
+  width: 100%;
+  /* nested */
+
+  tr {
+  }
+
+  th,
+  td {
+    border: $stroke-1 solid $color-1;
+    padding: 0.5em;
+    font-size: $font-size-body * 0.8;
+  }
+
+  th {
+    background-color: rgba($color-1, 0.15);
+    text-align: left;
+    font-weight: normal;
+  }
+
+  td {
+  }
+
+  tr:nth-child(even) td {
+    background-color: rgba($gray, 0.15);
+  }
+
+  /* /end - nested content table styles */
+}
+
+div.geshifilter {
+  margin: 0;
+  border: none;
+  overflow: auto;
+  font-size: $font-size-body * 0.8;
+  /* custom */
+  padding: 1em;
+  border-radius: 0.25em;
+  -webkit-border-radius: 1em;
+  background-color: rgba($site-bgcolor, 0.85);
+}
+
+/* style preformatted code blocks with geshi */
+div.geshifilter pre {
+  overflow: hidden;
+}
+
+/* unset table styles within geshifilter */
+.geshifilter table th,
+.geshifilter table td {
+  border: unset;
+  padding: unset;
+  font-size: unset;
+}
+
+#container {
+  /* this is the page container */
+  box-shadow: 0 0 0.75em rgba($black, 0.25);
+  background-color: $page-bgcolor;
+}
+
+.page-header {
+  border-bottom: $stroke-2 solid rgba($color-2, 1);
+  background-color: $page-bgcolor;
+}
+
+.page-main {
+}
+
+.page-main main.main-wrapper {
+}
+
+#block-mainpagecontent {
+}
+
+.utility-belt {
+  background-color: rgba($color-1, 0.05);
+  border-bottom: $stroke-1 solid rgba($color-1, 0.8);
+}
+
+.mgr-links {
+}
+
+.page-footer {
+  border-top: $stroke-2 solid rgba($color-2, 1);
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+  background-color: $page-bgcolor;
+}
+
+/* /layout formatting */
+
+.page-title {
+  /* wrap all h1s in page-title class */
+  color: $color-1;
+  border-bottom: $stroke-2 solid rgba($color-1, 0.5);
+}
+
+h1 {
+  /* font */
+  font-weight: $font-weight-h1;
+  font-size: $font-size-h1;
+  color: $color-h1;
+  line-height: $line-height-h1;
+  text-align: left;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+  padding: 0.5em 0 0.25em 0;
+  margin-bottom: 0;
+}
+
+h1 a:link,
+h1 a:visited {
+  color: $color-1;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+h1 .highlight {
+  color: $color-2;
+}
+
+h1 .name {
+  color: $color-2;
+  display: block;
+}
+
+.block.page-title.wsubtext h1 {
+}
+
+.block.page-title.wsubtext p {
+  text-align: center;
+  font-style: italic;
+  font-size: $font-size-body;
+  color: rgba($gray, 1);
+  line-height: 1em;
+  padding-bottom: 1em;
+  margin-top: -1em;
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  font-weight: $font-weight-h2;
+  font-size: $font-size-h2;
+  color: $color-h2;
+  line-height: $line-height-h2;
+  letter-spacing: 0.005em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.25rem;
+  border-bottom-color: $color-1;
+  padding-bottom: 0.25em;
+  clear: both;
+}
+
+h2:after {
+  display: block;
+  width: 100%;
+  margin-bottom: $siteg * 0.5;
+}
+
+h2.pane-title {
+}
+
+.block.section-header,
+.section-header {
+  margin-bottom: 0;
+}
+
+.block.section-header h2,
+.section-header h2 {
+  text-align: center;
+  color: $color-h2;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0.5em 0;
+  font-size: 2.4em;
+  border-bottom: $stroke-1 * 0.5 solid $color-2;
+}
+
+.block.section-header h2 a:link,
+.block.section-header h2 a:visited,
+.section-header h2 a:link,
+.section-header h2 a:visited {
+  color: $color-h2;
+  text-decoration: none;
+  border: $stroke-1 * 0.5 solid rgba(transparent, 0);
+}
+
+.block.section-header h2 a:hover,
+.section-header h2 a:hover {
+  color: $color-h2;
+  border-color: rgba($color-2, 1);
+}
+
+h3 {
+  font-weight: $font-weight-h3;
+  font-size: $font-size-h3;
+  color: $color-h3;
+  line-height: $line-height-h3;
+  letter-spacing: -0.02em;
+  margin-bottom: $siteg * 0.5;
+}
+
+h4 {
+  font-weight: $font-weight-h4;
+  font-size: $font-size-h4;
+  color: $color-h4;
+  line-height: $line-height-h4;
+  margin-bottom: $siteg;
+}
+
+h5 {
+  font-weight: $font-weight-h5;
+  font-size: $font-size-h5;
+  color: $color-h5;
+  line-height: $line-height-h5;
+}
+
+h6 {
+}
+
+/* ***************************************** */
+@media all and (min-width: 768px) {
+  /* page layout for desktop screens */
+
+  h1 {
+    padding: 0.5em 1.25em 0.25em 0;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+  }
+
+  h2.pane-title {
+  }
+
+  h2.section {
+    /* flex */
+    height: $d-section-h2-height;
+  }
+
+  h2.section a:link,
+  h2.section a:visited {
+    display: block;
+    color: $color-1;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: $stroke-1 * 0.5 solid rgba(transparent, 0);
+  }
+
+  h2.section a:hover {
+    color: $color-2;
+    text-decoration: none;
+    border: $stroke-1 * 0.5 solid rgba(transparent, 0);
+  }
+
+  /* /end - page formatting for desktop screens */
+}
