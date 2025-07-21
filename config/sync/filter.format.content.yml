@@ -1,7 +1,9 @@
 uuid: f3825842-16b5-4677-a8a4-4a4065653bd2
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
 name: Content
 format: content
 weight: 0
@@ -24,7 +26,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption>'
+      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -39,3 +41,13 @@ filters:
     status: true
     weight: 10
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types:
+        image: image
