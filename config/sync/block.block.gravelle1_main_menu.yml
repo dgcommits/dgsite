@@ -1,6 +1,6 @@
 uuid: 93cc1f89-08ca-4ed7-bf8d-c487dbe9b824
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -13,7 +13,7 @@ _core:
 id: gravelle1_main_menu
 theme: gravelle1
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:

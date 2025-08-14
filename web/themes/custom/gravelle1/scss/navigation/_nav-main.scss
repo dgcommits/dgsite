@@ -1,0 +1,22 @@
+@use '../base' as *;
+
+@media all and (min-width: 768px) {
+  nav.menu--main {
+  }
+
+  nav.menu--main ul.menu {
+  }
+
+  nav.menu--main ul.menu > li.menu-item {
+  }
+
+  nav.menu--main ul.menu > li.menu-item span,
+  nav.menu--main ul.menu > li.menu-item a,
+  nav.menu--main ul.menu > li.menu-item a:visited {
+    line-height: $link-height * 1.1;
+    font-size: $m-link-size * 1.2;
+  }
+
+  nav.menu--main ul.menu > li.menu-item a.is-active {
+  }
+}

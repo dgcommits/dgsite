@@ -1,0 +1,24 @@
+uuid: 66b608cb-fe59-4011-ac38-23b32d715114
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_announcement
+    - field.storage.block_content.field_block_title
+    - filter.format.plain_text
+  module:
+    - text
+id: block_content.banner_announcement.field_block_title
+field_name: field_block_title
+entity_type: block_content
+bundle: banner_announcement
+label: 'Block Title'
+description: 'Optionally, enter a title to appear on this block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

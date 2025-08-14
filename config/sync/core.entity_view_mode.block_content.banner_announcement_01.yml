@@ -1,0 +1,11 @@
+uuid: 5fda519e-e54b-4a45-a9ef-a445a6f66bff
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.banner_announcement_01
+label: banner_announcement_01
+description: null
+targetEntityType: block_content
+cache: true

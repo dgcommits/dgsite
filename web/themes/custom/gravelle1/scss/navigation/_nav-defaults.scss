@@ -1,0 +1,123 @@
+@use '../base' as *;
+
+nav {
+  /* position this element in layouts */
+}
+
+/* default menu links */
+
+nav ul.menu,
+nav ul.tabs,
+nav.action-links ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  /* begin nested menu styles */
+  > li {
+    margin: 0;
+    margin-bottom: $link-space;
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none;
+  }
+
+  > li > span,
+  > li > a,
+  > li > a:visited {
+    display: block;
+    padding: 0 $link-pad-right 0 $link-pad-left;
+    text-decoration: none;
+    line-height: $link-height;
+    font-size: $m-link-size;
+    /**/
+    color: $link-color;
+    border: $link-border;
+  }
+
+  > li > a:hover {
+    color: $link-hover-color;
+    background-color: $link-hover-bgcolor;
+    border: $link-hover-border;
+  }
+
+  > li > a:active {
+    color: $link-click-color;
+    background-color: $link-click-bgcolor;
+    border: $link-click-border;
+  }
+
+  > li > a.is-active,
+  > li > a.is-active:visited {
+    color: $link-isactive-color;
+    background-color: $link-isactive-bgcolor;
+    border: $link-isactive-border;
+  }
+
+  > li > a.is-active:hover {
+    color: $link-isactive-hover-color;
+    background-color: $link-isactive-hover-bgcolor;
+    border: $link-isactive-hover-border;
+    cursor: default; /* leave cursor unchanged */
+  }
+
+  > li > a.is-active:active {
+    color: $link-isactive-click-color;
+    background-color: $link-isactive-click-bgcolor;
+    border: $link-isactive-click-border;
+  }
+
+  > li.menu-item--collapsed {
+  }
+  /* end nested menu styles */
+}
+
+/* action links */
+
+nav.action-links {
+}
+
+nav.action-links ul {
+}
+
+nav.action-links ul li a,
+nav.action-items ul li a /* use this class to highlight action item menus */ {
+  background-color: rgba($color-3, 0.5);
+}
+
+/* *********************************************************** */
+
+@media all and (min-width: 768px) {
+  /* set for desktop screens */
+
+  nav {
+    display: inline-block;
+  }
+
+  nav ul.menu,
+  nav ul.tabs,
+  nav.action-links ul {
+    flex-direction: row;
+  }
+
+  nav ul.menu,
+  nav ul.tabs,
+  nav.action-links ul {
+    /* begin nested menu styles */
+
+    > li {
+      margin: 0;
+      margin-right: $d-link-space;
+    }
+
+    > li > span,
+    > li > a,
+    > li > a:visited {
+      border-radius: $link-radius;
+      font-size: $d-link-size;
+    }
+    /* /end nested menu styles */
+  }
+  /* end desktop */
+}

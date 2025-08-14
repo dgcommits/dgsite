@@ -1,0 +1,54 @@
+{% if sidebar_first %}
+  <div id="mobile-menu" class="offcanvas-menu">
+    {{ sidebar_first }}
+  </div>
+{% endif %}
+
+<div class="site-overlay"></div>
+
+<div class="layout-container" id="container">
+  <header role="banner">
+    <div class="header-content">
+      {{ header }}
+      <div class="navburger">
+        <button class="menu-btn" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  {% if breadcrumb_has_content %}
+    <div class="breadcrumb">
+      <div class="breadcrumb-content">
+        {{ breadcrumb }}
+      </div>
+    </div>
+  {% endif %}
+
+  <main role="main">
+    <div class="main-content">
+      {{ primary_menu }}
+      {{ secondary_menu }}
+      {{ highlighted }}
+      {{ help }}
+      <a id="main-content" tabindex="-1"></a>
+
+      <div class="layout-content">
+        {{ content }}
+      </div>
+
+      {% if sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ sidebar_second }}
+        </aside>
+      {% endif %}
+    </div>
+  </main>
+
+  {% if footer %}
+    <footer role="contentinfo">
+      <div class="footer-content">
+        {{ footer }}
+      </div>
+    </footer>
+  {% endif %}
+</div>

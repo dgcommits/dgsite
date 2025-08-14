@@ -1,0 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.0.x/core/modules/sdc/src/metadata.schema.json
+name: menu-main
+template: menu-main.twig
+library: gravelle1/menu-main
+description: 'Main navigation menu block.'
+slots:
+  content:
+    description: 'Rendered menu content.'

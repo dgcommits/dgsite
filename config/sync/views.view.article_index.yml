@@ -1,4 +1,4 @@
-uuid: 4251ad18-3c05-4941-94dd-b841a16b2a38
+uuid: 03f11605-9126-4e4e-a343-78e8b2174c50
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
   module:
     - node
     - user
-id: mana
+id: article_index
 label: 'Article Index'
 module: views
 description: ''
@@ -187,7 +187,7 @@ display:
         type: normal
         title: Articles
         description: ''
-        weight: 0
+        weight: -49
         expanded: false
         menu_name: main
         parent: ''
