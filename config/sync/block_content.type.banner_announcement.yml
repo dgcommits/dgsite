@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: banner_announcement
-label: banner_announcement
+label: 'Banner Announcement'
 revision: false
 description: 'An announcement banner with text and image.'

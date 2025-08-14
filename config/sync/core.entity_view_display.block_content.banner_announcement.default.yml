@@ -9,8 +9,8 @@ dependencies:
     - field.field.block_content.banner_announcement.field_block_text
     - field.field.block_content.banner_announcement.field_block_title
   module:
-    - image
     - link
+    - svg_image
     - text
 id: block_content.banner_announcement.default
 targetEntityType: block_content
@@ -25,6 +25,10 @@ content:
       image_style: ''
       image_loading:
         attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -32,11 +36,11 @@ content:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
+      trim_length: null
+      url_only: true
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     weight: 1
     region: content
