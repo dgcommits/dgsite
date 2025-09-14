@@ -1,0 +1,31 @@
+uuid: 9f8e7d6c-5b4a-3c2d-1e0f-a9b8c7d6e5f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - responsive_image.styles.article_image_100_4x3
+    - media.type.image
+  module:
+    - responsive_image
+id: media.image.article_100_4x3
+targetEntityType: media
+bundle: image
+mode: article_100_4x3
+content:
+  field_media_image:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: article_image_100_4x3
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

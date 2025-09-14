@@ -1,0 +1,17 @@
+uuid: 37395ce2-804f-4102-a524-4d1fce1d4562
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cH1mp7HoG4lou7D_yvVXP76YMTR3AIbGtZ6QG4RGfH0
+name: article_image_100_handheld
+label: 'Article Image 100 Handheld'
+effects:
+  bcd189ef-5856-4995-bce5-3a3946dd1d6b:
+    uuid: ''
+    id: image_scale
+    weight: 1
+    data:
+      width: 636
+      height: null
+      upscale: true

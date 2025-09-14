@@ -1,0 +1,12 @@
+uuid: aa5014a3-5a6b-4c8d-9e0f-1a2b3c4d5e42
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_50_16x9
+label: 'Article Image 50 16x9'
+description: ''
+targetEntityType: media
+cache: true
+

@@ -1,0 +1,11 @@
+uuid: e9f01a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.page_25_16x9
+label: 'Page Image 25 16x9'
+description: ''
+targetEntityType: media
+cache: true

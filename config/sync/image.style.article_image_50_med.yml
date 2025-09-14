@@ -1,0 +1,17 @@
+uuid: 543b8588-af10-42bc-96cb-034b6ad62e6a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: C08eq0hHtLA3rxXDvtRzRFQnbhYhorOoPNebPJR9sAc
+name: article_image_50_med
+label: 'Article Image 50 Med'
+effects:
+  054c2991-2660-4377-bda7-092645048f3a:
+    uuid: ''
+    id: image_scale
+    weight: 1
+    data:
+      width: 395
+      height: null
+      upscale: true

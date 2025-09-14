@@ -1,0 +1,17 @@
+uuid: 3a3959b2-f8f7-4530-b341-1a88a49693bf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NtE0KdO_5EL3otE8kOtpLNisAXfuYggRn7GQLKA06d0
+name: article_image_50_max
+label: 'Article Image 50 Max'
+effects:
+  89430bfa-004f-450a-84eb-6357a9e9085c:
+    uuid: ''
+    id: image_scale
+    weight: 1
+    data:
+      width: 795
+      height: null
+      upscale: true

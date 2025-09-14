@@ -1,0 +1,17 @@
+uuid: b501c7c9-2728-4c7b-b416-2dcfed64dcdb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_wide_4x3_small
+label: 'Image Wide 4x3 Small'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: 5310926e-df64-48e1-8ef3-427a6a4475a0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 576
+      crop_type: focal_point

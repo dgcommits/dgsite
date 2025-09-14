@@ -1,0 +1,18 @@
+uuid: a3333333-cccc-4a01-9001-00000025169m
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_image_25_med_16x9
+label: 'Article Image 25 Med 16x9'
+effects:
+  e25m169:
+    uuid: e25m169
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 256
+      height: 144
+      crop_type: focal_point
+

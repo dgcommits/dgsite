@@ -1,0 +1,11 @@
+uuid: c7d8e9f0-1a2b-3c4d-5e6f-7a8b9c0d1e2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.page_25_4x3
+label: 'Page Image 25 4x3'
+description: ''
+targetEntityType: media
+cache: true

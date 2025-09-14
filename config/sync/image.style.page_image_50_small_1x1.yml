@@ -1,0 +1,17 @@
+uuid: 22222222-aaaa-4a01-9001-000000000102
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_50_small_1x1
+label: 'Page Image 50 Small 1x1'
+effects:
+  e50s11x1:
+    uuid: e50s11x1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 384
+      height: 384
+      crop_type: focal_point

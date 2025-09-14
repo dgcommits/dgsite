@@ -1,0 +1,16 @@
+uuid: pgi-100-sm-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_100_small
+label: 'Page Image 100 Small'
+effects:
+  pg100sm:
+    uuid: pg100sm
+    id: image_scale
+    weight: 1
+    data:
+      width: 636
+      height: null
+      upscale: true
+

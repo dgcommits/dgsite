@@ -1,0 +1,17 @@
+uuid: 11111111-cccc-4a01-9001-000000000305
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_100_max_16x9
+label: 'Page Image 100 Max 16x9'
+effects:
+  e100x169:
+    uuid: e100x169
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      crop_type: focal_point

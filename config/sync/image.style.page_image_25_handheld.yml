@@ -1,0 +1,16 @@
+uuid: pgi-25-hh-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_25_handheld
+label: 'Page Image 25 Handheld'
+effects:
+  pg25hh:
+    uuid: pg25hh
+    id: image_scale
+    weight: 1
+    data:
+      width: 705
+      height: null
+      upscale: true
+

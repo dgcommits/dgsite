@@ -1,0 +1,16 @@
+uuid: pgi-50-hh-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_50_handheld
+label: 'Page Image 50 Handheld'
+effects:
+  pg50hh:
+    uuid: pg50hh
+    id: image_scale
+    weight: 1
+    data:
+      width: 1590
+      height: null
+      upscale: true
+

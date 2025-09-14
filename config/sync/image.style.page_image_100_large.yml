@@ -1,0 +1,16 @@
+uuid: pgi-100-lg-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_100_large
+label: 'Page Image 100 Large'
+effects:
+  pg100lg:
+    uuid: pg100lg
+    id: image_scale
+    weight: 1
+    data:
+      width: 1130
+      height: null
+      upscale: true
+

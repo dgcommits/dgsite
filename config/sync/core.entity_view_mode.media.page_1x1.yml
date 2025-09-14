@@ -1,0 +1,11 @@
+uuid: 5d7e9e2a-6a2d-4f18-9f24-3e1c9c5a7b66
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.page_1x1
+label: 'Page Image 1x1'
+description: ''
+targetEntityType: media
+cache: true

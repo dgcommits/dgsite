@@ -1,0 +1,42 @@
+uuid: 9b2a0d63-1c2a-4d78-9a6e-93859b1f7602
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.article_image_25_handheld
+    - image.style.article_image_25_small
+    - image.style.article_image_25_med
+    - image.style.article_image_25_large
+    - image.style.article_image_25_max
+  theme:
+    - gravelle1
+id: article_image_25
+label: 'Article Image 25'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: article_image_25_handheld
+    breakpoint_id: gravelle1.handheld
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: article_image_25_small
+    breakpoint_id: gravelle1.desktop-small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: article_image_25_med
+    breakpoint_id: gravelle1.desktop-medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: article_image_25_large
+    breakpoint_id: gravelle1.desktop-large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: article_image_25_max
+    breakpoint_id: gravelle1.desktop-max
+    multiplier: 1x
+breakpoint_group: gravelle1
+fallback_image_style: original_image

@@ -2,6 +2,17 @@ uuid: f3825842-16b5-4677-a8a4-4a4065653bd2
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.page_100_16x9
+    - core.entity_view_mode.media.page_100_1x1
+    - core.entity_view_mode.media.page_100_4x3
+    - core.entity_view_mode.media.page_16x9
+    - core.entity_view_mode.media.page_25_16x9
+    - core.entity_view_mode.media.page_25_1x1
+    - core.entity_view_mode.media.page_25_4x3
+    - core.entity_view_mode.media.page_50_16x9
+    - core.entity_view_mode.media.page_50_1x1
+    - core.entity_view_mode.media.page_50_4x3
   module:
     - media
 name: Content
@@ -26,7 +37,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
+      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align data-view-mode>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -48,6 +59,17 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_view_modes: {  }
+      allowed_view_modes:
+        default: default
+        page_100_16x9: page_100_16x9
+        page_100_1x1: page_100_1x1
+        page_100_4x3: page_100_4x3
+        page_16x9: page_16x9
+        page_25_16x9: page_25_16x9
+        page_25_1x1: page_25_1x1
+        page_25_4x3: page_25_4x3
+        page_50_16x9: page_50_16x9
+        page_50_1x1: page_50_1x1
+        page_50_4x3: page_50_4x3
       allowed_media_types:
         image: image

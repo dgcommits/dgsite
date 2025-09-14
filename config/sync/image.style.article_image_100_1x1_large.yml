@@ -1,0 +1,19 @@
+uuid: e63d4b7e-d256-4e67-b2b7-a195ad347fcb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: FjnvaI80WSoaZmIkUWh5o2puPgK9u5zCtJIpCFUGUZc
+name: article_image_100_1x1_large
+label: 'Article Image 100 1x1 Large'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: ''
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1128
+      height: 1128
+      crop_type: focal_point

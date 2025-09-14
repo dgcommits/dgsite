@@ -1,0 +1,16 @@
+uuid: pgi-25-lg-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_25_large
+label: 'Page Image 25 Large'
+effects:
+  pg25lg:
+    uuid: pg25lg
+    id: image_scale
+    weight: 1
+    data:
+      width: 283
+      height: null
+      upscale: true
+

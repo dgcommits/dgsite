@@ -1,0 +1,19 @@
+uuid: da29720d-8536-47b8-9c61-8d358595c246
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: 0oM54NgTK6WGig7rw6VZATATxM9tl3ha_dtUFIe0UHY
+name: article_image_100_4x3_handheld
+label: 'Article Image 100 4x3 handheld'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: ''
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 705
+      height: 529
+      crop_type: focal_point

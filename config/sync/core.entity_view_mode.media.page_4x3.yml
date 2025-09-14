@@ -1,0 +1,11 @@
+uuid: 3f6c4a8e-0b1a-4f0a-9c8e-2b7e6d9f1a3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.page_4x3
+label: 'Page Image 4x3'
+description: ''
+targetEntityType: media
+cache: true

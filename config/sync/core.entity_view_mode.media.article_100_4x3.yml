@@ -1,0 +1,11 @@
+uuid: b6449f15-7d6d-4b0a-9b0e-3e5f6b4a9c7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_100_4x3
+label: 'Article Image 100% 4x3'
+description: ''
+targetEntityType: media
+cache: true

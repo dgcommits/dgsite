@@ -1,0 +1,17 @@
+uuid: 027ee0ee-b02c-4b49-b160-09a57fbfbbe3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_wide_1x1_med
+label: 'Image Wide 1x1 Med'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: 5310926e-df64-48e1-8ef3-427a6a4475a0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 1024
+      crop_type: focal_point

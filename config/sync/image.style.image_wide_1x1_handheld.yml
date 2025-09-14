@@ -1,0 +1,17 @@
+uuid: 068bf1f4-eee2-47c9-a393-4c6c350f710f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_wide_1x1_handheld
+label: 'Image Wide 1x1 handheld'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: 5310926e-df64-48e1-8ef3-427a6a4475a0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 767
+      height: 767
+      crop_type: focal_point

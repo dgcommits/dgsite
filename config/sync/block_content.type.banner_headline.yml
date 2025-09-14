@@ -1,0 +1,8 @@
+uuid: 7935156a-9a0f-47df-b5a2-c6afa7c3a92f
+langcode: en
+status: true
+dependencies: {  }
+id: banner_headline
+label: 'Banner Headline'
+revision: false
+description: 'Banner text with an optional image and link.'

@@ -1,0 +1,56 @@
+uuid: 0bd731ff-dee4-42bf-ba15-6f149bbcd41b
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.banner_headline
+    - core.entity_view_mode.block_content.banner_announcement_02
+    - field.field.block_content.banner_headline.field_block_background
+    - field.field.block_content.banner_headline.field_block_image
+    - field.field.block_content.banner_headline.field_block_link
+    - field.field.block_content.banner_headline.field_block_text
+  module:
+    - link
+    - svg_image
+    - text
+id: block_content.banner_headline.banner_announcement_02
+targetEntityType: block_content
+bundle: banner_headline
+mode: banner_announcement_02
+content:
+  field_block_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_block_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_block_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_block_background: true

@@ -1,0 +1,17 @@
+uuid: 22222222-cccc-4a01-9001-000000000301
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_50_handheld_16x9
+label: 'Page Image 50 Handheld 16x9'
+effects:
+  e50h169:
+    uuid: e50h169
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 384
+      height: 216
+      crop_type: focal_point

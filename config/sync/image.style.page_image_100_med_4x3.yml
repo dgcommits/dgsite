@@ -1,0 +1,17 @@
+uuid: 11111111-bbbb-4a01-9001-000000000203
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_100_med_4x3
+label: 'Page Image 100 Med 4x3'
+effects:
+  e100m143:
+    uuid: e100m143
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 768
+      crop_type: focal_point

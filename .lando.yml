@@ -6,6 +6,10 @@ config:
 services:
   node:
     type: node:20
+  appserver:
+    overrides:
+      ports:
+        - '0.0.0.0:8080:80' # host:container — change 8080 if you need another port
 
 tooling:
   node:

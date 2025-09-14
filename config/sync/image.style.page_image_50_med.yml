@@ -1,0 +1,16 @@
+uuid: pgi-50-md-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_50_med
+label: 'Page Image 50 Med'
+effects:
+  pg50md:
+    uuid: pg50md
+    id: image_scale
+    weight: 1
+    data:
+      width: 395
+      height: null
+      upscale: true
+

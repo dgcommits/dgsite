@@ -1,0 +1,17 @@
+uuid: 11111111-bbbb-4a01-9001-000000000204
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_100_large_4x3
+label: 'Page Image 100 Large 4x3'
+effects:
+  e100l143:
+    uuid: e100l143
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1365
+      height: 1024
+      crop_type: focal_point

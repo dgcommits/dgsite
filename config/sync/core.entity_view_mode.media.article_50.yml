@@ -1,0 +1,11 @@
+uuid: 5c1d9a2e-61d3-4f73-9b4e-8c345b8fa12f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_50
+label: 'Article Image 50%'
+description: ''
+targetEntityType: media
+cache: true

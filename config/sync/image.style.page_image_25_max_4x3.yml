@@ -1,0 +1,17 @@
+uuid: 33333333-bbbb-4a01-9001-000000000205
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_25_max_4x3
+label: 'Page Image 25 Max 4x3'
+effects:
+  e25x143:
+    uuid: e25x143
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360
+      crop_type: focal_point

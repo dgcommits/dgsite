@@ -1,0 +1,62 @@
+uuid: a8b4c1d2-3e4f-5a6b-7c8d-9e0f1a2b3c4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: Article
+format: article
+weight: 0
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align data-view-mode>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: article_100_4x3
+      allowed_view_modes:
+        article_100_4x3: article_100_4x3
+        article_100_16x9: article_100_16x9
+        article_100_1x1: article_100_1x1
+        article_50_4x3: article_50_4x3
+        article_50_16x9: article_50_16x9
+        article_50_1x1: article_50_1x1
+        article_25_4x3: article_25_4x3
+        article_25_16x9: article_25_16x9
+        article_25_1x1: article_25_1x1
+      allowed_media_types:
+        image: image

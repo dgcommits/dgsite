@@ -1,0 +1,16 @@
+uuid: pgi-50-mx-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_50_max
+label: 'Page Image 50 Max'
+effects:
+  pg50mx:
+    uuid: pg50mx
+    id: image_scale
+    weight: 1
+    data:
+      width: 795
+      height: null
+      upscale: true
+

@@ -1,0 +1,18 @@
+uuid: a2222222-aaaa-4a01-9001-00000050111x
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_image_50_max_1x1
+label: 'Article Image 50 Max 1x1'
+effects:
+  e50x11x1:
+    uuid: e50x11x1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 960
+      crop_type: focal_point
+

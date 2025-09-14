@@ -1,0 +1,11 @@
+uuid: e3f4a5b6-c7d8-9e0f-1a2b-3c4d5e6f7a8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.page_100_16x9
+label: 'Page Image 100 16x9'
+description: ''
+targetEntityType: media
+cache: true

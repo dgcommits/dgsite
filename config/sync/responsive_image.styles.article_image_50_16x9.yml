@@ -1,0 +1,23 @@
+uuid: d5a1c2b3-4e5f-6a7b-8c9d-0e1f2a3b4c52
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.article_image_50_handheld_16x9
+    - image.style.article_image_50_small_16x9
+    - image.style.article_image_50_med_16x9
+    - image.style.article_image_50_large_16x9
+    - image.style.article_image_50_max_16x9
+  theme:
+    - gravelle1
+id: article_image_50_16x9
+label: 'Article Image 50 16x9'
+breakpoint_group: gravelle1
+fallback_image_style: article_image_50_med_16x9
+image_style_mappings:
+  - { breakpoint_id: gravelle1.handheld,       multiplier: 1x, image_mapping_type: image_style, image_mapping: article_image_50_handheld_16x9 }
+  - { breakpoint_id: gravelle1.desktop-small,  multiplier: 1x, image_mapping_type: image_style, image_mapping: article_image_50_small_16x9 }
+  - { breakpoint_id: gravelle1.desktop-medium, multiplier: 1x, image_mapping_type: image_style, image_mapping: article_image_50_med_16x9 }
+  - { breakpoint_id: gravelle1.desktop-large,  multiplier: 1x, image_mapping_type: image_style, image_mapping: article_image_50_large_16x9 }
+  - { breakpoint_id: gravelle1.desktop-max,    multiplier: 1x, image_mapping_type: image_style, image_mapping: article_image_50_max_16x9 }
+

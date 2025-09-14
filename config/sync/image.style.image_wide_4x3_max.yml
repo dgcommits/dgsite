@@ -1,0 +1,17 @@
+uuid: 8650f296-7398-4870-af95-e2283f0b3a20
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_wide_4x3_max
+label: 'Image Wide 4x3 Max'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: 5310926e-df64-48e1-8ef3-427a6a4475a0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1440
+      crop_type: focal_point

@@ -1,0 +1,16 @@
+uuid: pgi-50-lg-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_50_large
+label: 'Page Image 50 Large'
+effects:
+  pg50lg:
+    uuid: pg50lg
+    id: image_scale
+    weight: 1
+    data:
+      width: 565
+      height: null
+      upscale: true
+

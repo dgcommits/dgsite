@@ -1,0 +1,17 @@
+uuid: f6bf0e27-650d-4122-9e2c-6451da07c43d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_wide_16x9_max
+label: 'Image Wide 16x9 Max'
+effects:
+  5310926e-df64-48e1-8ef3-427a6a4475a0:
+    uuid: 5310926e-df64-48e1-8ef3-427a6a4475a0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      crop_type: focal_point

@@ -1,0 +1,17 @@
+uuid: 22222222-cccc-4a01-9001-000000000303
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_image_50_med_16x9
+label: 'Page Image 50 Med 16x9'
+effects:
+  e50m169:
+    uuid: e50m169
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 512
+      height: 288
+      crop_type: focal_point

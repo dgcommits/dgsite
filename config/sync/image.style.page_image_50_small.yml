@@ -1,0 +1,16 @@
+uuid: pgi-50-sm-0001
+langcode: en
+status: true
+dependencies: { }
+name: page_image_50_small
+label: 'Page Image 50 Small'
+effects:
+  pg50sm:
+    uuid: pg50sm
+    id: image_scale
+    weight: 1
+    data:
+      width: 325
+      height: null
+      upscale: true
+
