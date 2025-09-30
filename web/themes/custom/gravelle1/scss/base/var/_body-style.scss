@@ -1,6 +1,7 @@
 @use 'var_default' as vars;
 @use 'mixins' as *;
 
+// _body-style-include.scss
 @mixin bodyStyle {
   /* these styles are imported into _body-style.scss and editor-styles.scss */
   /* include all styles that can apply to the editor body and the editor    */
@@ -51,10 +52,10 @@
   figure,
   ul,
   ol {
-    margin-bottom: units(2);
-    font-family: family($theme-prose-font-family);
-    line-height: line-height('body', $theme-body-line-height);
-    font-size: size(body, 5);
+    margin-bottom: 2em;
+    font-family: vars.$font-body;
+    line-height: vars.$line-height-body;
+    font-size: vars.$font-size-body;
     /* max-width: 40rem; use max-width to improve line-length/readability sitewide */
   }
 
@@ -75,10 +76,10 @@
     overflow: hidden; /* prevent lists from extending into floats */
     li {
       padding-left: 0.5em;
-      margin-bottom: units(2px);
+      margin-bottom: 2px;
     }
     li:last-child {
-      margin-bottom: units(0);
+      margin-bottom: 0;
     }
   }
 
@@ -100,7 +101,7 @@
       /* display inline images within text */
       vertical-align: middle;
       border: none;
-      margin: 0 units(0.5);
+      margin: 0 0.5em;
     }
   }
 
@@ -108,19 +109,23 @@
 
   figure {
     margin: 0;
-    margin-bottom: units(1);
+    margin-bottom: 1em;
     width: 100%;
-    @include at-media('tablet') {
-      figure[class^='display--main_66'] {
+    @include desktop-small {
+      figure[class^='display--page_66'],
+      figure[class^='display--article_66'] {
         max-width: 65%;
       }
-      figure[class^='display--main_50'] {
+      figure[class^='display--page_50'],
+      figure[class^='display--article_50'] {
         max-width: 49%;
       }
-      figure[class^='display--main_33'] {
+      figure[class^='display--page_33'],
+      figure[class^='display--article_33'] {
         max-width: 32%;
       }
-      figure[class^='display--main_25'] {
+      figure[class^='display--page_25'],
+      figure[class^='display--article_25'] {
         max-width: 24%;
       }
     }
@@ -135,7 +140,7 @@
       padding: 0;
       margin: 0; /* remove margin from img in figure tag */
       display: block;
-      @include at-media('tablet') {
+      @include desktop-small {
         border-bottom: 0;
       }
       &.align-center img {
@@ -145,11 +150,11 @@
   }
 
   figcaption {
-    color: color('gray-50');
+    color: rgba(#7b7a7a, 1);
     outline-offset: -1px;
     background-color: unset;
     margin: 0 !important;
-    padding: units(2px) 0 0 0 !important;
+    padding: 2px 0 0 0 !important;
     font-size: 0.75em;
     font-style: italic;
   }
@@ -172,7 +177,7 @@
   .align-left,
   .align-center {
     float: none; /* do not float on mobile */
-    margin-bottom: units(1);
+    margin-bottom: 1em;
     p {
       /* render p as inline */
       display: inline;
@@ -180,9 +185,9 @@
   }
 
   .align-right {
-    @include at-media('tablet') {
+    @include desktop-small {
       float: right;
-      margin-left: units(2);
+      margin-left: 2em;
       max-width: 65%;
       img.inline-img {
         width: 100% !important; /* make aligned image fit figure */
@@ -191,9 +196,9 @@
   }
 
   .align-left {
-    @include at-media('tablet') {
+    @include desktop-small {
       float: left;
-      margin: 0 units(2) 0 0;
+      margin: 0 2em 0 0;
       max-width: 65%;
       img.inline-img {
         width: 100% !important; /* make aligned image fit figure */
@@ -203,30 +208,35 @@
 
   .align-center {
     text-align: center;
-    margin: 0 auto units(1) auto;
-    @include at-media('tablet') {
+    margin: 0 auto 1em auto;
+    @include desktop-small {
       margin: 0 auto;
       max-width: 95%;
     }
   }
-  @include at-media('tablet') {
-    figure:has([class*=' display--main_100']) {
+  @include desktop-small {
+    figure:has([class*=' display--page_100']),
+    figure:has([class*=' display--article_100']) {
       max-width: 100%;
     }
 
-    figure:has([class*=' display--main_66']) {
+    figure:has([class*=' display--page_66']),
+    figure:has([class*=' display--article_66']) {
       max-width: 65%;
     }
 
-    figure:has([class*=' display--main_50']) {
+    figure:has([class*=' display--page_50']),
+    figure:has([class*=' display--article_50']) {
       max-width: 49%;
     }
 
-    figure:has([class*=' display--main_33']) {
+    figure:has([class*=' display--page_33']),
+    figure:has([class*=' display--article_33']) {
       max-width: 32%;
     }
 
-    figure:has([class*=' display--main_25']) {
+    figure:has([class*=' display--page_25']),
+    figure:has([class*=' display--article_25']) {
       max-width: 24%;
     }
   }
@@ -236,21 +246,21 @@
     display: inline-block;
   }
 
-  @include at-media('tablet') {
-    [class*=' display--main_66'],
-    [data-view-mode*=' main_66'] {
+  @include desktop-small {
+    [class*=' display--page_66'],
+    [data-view-mode*=' page_66'] {
       max-width: 65%;
     }
-    [class*=' display--main_50'],
-    [data-view-mode*=' main_50'] {
+    [class*=' display--page_50'],
+    [data-view-mode*=' page_50'] {
       max-width: 49%;
     }
-    [class*=' display--main_33'],
-    [data-view-mode*=' main_33'] {
+    [class*=' display--page_33'],
+    [data-view-mode*=' page_33'] {
       max-width: 32%;
     }
-    [class*=' display--main_25'],
-    [data-view-mode*=' main_25'] {
+    [class*=' display--page_25'],
+    [data-view-mode*=' page_25'] {
       max-width: 24%;
     }
   }
@@ -263,21 +273,21 @@
     }
   }
 
-  @include at-media('tablet') {
+  @include desktop-small {
     .media-ext--svg {
-      &[class*='display--main_100'] {
+      &[class*='display--page_100'] {
         width: 100%;
       }
-      &[class*='display--main_66'] {
+      &[class*='display--page_66'] {
         width: 65%;
       }
-      &[class*='display--main_50'] {
+      &[class*='display--page_50'] {
         width: 49%;
       }
-      &[class*='display--main_33'] {
+      &[class*='display--page_33'] {
         width: 32%;
       }
-      &[class*='display--main_25'] {
+      &[class*='display--page_25'] {
         width: 24%;
       }
       img {
@@ -287,8 +297,8 @@
   }
 
   blockquote {
-    margin: units(0) units(1) units(2) units(0);
-    padding: units(2) units(6) units(2) units(3);
+    margin: 0 1em 2em 0;
+    padding: 2em 6em 2em 3em;
     border-left: 6px solid #ccc !important;
 
     &::before {
@@ -296,23 +306,23 @@
     }
     p {
       margin-top: 0;
-      font-weight: $theme-font-weight-light;
+      font-weight: vars.$font-weight-body-light;
       font-style: italic;
 
       &:last-child {
         margin-bottom: 0;
       }
       strong {
-        font-weight: $theme-font-weight-medium; /* 500 */
+        font-weight: vars.$font-weight-body-medium; /* 500 */
       }
     }
   }
 
   .ck-horizontal-line hr,
   hr {
-    background-color: 2px solid color('gray-cool-10');
+    background-color: 2px solid rgba(#7b7a7a, 1);
     height: 0px;
-    border-top: 2px solid color('gray-cool-10');
+    border-top: 2px solid rgba(#7b7a7a, 1);
     clear: both;
   }
   a {
@@ -346,7 +356,7 @@
     border-spacing: 0;
     height: 100%;
     width: 100%;
-    margin-bottom: units(3);
+    margin-bottom: 3em;
     th,
     td {
       border: 1px double #b3b3b3;
@@ -377,8 +387,8 @@
   div:has(.external-form),
   *:has(.inline-external-form) {
     /* add spacing beneath form items */
-    margin-bottom: units(1.5);
+    margin-bottom: 1.5em;
   }
 
-  /* /bodyStyle */
+  /* /bodyStyles */
 }

@@ -1,3 +1,6 @@
+// Silence Sass legacy JS API deprecation warnings until gulp-dart-sass migrates.
+process.env.SASS_SILENCE_DEPRECATIONS = 'legacy-js-api';
+
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
@@ -6,12 +9,16 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
+const sassOptions = {
+  silenceDeprecations: ['legacy-js-api']
+};
+
 // Compile global SCSS from scss/ into css/
 const sassTask = () => {
   return gulp.src('scss/**/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'));
@@ -23,7 +30,8 @@ const componentSassTask = () => {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(gulpSass({
-      includePaths: ['scss']
+      includePaths: ['scss'],
+      silenceDeprecations: ['legacy-js-api']
     }).on('error', gulpSass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))

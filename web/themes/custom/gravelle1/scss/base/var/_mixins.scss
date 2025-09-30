@@ -31,6 +31,52 @@
   }
 }
 
+@mixin body-h2 {
+  font-size: vars.$font-size-h2;
+  margin-top: 0;
+  margin-bottom: 3em;
+  padding-bottom: 0.5em;
+  letter-spacing: -0.03em;
+  font-family: vars.$font-heading;
+  &:after {
+    margin-top: 0.4rem;
+    border-bottom: 2px solid red;
+    display: flex; /* prevent border-bottom from overlapping floats */
+    content: '';
+  }
+}
+
+@mixin body-h3 {
+  font-size: vars.$font-size-h3;
+  letter-spacing: -0.3em;
+  font-family: vars.$font-heading;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+@mixin body-h4 {
+  font-size: vars.$font-size-h4;
+  letter-spacing: -0.3em;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+@mixin body-h5 {
+  font-size: vars.$font-size-h5;
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: gray;
+}
+
+@mixin body-h6 {
+  font-size: vars.$font-size-h6;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+@mixin font-body {
+  font-family: Roboto, sans-serif;
+}
+
 // ========================================
 // Layout Mixins
 // ========================================
