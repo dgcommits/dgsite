@@ -32,36 +32,39 @@
 }
 
 @mixin body-h2 {
+  @include headingtext;
   font-size: vars.$font-size-h2;
   margin-top: 0;
-  margin-bottom: 3em;
+  margin-bottom: 0;
   padding-bottom: 0.5em;
   letter-spacing: -0.03em;
   font-family: vars.$font-heading;
   &:after {
     margin-top: 0.4rem;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid vars.$color-1;
     display: flex; /* prevent border-bottom from overlapping floats */
     content: '';
   }
 }
 
 @mixin body-h3 {
+  @include headingtext;
   font-size: vars.$font-size-h3;
-  letter-spacing: -0.3em;
-  font-family: vars.$font-heading;
+  letter-spacing: -0.03em;
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 @mixin body-h4 {
+  @include headingtext;
   font-size: vars.$font-size-h4;
-  letter-spacing: -0.3em;
+  letter-spacing: -0.03em;
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 @mixin body-h5 {
+  @include headingtext;
   font-size: vars.$font-size-h5;
   margin-top: 0;
   margin-bottom: 1em;
@@ -69,6 +72,7 @@
 }
 
 @mixin body-h6 {
+  @include headingtext;
   font-size: vars.$font-size-h6;
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -133,9 +137,8 @@
 
 @mixin headingtext {
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-family: vars.$font-heading;
-  text-transform: uppercase;
 
   strong,
   b {
@@ -145,16 +148,16 @@
 
 @mixin bodytext {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-family: vars.$font-body;
 
   strong,
   b {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .light {
-    font-weight: 400;
+    font-weight: 100;
   }
 }
 

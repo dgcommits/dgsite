@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "277883fc29ca2496676563d9ea3980ee",
+    "content-hash": "77a435cf32e0d25bddfbac23ef674d50",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2125,6 +2125,62 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/prism",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/prism.git",
+                "reference": "2.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/prism-2.2.3.zip",
+                "reference": "2.2.3",
+                "shasum": "95fce6680c04a86cc55677b2c827efe5f013fd2b"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.3",
+                    "datestamp": "1738849182",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "eojthebrave",
+                    "homepage": "https://www.drupal.org/user/79230"
+                },
+                {
+                    "name": "helior",
+                    "homepage": "https://www.drupal.org/user/333731"
+                },
+                {
+                    "name": "swim",
+                    "homepage": "https://www.drupal.org/user/1968266"
+                },
+                {
+                    "name": "_nolocation",
+                    "homepage": "https://www.drupal.org/user/299708"
+                }
+            ],
+            "description": "Support for the prism.js syntax highlighting library",
+            "homepage": "https://www.drupal.org/project/prism",
+            "support": {
+                "source": "https://git.drupalcode.org/project/prism"
             }
         },
         {

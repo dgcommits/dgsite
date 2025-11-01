@@ -27,6 +27,7 @@
         "drupal/focal_point": "^2.1",
         "drupal/layout_builder_styles": "^2.1",
         "drupal/pathauto": "^1.13",
+        "drupal/prism": "^2.2",
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drush/drush": "^13.6"

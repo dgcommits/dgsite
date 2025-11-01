@@ -15,6 +15,7 @@
   nav.menu--main ul.menu > li.menu-item a:visited {
     line-height: $link-height * 1.1;
     font-size: $m-link-size * 1.2;
+    @include bodytext;
   }
 
   nav.menu--main ul.menu > li.menu-item a.is-active {
