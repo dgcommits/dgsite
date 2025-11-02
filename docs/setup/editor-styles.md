@@ -4,11 +4,11 @@ In order to create a unified set of styles that works in all long text field ele
 
 body styles mixin
 
-bodystyles class
+bodystyle class
 
 - **web/themes/custom/busops/sass/custom-overwrites/globals/\_body-style.scss**
 
-  Applies @include bodyStyles; to .body-style content.
+  Applies @include bodyStyle; to .body-style content.
 
   ```scss
   .body-style {
@@ -27,24 +27,12 @@ bodystyles class
   ```
 
   ```scss
-  @mixin landing-heading {
-    color: $color-3;
-    border-bottom: 3px solid $color-3;
-    padding: 0 0 0.25em 0;
-    margin: 0 0 0.67em 0;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    font-weight: 700;
-    letter-spacing: -0.2em;
-  }
-
   @mixin body-h2 {
     font-size: $font-size-h2;
-    margin-top:;
+    margin-top: 0;
     margin-bottom: 3em;
     padding-bottom: 0.5em;
-    letter-spacing: -0.3em;
+    letter-spacing: -0.03em;
     font-family: $font-heading;
     color: $color-h2;
     font-weight: $font-weight-h2;
@@ -58,7 +46,7 @@ bodystyles class
 
   @mixin body-h3 {
     font-size: $font-size-h3;
-    letter-spacing: -0.3em;
+    letter-spacing: -0.03em;
     font-family: $font-heading;
     margin-top: 0;
     margin-bottom: 2em;
@@ -68,7 +56,7 @@ bodystyles class
 
   @mixin body-h4 {
     font-size: $font-size-h4;
-    letter-spacing: -0.3em;
+    letter-spacing: -0.03em;
     margin-top: 0;
     margin-bottom: 2em;
     font-weight: $font-wight-h2;

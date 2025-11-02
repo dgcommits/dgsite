@@ -182,25 +182,6 @@ h1 .name {
   margin-bottom: 0.25em;
 }
 
-h2 {
-  font-weight: $font-weight-h2;
-  font-size: $font-size-h2;
-  color: $color-h2;
-  line-height: $line-height-h2;
-  letter-spacing: 0.005em;
-  border-bottom-style: solid;
-  border-bottom-width: 0.25rem;
-  border-bottom-color: $color-1;
-  padding-bottom: 0.25em;
-  clear: both;
-}
-
-h2:after {
-  display: block;
-  width: 100%;
-  margin-bottom: $siteg * 0.5;
-}
-
 h2.pane-title {
 }
 
@@ -211,53 +192,25 @@ h2.pane-title {
 
 .block.section-header h2,
 .section-header h2 {
-  text-align: center;
-  color: $color-h2;
-  letter-spacing: 0.05em;
-  font-weight: 300;
-  margin: 0;
-  padding: 0.5em 0;
-  font-size: 2.4em;
-  border-bottom: $stroke-1 * 0.5 solid $color-2;
 }
 
 .block.section-header h2 a:link,
 .block.section-header h2 a:visited,
 .section-header h2 a:link,
 .section-header h2 a:visited {
-  color: $color-h2;
-  text-decoration: none;
-  border: $stroke-1 * 0.5 solid rgba(transparent, 0);
 }
 
 .block.section-header h2 a:hover,
 .section-header h2 a:hover {
-  color: $color-h2;
-  border-color: rgba($color-2, 1);
 }
 
 h3 {
-  font-weight: $font-weight-h3;
-  font-size: $font-size-h3;
-  color: $color-h3;
-  line-height: $line-height-h3;
-  letter-spacing: -0.02em;
-  margin-bottom: $siteg * 0.5;
 }
 
 h4 {
-  font-weight: $font-weight-h4;
-  font-size: $font-size-h4;
-  color: $color-h4;
-  line-height: $line-height-h4;
-  margin-bottom: $siteg;
 }
 
 h5 {
-  font-weight: $font-weight-h5;
-  font-size: $font-size-h5;
-  color: $color-h5;
-  line-height: $line-height-h5;
 }
 
 h6 {

@@ -1,7 +1,6 @@
 @use 'var_default' as vars;
 @use 'mixins' as *;
 
-// _body-style-include.scss
 @mixin bodyStyle {
   /* these styles are imported into _body-style.scss and editor-styles.scss */
   /* include all styles that can apply to the editor body and the editor    */
@@ -76,10 +75,10 @@
     overflow: hidden; /* prevent lists from extending into floats */
     li {
       padding-left: 0.5em;
-      margin-bottom: 2px;
+      margin-bottom: units(2px);
     }
     li:last-child {
-      margin-bottom: 0;
+      margin-bottom: units(0);
     }
   }
 
@@ -109,23 +108,19 @@
 
   figure {
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: units(1);
     width: 100%;
     @include desktop-small {
-      figure[class^='display--page_66'],
-      figure[class^='display--article_66'] {
+      figure[class^='display--main_66'] {
         max-width: 65%;
       }
-      figure[class^='display--page_50'],
-      figure[class^='display--article_50'] {
+      figure[class^='display--main_50'] {
         max-width: 49%;
       }
-      figure[class^='display--page_33'],
-      figure[class^='display--article_33'] {
+      figure[class^='display--main_33'] {
         max-width: 32%;
       }
-      figure[class^='display--page_25'],
-      figure[class^='display--article_25'] {
+      figure[class^='display--main_25'] {
         max-width: 24%;
       }
     }
@@ -150,11 +145,11 @@
   }
 
   figcaption {
-    color: rgba(#7b7a7a, 1);
+    color: vars.$gray;
     outline-offset: -1px;
     background-color: unset;
     margin: 0 !important;
-    padding: 2px 0 0 0 !important;
+    padding: 2em 0 0 0 !important;
     font-size: 0.75em;
     font-style: italic;
   }
@@ -208,35 +203,30 @@
 
   .align-center {
     text-align: center;
-    margin: 0 auto 1em auto;
+    margin: 0 auto units(1) auto;
     @include desktop-small {
       margin: 0 auto;
       max-width: 95%;
     }
   }
   @include desktop-small {
-    figure:has([class*=' display--page_100']),
-    figure:has([class*=' display--article_100']) {
+    figure:has([class*=' display--main_100']) {
       max-width: 100%;
     }
 
-    figure:has([class*=' display--page_66']),
-    figure:has([class*=' display--article_66']) {
+    figure:has([class*=' display--main_66']) {
       max-width: 65%;
     }
 
-    figure:has([class*=' display--page_50']),
-    figure:has([class*=' display--article_50']) {
+    figure:has([class*=' display--main_50']) {
       max-width: 49%;
     }
 
-    figure:has([class*=' display--page_33']),
-    figure:has([class*=' display--article_33']) {
+    figure:has([class*=' display--main_33']) {
       max-width: 32%;
     }
 
-    figure:has([class*=' display--page_25']),
-    figure:has([class*=' display--article_25']) {
+    figure:has([class*=' display--main_25']) {
       max-width: 24%;
     }
   }
@@ -247,20 +237,20 @@
   }
 
   @include desktop-small {
-    [class*=' display--page_66'],
-    [data-view-mode*=' page_66'] {
+    [class*=' display--main_66'],
+    [data-view-mode*=' main_66'] {
       max-width: 65%;
     }
-    [class*=' display--page_50'],
-    [data-view-mode*=' page_50'] {
+    [class*=' display--main_50'],
+    [data-view-mode*=' main_50'] {
       max-width: 49%;
     }
-    [class*=' display--page_33'],
-    [data-view-mode*=' page_33'] {
+    [class*=' display--main_33'],
+    [data-view-mode*=' main_33'] {
       max-width: 32%;
     }
-    [class*=' display--page_25'],
-    [data-view-mode*=' page_25'] {
+    [class*=' display--main_25'],
+    [data-view-mode*=' main_25'] {
       max-width: 24%;
     }
   }
@@ -275,19 +265,19 @@
 
   @include desktop-small {
     .media-ext--svg {
-      &[class*='display--page_100'] {
+      &[class*='display--main_100'] {
         width: 100%;
       }
-      &[class*='display--page_66'] {
+      &[class*='display--main_66'] {
         width: 65%;
       }
-      &[class*='display--page_50'] {
+      &[class*='display--main_50'] {
         width: 49%;
       }
-      &[class*='display--page_33'] {
+      &[class*='display--main_33'] {
         width: 32%;
       }
-      &[class*='display--page_25'] {
+      &[class*='display--main_25'] {
         width: 24%;
       }
       img {
@@ -320,13 +310,13 @@
 
   .ck-horizontal-line hr,
   hr {
-    background-color: 2px solid rgba(#7b7a7a, 1);
+    background-color: 2px solid vars.$gray;
     height: 0px;
-    border-top: 2px solid rgba(#7b7a7a, 1);
+    border-top: 2px solid vars.$gray;
     clear: both;
   }
   a {
-    &.usa-button--red {
+    &.button--red {
       background-color: #d83933;
       color: #fff;
       &:hover {
@@ -336,7 +326,7 @@
         background-color: #8b0a03;
       }
     }
-    &.usa-button--orange {
+    &.button--orange {
       color: #1b1b1b;
       background-color: #fa9441;
       &:hover {
@@ -360,8 +350,8 @@
     th,
     td {
       border: 1px double #b3b3b3;
-      padding: 0.4rem;
-      min-width: 2rem;
+      padding: 0.4em;
+      min-width: 2em;
     }
     th {
       background-color: rgba(0, 0, 0, 0.05);
@@ -369,26 +359,9 @@
     }
     td {
       border: 1px double #b3b3b3;
-      padding: 0.25rem;
+      padding: 0.25em;
     }
   }
 
-  /* display styles for external form media type */
-
-  .external-form.display--default {
-    /* default style is a typical link */
-    background-color: #fff;
-  }
-
-  .external-form.display--form_button {
-    /* button style adds usa-button class */
-  }
-
-  div:has(.external-form),
-  *:has(.inline-external-form) {
-    /* add spacing beneath form items */
-    margin-bottom: 1.5em;
-  }
-
-  /* /bodyStyles */
+  /* /bodyStyle */
 }

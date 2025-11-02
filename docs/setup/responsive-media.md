@@ -18,7 +18,7 @@ main_100 - applies to the "main" region, 100% width, no cropping
 
 Templates + SCSS
 
-- **web/themes/custom/busops/templates/media/media--image.html.twig**
+- **web/themes/custom/gravelle1/templates/media/media--image.html.twig**
 
   Adds display--<view_mode> and media-ext--<ext> class to media wrappers.
 
@@ -36,7 +36,7 @@ Templates + SCSS
 </div>
 ```
 
-- **web/themes/custom/busops/sass/editor-styles.scss**
+- **web/themes/custom/gravelle1/scss/base/var/\_body-style.scss**
 
   CKEditor content widths for .media[class^="display--main_*"] and figure[data-view-mode^="main_*"].\*\*
 
@@ -106,11 +106,10 @@ Templates + SCSS
 }
 ```
 
-- **web/themes/custom/gravelle1/scss/base/var/\_mixins.scss**
-  @mixin bodyStyles includes all display sizing; see display--main\*_ and data-view-mode_=" main\*\*".
+- **web/themes/custom/gravelle1/scss/base/var/\_body-style.scss**
+  @mixin bodyStyles includes all display sizing; see display--main\*_ and data-view-mode_=" main\*\*". applies @include bodyStyles; to .body-style content.
 
 ```scss
-// _body-style-include.scss
 @mixin bodyStyle {
   /* these styles are imported into _body-style.scss and editor-styles.scss */
   /* include all styles that can apply to the editor body and the editor    */
@@ -162,9 +161,9 @@ Templates + SCSS
   ul,
   ol {
     margin-bottom: 2em;
-    font-family: $font-body;
-    line-height: $line-height-body;
-    font-size: $font-size-body;
+    font-family: vars.$font-body;
+    line-height: vars.$line-height-body;
+    font-size: vars.$font-size-body;
     /* max-width: 40rem; use max-width to improve line-length/readability sitewide */
   }
 
@@ -245,7 +244,7 @@ Templates + SCSS
       padding: 0;
       margin: 0; /* remove margin from img in figure tag */
       display: block;
-      @include tablet {
+      @include desktop-small {
         border-bottom: 0;
       }
       &.align-center img {
@@ -255,7 +254,7 @@ Templates + SCSS
   }
 
   figcaption {
-    color: $gray;
+    color: vars.$gray;
     outline-offset: -1px;
     background-color: unset;
     margin: 0 !important;
@@ -290,7 +289,7 @@ Templates + SCSS
   }
 
   .align-right {
-    @include tablet {
+    @include desktop-small {
       float: right;
       margin-left: 2em;
       max-width: 65%;
@@ -301,7 +300,7 @@ Templates + SCSS
   }
 
   .align-left {
-    @include tablet {
+    @include desktop-small {
       float: left;
       margin: 0 2em 0 0;
       max-width: 65%;
@@ -314,12 +313,12 @@ Templates + SCSS
   .align-center {
     text-align: center;
     margin: 0 auto units(1) auto;
-    @include tablet {
+    @include desktop-small {
       margin: 0 auto;
       max-width: 95%;
     }
   }
-  @include tablet {
+  @include desktop-small {
     figure:has([class*=' display--main_100']) {
       max-width: 100%;
     }
@@ -346,7 +345,7 @@ Templates + SCSS
     display: inline-block;
   }
 
-  @include tablet {
+  @include desktop-small {
     [class*=' display--main_66'],
     [data-view-mode*=' main_66'] {
       max-width: 65%;
@@ -373,7 +372,7 @@ Templates + SCSS
     }
   }
 
-  @include tablet {
+  @include desktop-small {
     .media-ext--svg {
       &[class*='display--main_100'] {
         width: 100%;
@@ -406,23 +405,23 @@ Templates + SCSS
     }
     p {
       margin-top: 0;
-      font-weight: $font-weight-body-light;
+      font-weight: vars.$font-weight-body-light;
       font-style: italic;
 
       &:last-child {
         margin-bottom: 0;
       }
       strong {
-        font-weight: $font-weight-body-medium; /* 500 */
+        font-weight: vars.$font-weight-body-medium; /* 500 */
       }
     }
   }
 
   .ck-horizontal-line hr,
   hr {
-    background-color: 2px solid $gray;
+    background-color: 2px solid vars.$gray;
     height: 0px;
-    border-top: 2px solid $gray;
+    border-top: 2px solid vars.$gray;
     clear: both;
   }
   a {
@@ -473,11 +472,9 @@ Templates + SCSS
     }
   }
 
-  /* /bodyStyles */
+  /* /bodyStyle */
 }
 ```
-
-web/themes/custom/busops/sass/custom-overwrites/globals/\_body-style.scss:7 — applies @include bodyStyles; to .body-style content.
 
 web/themes/custom/busops/busops.info.yml:41 — registers CKEditor 5 stylesheet assets/css/editor-styles.css.
 

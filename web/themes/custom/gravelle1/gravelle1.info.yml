@@ -36,4 +36,4 @@ description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.2'
 ckeditor5-stylesheets:
-  - css/ckstyles.css
+  - css/editor-styles.css
