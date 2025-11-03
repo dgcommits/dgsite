@@ -1,0 +1,15 @@
+uuid: 367d4273-0ae5-4c64-abdf-7fc72ed69c8c
+langcode: en
+status: true
+dependencies: {  }
+name: main_33_small
+label: main_33_small
+effects:
+  232e6cb9-3d7d-418f-8ad3-0017f6468a7a:
+    uuid: 232e6cb9-3d7d-418f-8ad3-0017f6468a7a
+    id: image_scale
+    weight: 1
+    data:
+      width: 205
+      height: null
+      upscale: true

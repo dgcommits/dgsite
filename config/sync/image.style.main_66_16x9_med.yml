@@ -1,0 +1,17 @@
+uuid: 21e96148-d592-4925-a3f9-d9e720ddbf3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: main_66_16x9_med
+label: main_66_16x9_med
+effects:
+  7e21b219-9c39-498f-859d-edf3b636adff:
+    uuid: 7e21b219-9c39-498f-859d-edf3b636adff
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 315
+      crop_type: focal_point

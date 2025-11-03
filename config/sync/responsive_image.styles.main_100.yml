@@ -1,0 +1,42 @@
+uuid: 9803bf7e-fe7e-4bf1-b166-e04a56a448eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.main_100_handheld
+    - image.style.main_100_large
+    - image.style.main_100_max
+    - image.style.main_100_med
+    - image.style.main_100_small
+  theme:
+    - gravelle1
+id: main_100
+label: main_100
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: main_100_max
+    breakpoint_id: gravelle1.desktop-max
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: main_100_large
+    breakpoint_id: gravelle1.desktop-large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: main_100_med
+    breakpoint_id: gravelle1.desktop-medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: main_100_small
+    breakpoint_id: gravelle1.desktop-small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: main_100_handheld
+    breakpoint_id: gravelle1.handheld
+    multiplier: 1x
+breakpoint_group: gravelle1
+fallback_image_style: '_original image_'

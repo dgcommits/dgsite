@@ -1,0 +1,15 @@
+uuid: 71c99e8a-5e30-4e8b-8d25-d57f79d3c4d1
+langcode: en
+status: true
+dependencies: {  }
+name: main_25_small
+label: main_25_small
+effects:
+  d2056329-237c-4041-a1ff-81503b924996:
+    uuid: d2056329-237c-4041-a1ff-81503b924996
+    id: image_scale
+    weight: 1
+    data:
+      width: 118
+      height: null
+      upscale: true

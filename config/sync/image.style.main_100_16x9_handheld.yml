@@ -1,0 +1,17 @@
+uuid: ac0e1356-3698-4dd6-a340-5f595f18cb86
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: main_100_16x9_handheld
+label: main_100_16x9_handheld
+effects:
+  c3b5804a-81a5-46d0-8de8-09e0fe8a7ec6:
+    uuid: c3b5804a-81a5-46d0-8de8-09e0fe8a7ec6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 705
+      height: 529
+      crop_type: focal_point

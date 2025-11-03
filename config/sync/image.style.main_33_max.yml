@@ -1,0 +1,15 @@
+uuid: fe0fae91-37a6-49ea-8826-daae5373c99e
+langcode: en
+status: true
+dependencies: {  }
+name: main_33_max
+label: main_33_max
+effects:
+  f3637adb-f153-4c02-be64-d2c05e445806:
+    uuid: f3637adb-f153-4c02-be64-d2c05e445806
+    id: image_scale
+    weight: 1
+    data:
+      width: 511
+      height: null
+      upscale: true

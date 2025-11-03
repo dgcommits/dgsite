@@ -6,17 +6,17 @@ Responsivve media styles rely on these Drupal modules:
 - Responsive Image
 - Breakpoint
 - CKeditor
-- Texst Editor
+- Text Editor
 
-Responsive Media styles are identified first, by the area the design element is to be placed. For example, in a typical web template, content is viewd in an area with a consistent view area, such as #content would be conisitent thourght pages of a particular content type. Of cource, these standard-width view areas are most likely used between content types. why we start with the abstract area called, "main". Since "main" will have a defined area width in any of our breakpoints, we start with this for our machine name convention:
+Rather than naming responsive styles after content types or templates, I use region‑based names (for example, "main") that describe where the media appears in the layout. Regions like the primary content column are consistent across pages and content types, and their widths are already defined by our breakpoints. A region‑first convention decouples display semantics (where/how big) from content semantics (what/type), so the same view mode can be reused in Articles, Basic Pages, Paragraphs, and Blocks. It also survives design refactors: if the main column changes width at certain breakpoints, the styles behind a name like "main_50" can evolve without renaming. This makes the system predictable, scalable, and easy to map to breakpoints and SCSS. The scheme also extends naturally to other regions (e.g., "sidebar", "hero") as needed.
 
-main_100_16x9 - applies to the "main" region, 100% width, 16x9 is the acpect ratio when the image is cropped
+main_100_16x9 - applies to the "main" region, 100% width, 16x9 is the aspect ratio when the image is cropped
 
 main_50_1x1 - applies to the "main" region, 50% width, 1x1 is the aspect ratio when the image is cropped
 
 main_100 - applies to the "main" region, 100% width, no cropping
 
-Templates + SCSS
+images are cropped using the "focal point scale and crop
 
 - **web/themes/custom/gravelle1/templates/media/media--image.html.twig**
 
@@ -35,6 +35,10 @@ Templates + SCSS
   {{ content }}
 </div>
 ```
+
+- **web/themes/custom/busops/busops.info.yml**
+
+  Registers CKEditor 5 stylesheet assets/css/editor-styles.css.
 
 - **web/themes/custom/gravelle1/scss/base/var/\_body-style.scss**
 
@@ -115,103 +119,6 @@ Templates + SCSS
   /* include all styles that can apply to the editor body and the editor    */
   /* below, to style only the editor, use _editor-styles.scss after         */
   /* @import "custom-overwrites/globals/_body-style-include"                */
-
-  /* position all block level element spacing from the bottom */
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  figure,
-  ul,
-  ol,
-  li {
-    margin-top: 0;
-  }
-
-  /* h1 is outside the page-body in block layout */
-  /* body-style headings are also used in modular sections */
-  /* difinitions are found in globals/_mixins partial      */
-  h2 {
-    @include body-h2;
-  }
-
-  h3 {
-    @include body-h3;
-  }
-
-  h4 {
-    @include body-h4;
-  }
-
-  h5 {
-    @include body-h5;
-  }
-
-  h6 {
-    @include body-h6;
-  }
-
-  /* block-level elements */
-  p,
-  blockquote,
-  figure,
-  ul,
-  ol {
-    margin-bottom: 2em;
-    font-family: vars.$font-body;
-    line-height: vars.$line-height-body;
-    font-size: vars.$font-size-body;
-    /* max-width: 40rem; use max-width to improve line-length/readability sitewide */
-  }
-
-  ul,
-  ol {
-    /* remove margin-bottom from nested lists */
-    ul,
-    ol {
-      margin-bottom: 0;
-    }
-  }
-
-  ul,
-  ol {
-    list-style-position: outside;
-    margin-left: 0;
-    padding-left: 1.5em;
-    overflow: hidden; /* prevent lists from extending into floats */
-    li {
-      padding-left: 0.5em;
-      margin-bottom: units(2px);
-    }
-    li:last-child {
-      margin-bottom: units(0);
-    }
-  }
-
-  ul {
-    ul {
-      list-style-type: circle;
-      ul {
-        list-style-type: square;
-        ul {
-          list-style-type: circle;
-        }
-      }
-    }
-  }
-
-  li,
-  p {
-    img {
-      /* display inline images within text */
-      vertical-align: middle;
-      border: none;
-      margin: 0 0.5em;
-    }
-  }
 
   /* images with captions are wrapped in figure tags */
 
@@ -318,6 +225,7 @@ Templates + SCSS
       max-width: 95%;
     }
   }
+
   @include desktop-small {
     figure:has([class*=' display--main_100']) {
       max-width: 100%;
@@ -338,11 +246,6 @@ Templates + SCSS
     figure:has([class*=' display--main_25']) {
       max-width: 24%;
     }
-  }
-
-  span.highlight {
-    background-color: yellow;
-    display: inline-block;
   }
 
   @include desktop-small {
@@ -395,87 +298,8 @@ Templates + SCSS
     }
   }
 
-  blockquote {
-    margin: 0 1em 2em 0;
-    padding: 2em 6em 2em 3em;
-    border-left: 6px solid #ccc !important;
-
-    &::before {
-      display: none; /* hide gin border */
-    }
-    p {
-      margin-top: 0;
-      font-weight: vars.$font-weight-body-light;
-      font-style: italic;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-      strong {
-        font-weight: vars.$font-weight-body-medium; /* 500 */
-      }
-    }
-  }
-
-  .ck-horizontal-line hr,
-  hr {
-    background-color: 2px solid vars.$gray;
-    height: 0px;
-    border-top: 2px solid vars.$gray;
-    clear: both;
-  }
-  a {
-    &.button--red {
-      background-color: #d83933;
-      color: #fff;
-      &:hover {
-        background-color: #b50909;
-      }
-      &:active {
-        background-color: #8b0a03;
-      }
-    }
-    &.button--orange {
-      color: #1b1b1b;
-      background-color: #fa9441;
-      &:hover {
-        color: #fff;
-        background-color: #c05600;
-      }
-      &:active {
-        color: #fff;
-        background-color: #775540;
-      }
-    }
-  }
-
-  table {
-    border: 1px double #b3b3b3;
-    border-collapse: collapse;
-    border-spacing: 0;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 3em;
-    th,
-    td {
-      border: 1px double #b3b3b3;
-      padding: 0.4em;
-      min-width: 2em;
-    }
-    th {
-      background-color: rgba(0, 0, 0, 0.05);
-      font-weight: 700;
-    }
-    td {
-      border: 1px double #b3b3b3;
-      padding: 0.25em;
-    }
-  }
-
   /* /bodyStyle */
 }
 ```
 
-web/themes/custom/busops/busops.info.yml:41 — registers CKEditor 5 stylesheet assets/css/editor-styles.css.
-
-web/themes/custom/busops/assets/css/editor-styles.css:1 — compiled CSS that styles .ck.ck-content with display--main\_\* (built from the SCSS above).
+## Add Media view modes

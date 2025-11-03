@@ -1,0 +1,15 @@
+uuid: e2aac352-a07e-4b2c-9109-2e1b248804be
+langcode: en
+status: true
+dependencies: {  }
+name: main_50_handheld
+label: main_50_handheld
+effects:
+  fdc82ebd-09d2-4cbd-8700-4957c7ad13e3:
+    uuid: fdc82ebd-09d2-4cbd-8700-4957c7ad13e3
+    id: image_scale
+    weight: 1
+    data:
+      width: 340
+      height: null
+      upscale: true

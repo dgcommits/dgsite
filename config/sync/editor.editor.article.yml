@@ -45,20 +45,48 @@ settings:
         - right
     ckeditor5_codeBlock:
       languages:
-        - { label: 'Plain text', language: plaintext }
-        - { label: C, language: c }
-        - { label: 'C#', language: cs }
-        - { label: C++, language: cpp }
-        - { label: CSS, language: css }
-        - { label: Diff, language: diff }
-        - { label: HTML, language: html }
-        - { label: Java, language: java }
-        - { label: JavaScript, language: javascript }
-        - { label: PHP, language: php }
-        - { label: Python, language: python }
-        - { label: Ruby, language: ruby }
-        - { label: TypeScript, language: typescript }
-        - { label: XML, language: xml }
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -72,10 +100,12 @@ settings:
         startIndex: true
       multiBlock: true
     ckeditor5_sourceEditing:
-      allowed_tags: { }
+      allowed_tags: {  }
     ckeditor5_style:
       styles:
-        - { label: 'Fancy title', element: '<p class="fancy title">' }
+        -
+          label: 'Fancy title'
+          element: '<p class="fancy title">'
     media_media:
       allow_view_mode_override: true
 image_upload:

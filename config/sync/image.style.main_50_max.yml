@@ -1,0 +1,15 @@
+uuid: deb0e98d-4e42-44b7-a821-f4056084e0f1
+langcode: en
+status: true
+dependencies: {  }
+name: main_50_max
+label: main_50_max
+effects:
+  cf740159-12bb-420f-b065-f75b4374f384:
+    uuid: cf740159-12bb-420f-b065-f75b4374f384
+    id: image_scale
+    weight: 1
+    data:
+      width: 1048
+      height: null
+      upscale: true

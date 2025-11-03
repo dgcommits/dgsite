@@ -1,0 +1,17 @@
+uuid: 120ebd53-ac31-4ea7-b0a9-b1d0b53e03b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: main_50_4x3_large
+label: main_50_4x3_large
+effects:
+  0a425dd8-0667-4e41-bab1-2e244df23d36:
+    uuid: 0a425dd8-0667-4e41-bab1-2e244df23d36
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 555
+      height: 555
+      crop_type: focal_point

@@ -68,7 +68,7 @@ settings:
   link_depth_class: 1
   link_text_prefix: ''
   link_text_suffix: ''
-  custom_list_class: ''
+  custom_list_class: sf-style-dg
   custom_item_class: ''
   custom_link_class: ''
 visibility: {  }

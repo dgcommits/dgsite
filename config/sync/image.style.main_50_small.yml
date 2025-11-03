@@ -1,0 +1,15 @@
+uuid: 60c9f22e-09da-4d39-b27e-9bed21e7f9a7
+langcode: en
+status: true
+dependencies: {  }
+name: main_50_small
+label: main_50_small
+effects:
+  8044ef40-1c91-4597-bc43-f1f7d1977db4:
+    uuid: 8044ef40-1c91-4597-bc43-f1f7d1977db4
+    id: image_scale
+    weight: 1
+    data:
+      width: 312
+      height: null
+      upscale: true

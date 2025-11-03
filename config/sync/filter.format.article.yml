@@ -2,6 +2,23 @@ uuid: a8b4c1d2-3e4f-5a6b-7c8d-9e0f1a2b3c4d
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.main_100
+    - core.entity_view_mode.media.main_100_16x9
+    - core.entity_view_mode.media.main_100_21x9
+    - core.entity_view_mode.media.main_100_4x3
+    - core.entity_view_mode.media.main_25
+    - core.entity_view_mode.media.main_25_1x1
+    - core.entity_view_mode.media.main_33
+    - core.entity_view_mode.media.main_33_1x1
+    - core.entity_view_mode.media.main_33_4x3
+    - core.entity_view_mode.media.main_50
+    - core.entity_view_mode.media.main_50_16x9
+    - core.entity_view_mode.media.main_50_1x1
+    - core.entity_view_mode.media.main_50_4x3
+    - core.entity_view_mode.media.main_66
+    - core.entity_view_mode.media.main_66_16x9
+    - core.entity_view_mode.media.main_66_4x3
   module:
     - media
 name: Article
@@ -26,7 +43,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align data-view-mode>'
+      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -47,16 +64,24 @@ filters:
     status: true
     weight: 100
     settings:
-      default_view_mode: article_100_4x3
+      default_view_mode: default
       allowed_view_modes:
-        article_100_4x3: article_100_4x3
-        article_100_16x9: article_100_16x9
-        article_100_1x1: article_100_1x1
-        article_50_4x3: article_50_4x3
-        article_50_16x9: article_50_16x9
-        article_50_1x1: article_50_1x1
-        article_25_4x3: article_25_4x3
-        article_25_16x9: article_25_16x9
-        article_25_1x1: article_25_1x1
+        default: default
+        main_100: main_100
+        main_100_16x9: main_100_16x9
+        main_100_21x9: main_100_21x9
+        main_100_4x3: main_100_4x3
+        main_25: main_25
+        main_25_1x1: main_25_1x1
+        main_33: main_33
+        main_33_1x1: main_33_1x1
+        main_33_4x3: main_33_4x3
+        main_50: main_50
+        main_50_16x9: main_50_16x9
+        main_50_1x1: main_50_1x1
+        main_50_4x3: main_50_4x3
+        main_66: main_66
+        main_66_16x9: main_66_16x9
+        main_66_4x3: main_66_4x3
       allowed_media_types:
         image: image

@@ -1,0 +1,15 @@
+uuid: 95561489-1fd9-40df-b0b3-d334a36dd86a
+langcode: en
+status: true
+dependencies: {  }
+name: main_100_handheld
+label: main_100_handheld
+effects:
+  0bec564c-edc4-4f97-8092-c33c2ebba0b0:
+    uuid: 0bec564c-edc4-4f97-8092-c33c2ebba0b0
+    id: image_scale
+    weight: 1
+    data:
+      width: 705
+      height: null
+      upscale: true

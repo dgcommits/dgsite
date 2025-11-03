@@ -1,0 +1,15 @@
+uuid: aa3cf096-b66b-42cc-96ba-0ecede617c50
+langcode: en
+status: true
+dependencies: {  }
+name: main_50_large
+label: main_50_large
+effects:
+  e33901f9-2243-417a-a5ee-d04ee7797758:
+    uuid: e33901f9-2243-417a-a5ee-d04ee7797758
+    id: image_scale
+    weight: 1
+    data:
+      width: 747
+      height: null
+      upscale: true

@@ -1,0 +1,15 @@
+uuid: 64010dd6-7b46-4892-8c21-02a05595801e
+langcode: en
+status: true
+dependencies: {  }
+name: main_66_med
+label: main_66_med
+effects:
+  c0c5913f-b8fb-407f-844c-af58c69038cb:
+    uuid: c0c5913f-b8fb-407f-844c-af58c69038cb
+    id: image_scale
+    weight: 1
+    data:
+      width: 560
+      height: null
+      upscale: true
