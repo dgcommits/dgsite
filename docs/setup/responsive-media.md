@@ -1,12 +1,13 @@
 ## Responsive Media setup
 
-Responsivve media styles rely on these Drupal modules:
+Responsive media styles rely on these Drupal modules:
 
 - Media (core)
 - Responsive Image
 - Breakpoint
-- CKeditor
+- CKEditor
 - Text Editor
+- Focal Point (if using focal point scale-and-crop)
 
 Rather than naming responsive styles after content types or templates, I use region‑based names (for example, "main") that describe where the media appears in the layout. Regions like the primary content column are consistent across pages and content types, and their widths are already defined by our breakpoints. A region‑first convention decouples display semantics (where/how big) from content semantics (what/type), so the same view mode can be reused in Articles, Basic Pages, Paragraphs, and Blocks. It also survives design refactors: if the main column changes width at certain breakpoints, the styles behind a name like "main_50" can evolve without renaming. This makes the system predictable, scalable, and easy to map to breakpoints and SCSS. The scheme also extends naturally to other regions (e.g., "sidebar", "hero") as needed.
 
@@ -16,7 +17,7 @@ main_50_1x1 - applies to the "main" region, 50% width, 1x1 is the aspect ratio w
 
 main_100 - applies to the "main" region, 100% width, no cropping
 
-images are cropped using the "focal point scale and crop
+Images are cropped using the "Focal Point Scale and Crop" effect when an aspect ratio is specified.
 
 - **web/themes/custom/gravelle1/templates/media/media--image.html.twig**
 
@@ -36,7 +37,7 @@ images are cropped using the "focal point scale and crop
 </div>
 ```
 
-- **web/themes/custom/busops/busops.info.yml**
+- **web/themes/custom/gravelle1/gravelle1.info.yml**
 
   Registers CKEditor 5 stylesheet assets/css/editor-styles.css.
 
