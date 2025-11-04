@@ -19,7 +19,7 @@ main_100 - applies to the "main" region, 100% width, no cropping
 
 Images are cropped using the "Focal Point Scale and Crop" effect when an aspect ratio is specified.
 
-See the list of responsive media styles in [image-styles.md](image-styles)
+See the list of responsive media styles in [image-styles.md](image-styles.md)
 
 - **web/themes/custom/gravelle1/templates/media/media--image.html.twig**
 
@@ -45,7 +45,7 @@ See the list of responsive media styles in [image-styles.md](image-styles)
 
 - **web/themes/custom/gravelle1/scss/base/var/\_body-style.scss**
 
-  CKEditor content widths for .media[class^="display--main_*"] and figure[data-view-mode^="main_*"].\*\*
+  CKEditor content widths for `.media[class^="display--main_*"]` and `figure[data-view-mode^="main_*"]`.
 
 ```scss
 .ck.ck-content {
@@ -114,7 +114,7 @@ See the list of responsive media styles in [image-styles.md](image-styles)
 ```
 
 - **web/themes/custom/gravelle1/scss/base/var/\_body-style.scss**
-  @mixin bodyStyles includes all display sizing; see display--main\*_ and data-view-mode_=" main\*\*". applies @include bodyStyles; to .body-style content.
+  `@mixin bodyStyle` includes all display sizing; see `display--main_*` and `data-view-mode="main_*"`. Applies `@include bodyStyle;` to `.body-style` content.
 
 ```scss
 @mixin bodyStyle {
@@ -127,7 +127,7 @@ See the list of responsive media styles in [image-styles.md](image-styles)
 
   figure {
     margin: 0;
-    margin-bottom: units(1);
+    margin-bottom: 1em;
     width: 100%;
     @include desktop-small {
       figure[class^='display--main_66'] {
@@ -222,7 +222,7 @@ See the list of responsive media styles in [image-styles.md](image-styles)
 
   .align-center {
     text-align: center;
-    margin: 0 auto units(1) auto;
+    margin: 0 auto 1em auto;
     @include desktop-small {
       margin: 0 auto;
       max-width: 95%;
@@ -304,5 +304,9 @@ See the list of responsive media styles in [image-styles.md](image-styles)
   /* /bodyStyle */
 }
 ```
+
+Note: The Twig template expects `file_extension` to output a `.media-ext--<ext>` class. The theme provides this via a preprocess function:
+
+- `web/themes/custom/gravelle1/gravelle1.theme` → `gravelle1_preprocess_media__image()`
 
 ## Add Media view modes
