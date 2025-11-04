@@ -2,48 +2,45 @@
 
 /**
  * @file
- * Functions to support theming.
+ * Theme hooks and preprocess functions for gravelle1.
  */
 
 /**
- * Implements hook_preprocess_image_widget().
+ * Implements hook_preprocess_block().
+ *
+ * When the Main navigation menu block is placed in the `sidebar_first` region,
+ * switch the inner menu theme suggestion to a Pushy-specific template so that
+ * only the drawer instance gets the collapsible submenu markup.
  */
-function gravelle1_preprocess_image_widget(array &$variables): void {
-  $data = &$variables['data'];
+function gravelle1_preprocess_block(array &$variables) {
+  $region = $variables['region'] ?? ($variables['elements']['#region'] ?? NULL);
+  $base_plugin_id = $variables['base_plugin_id'] ?? ($variables['elements']['#base_plugin_id'] ?? NULL);
 
-  // This prevents image widget templates from rendering preview container HTML
-  // to users that do not have permission to access these previews.
-  // @todo revisit in https://drupal.org/node/953034
-  // @todo revisit in https://drupal.org/node/3114318
-  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
-    unset($data['preview']);
+  // Apply to ANY core menu block rendered in the sidebar_first region.
+  if ($region === 'sidebar_first' && $base_plugin_id === 'system_menu_block') {
+    // Recursively locate the menu render array and retarget its theme to
+    // menu__pushy so only the drawer uses Pushy submenu markup.
+    _gravelle1_switch_menu_theme($variables['content']);
   }
 }
 
 /**
- * Implements hook_preprocess_HOOK() for 'media' templates targeting the 'image' bundle.
+ * Walk the render array and switch the first menu theme to `menu__pushy`.
  */
-function gravelle1_preprocess_media__image(array &$variables) {
-  if (!empty($variables['media']) && $variables['media'] instanceof \Drupal\media\MediaInterface) {
-    $media = $variables['media'];
-
-    // Check that the field exists and has a file entity attached.
-    if ($media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
-      $file = $media->get('field_media_image')->entity;
-
-      if ($file && $file->hasField('filename')) {
-        // Safely extract the extension from the raw filename value.
-        $filename = $file->get('filename')->value;
-        $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-        // add the extensions as the file_extension variable
-        $variables['file_extension'] = $extension;
-      }
-      else {
-        $variables['file_extension'] = 'unknown';
-      }
-    }
-    else {
-      $variables['file_extension'] = 'unknown';
+function _gravelle1_switch_menu_theme(&$element) {
+  if (!is_array($element)) {
+    return FALSE;
+  }
+  if (!empty($element['#theme']) && ($element['#theme'] === 'menu' || strpos($element['#theme'], 'menu__') === 0)) {
+    $element['#theme'] = 'menu__pushy';
+    return TRUE;
+  }
+  foreach ($element as &$child) {
+    if (_gravelle1_switch_menu_theme($child)) {
+      return TRUE;
     }
   }
+  return FALSE;
 }
+
+// (Intentionally no block suggestion hook; Pushy is applied via preprocess)
