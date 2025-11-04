@@ -19,6 +19,8 @@ main_100 - applies to the "main" region, 100% width, no cropping
 
 Images are cropped using the "Focal Point Scale and Crop" effect when an aspect ratio is specified.
 
+See the list of responsive media styles in [image-styles.md](image-styles)
+
 - **web/themes/custom/gravelle1/templates/media/media--image.html.twig**
 
   Adds display--<view_mode> and media-ext--<ext> class to media wrappers.

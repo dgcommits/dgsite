@@ -75,10 +75,10 @@
     overflow: hidden; /* prevent lists from extending into floats */
     li {
       padding-left: 0.5em;
-      margin-bottom: units(2px);
+      margin-bottom: 2px;
     }
     li:last-child {
-      margin-bottom: units(0);
+      margin-bottom: 0;
     }
   }
 
@@ -108,7 +108,7 @@
 
   figure {
     margin: 0;
-    margin-bottom: units(1);
+    margin-bottom: 1em;
     width: 100%;
     @include desktop-small {
       figure[class^='display--main_66'] {
@@ -203,7 +203,7 @@
 
   .align-center {
     text-align: center;
-    margin: 0 auto units(1) auto;
+    margin: 0 auto 1em auto;
     @include desktop-small {
       margin: 0 auto;
       max-width: 95%;
@@ -310,10 +310,23 @@
 
   .ck-horizontal-line hr,
   hr {
-    background-color: 2px solid vars.$gray;
     height: 0px;
     border-top: 2px solid vars.$gray;
     clear: both;
+  }
+
+  /* text alignment helpers allowed by the Article format */
+  .text-align-left {
+    text-align: left;
+  }
+  .text-align-center {
+    text-align: center;
+  }
+  .text-align-right {
+    text-align: right;
+  }
+  .text-align-justify {
+    text-align: justify;
   }
   a {
     &.button--red {

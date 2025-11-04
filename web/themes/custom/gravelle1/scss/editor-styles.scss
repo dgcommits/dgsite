@@ -13,7 +13,7 @@
 }
 
 .ck.ck-content {
-  border: 2px solid olivedrab !important;
+  /* removed debug border */
   margin: 0;
   & > h2:first-child {
     /* when the first child of the ckeditor is an h2, remove top margin*/
@@ -53,27 +53,25 @@
     margin: 0 0.5em;
   }
 
-  .media[class^='display--page_66'],
-  figure[data-view-mode^='page_66'] {
+  .media[class^='display--main_66'],
+  figure[data-view-mode^='main_66'] {
     width: 65%;
     max-width: 65%;
   }
 
-  .media[class^='display--page_50'],
-  figure[data-view-mode^='page_50'] {
-    border: 2px solid darkorange;
+  .media[class^='display--main_50'],
+  figure[data-view-mode^='main_50'] {
     width: 49%;
     max-width: 49%;
   }
 
-  .media[class^='display--page_33'],
-  figure[data-view-mode^='page_33'] {
+  .media[class^='display--main_33'],
+  figure[data-view-mode^='main_33'] {
     max-width: 32%;
   }
 
-  .media[class^='display--page_25'],
-  figure[data-view-mode^='page_25'] {
-    border: 2px solid olivedrab;
+  .media[class^='display--main_25'],
+  figure[data-view-mode^='main_25'] {
     max-width: 24%;
   }
   /* /ck_content */
