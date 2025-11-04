@@ -22,6 +22,7 @@ Refer to docs/setup/utility-belt.md for build and cache commands used below.
 - Pushy assets (checked into theme)
   - CSS: `web/themes/custom/gravelle1/js/pushy/css/pushy.css`
   - JS: `web/themes/custom/gravelle1/js/pushy/js/pushy.min.js`
+  - Arrow: `web/themes/custom/gravelle1/js/pushy/img/arrow.svg`
 
 ## Markup
 
@@ -62,6 +63,7 @@ Ensure the following elements exist in your page layout (already present in the 
 
 Notes
 
+- The theme uses only `page.html.twig` for page layout (no SDC `site-page.twig`).
 - Pushy v2 supports `data-menu-btn-selector` and `data-focus` on `<nav class="pushy …">` to customize the toggle selector or focus target. This theme sets both without changing design:
 
 ```twig
@@ -130,6 +132,12 @@ You can change these in `web/themes/custom/gravelle1/js/pushy/css/pushy.css`:
 
 Pushy automatically adds body classes (`pushy-open-right` or `pushy-open-left`) to animate both the drawer and `#container`.
 
+## Drawer Menu Behavior
+- Region‑scoped application: the theme preprocess switches any core menu block rendered in `sidebar_first` to use the Pushy menu template (`menu__pushy`) so it only affects the drawer.
+- Demo‑style parents: expandable parents render as buttons and do not navigate; the parent link is added as the first child item inside the submenu (e.g., “All Articles”).
+- Collapsed by default: submenus are collapsed unless the parent is in the active trail (arrow rotates when open).
+- Styling isolation: header and `mgr-links` use default nav styles; the drawer uses `.pushy …` styling and resets so header styles don’t bleed in.
+
 ## Placing Menu Content
 
 - Go to Structure → Block layout → gravelle1 → `Sidebar first` and place the blocks/menus you want in the drawer (e.g., Main navigation).
@@ -166,6 +174,8 @@ lando drush cr
   - Confirm the button has class `.menu-btn` or set `data-menu-btn-selector` on the pushy nav.
 - Drawer width not pushing correctly
   - Update widths in `pushy.css` for both the drawer and the panel transforms.
+ - Header menu shows sublinks
+   - Reduce the header block depth to 1 (Block config → Maximum number of menu levels) or leave it as‑is if that’s desired. Header/mgr-links styles are scoped and won’t affect the drawer.
 
 ## Version
 
