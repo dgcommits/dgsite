@@ -18,7 +18,7 @@ regions:
 libraries:
   - gravelle1/base
   - gravelle1/messages
-  - gravelle1/mobile-menu
+  - gravelle1/pushy
   - gravelle1/fonts.roboto
   - core/normalize
 libraries-extend:

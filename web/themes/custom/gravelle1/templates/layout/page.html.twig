@@ -43,11 +43,16 @@
  */
 #}
 
-{% if page.sidebar_first %}
-  <div id="mobile-menu" class="offcanvas-menu">
-    {{ page.sidebar_first }}
+<!-- Pushy Menu -->
+<nav class="pushy pushy-right" data-menu-btn-selector=".menu-btn" data-focus=".pushy a">
+  <div class="pushy-content">
+    {% if page.sidebar_first %}
+      <div class="sidebar">
+        {{ page.sidebar_first }}
+      </div>
+    {% endif %}
   </div>
-{% endif %}
+</nav>
 <!-- Site Overlay -->
 <div class="site-overlay"></div>
 <div id="container" class="sitew"><!-- required for pushy menu -->

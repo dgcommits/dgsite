@@ -152,6 +152,9 @@ body * {
   align-items: center;
 }
 
+/* Overlay visibility while open */
+body.menu-open .site-overlay { display: block; opacity: 1; }
+
 .page-header button.menu-btn {
   -webkit-appearance: none;
   -moz-appearance: none;

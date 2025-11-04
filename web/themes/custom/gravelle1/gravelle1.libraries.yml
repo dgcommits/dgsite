@@ -44,8 +44,7 @@ base:
         weight: -10
       css/components/ui-dialog.css:
         weight: -10
-      css/mobile-menu.css:
-        weight: -10
+      # removed old mobile-menu.css include; handled via component styles
       css/styles.css:
         weight: -10
 dialog:
@@ -113,12 +112,15 @@ user:
     component:
       css/components/user.css:
         weight: -10
-mobile-menu:
+## mobile-menu library removed in favor of slideout-menu
+
+pushy:
+  css:
+    theme:
+      js/pushy/css/pushy.css: {}
   js:
-    js/mobile-menu.js: {}
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
+    js/pushy/js/pushy.min.js: {}
+  # Pushy v2 has no jQuery dependency
 
 fonts.roboto:
   css:
