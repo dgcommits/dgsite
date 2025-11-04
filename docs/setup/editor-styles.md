@@ -1,10 +1,15 @@
 # Editor Styles (WYSIWYG)
 
-In order to create a unified set of styles that works in all long text field elements. There is a bodyStyle mixin, that imports the css for prose. It uses default variables for headings as well ensureing that not just the ckeditor, but all fomratted content follows the same rules.
+In order to create a unified set of styles that works in all long text field elements. There is a bodyStyle mixin, that imports the css for prose. It uses default variables for headings as well ensureing that not just the ckeditor, but all formatted content follows the same rules.
 
-body styles mixin
+To apply styles to all long-text fields, change the templates to make sure the body-style class is applied globally.
 
-bodystyle class
+- templates/field/field--text-with-summary.html.twig
+- templates/field/field--text-long.html.twig
+
+The body-style class imports the bodyStyle mixin so that the set of styles for prose can be used anywhere.
+
+The headings and body-copy elements can be customized by editing the default variables in scss/base/var/\_var_default.scss
 
 - **web/themes/custom/gravelle1/scss/base/var/\_body-style.scss**
 
