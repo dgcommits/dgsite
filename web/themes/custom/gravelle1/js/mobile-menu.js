@@ -2,7 +2,8 @@
   Drupal.behaviors.mobileMenuToggle = {
     attach: function (context) {
       // Get elements globally using document.querySelector
-      const toggle = document.querySelector('#menu-toggle');
+      // Support either an id or class-based toggle button
+      const toggle = document.querySelector('#menu-toggle') || document.querySelector('.menu-btn');
       const menu = document.querySelector('#mobile-menu');
       const overlay = document.querySelector('.site-overlay');
 
@@ -15,12 +16,16 @@
 
           toggle.classList.add('menu-bound');
 
-          toggle.addEventListener('click', () => {
-            console.log('Toggle button clicked'); // Add this line
+          const openMenu = () => {
             const isOpen = menu.classList.toggle('is-active');
             toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             document.body.classList.toggle('menu-open', isOpen);
             overlay.classList.toggle('is-active', isOpen);
+          };
+
+          toggle.addEventListener('click', () => {
+            console.log('Toggle button clicked'); // Add this line
+            openMenu();
           });
 
 
@@ -29,6 +34,17 @@
             overlay.classList.remove('is-active');
             document.body.classList.remove('menu-open');
             toggle.setAttribute('aria-expanded', 'false');
+          });
+
+          // Close on Escape for accessibility
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menu.classList.contains('is-active')) {
+              menu.classList.remove('is-active');
+              overlay.classList.remove('is-active');
+              document.body.classList.remove('menu-open');
+              toggle.setAttribute('aria-expanded', 'false');
+              toggle.focus();
+            }
           });
         }
       } else {
