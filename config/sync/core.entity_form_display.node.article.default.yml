@@ -3,16 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.comment
     - field.field.node.article.field_article_body
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
-    - comment
-    - image
     - path
+    - svg_image
     - text
 _core:
   default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
@@ -21,12 +19,6 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
-  comment:
-    type: comment_default
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 5

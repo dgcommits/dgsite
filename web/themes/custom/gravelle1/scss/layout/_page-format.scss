@@ -134,11 +134,12 @@ div.geshifilter pre {
 .page-title {
   /* wrap all h1s in page-title class */
   color: $color-1;
-  border-bottom: $stroke-2 solid rgba($color-1, 0.5);
+  border-bottom: $stroke-2 solid rgba($color-2, 0.5);
 }
 
 h1 {
   /* font */
+  font-family: $font-heading;
   font-weight: $font-weight-h1;
   font-size: $font-size-h1;
   color: $color-h1;

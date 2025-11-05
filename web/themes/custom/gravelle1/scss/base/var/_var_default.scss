@@ -30,7 +30,7 @@ $yellow: #f0d27b !default; /* yellow - notes */
 $black: #000000 !default; /* black */
 $color-text: #fff5e4 !default;
 
-$font-heading: 'Open Sans', sans-serif !default; /* heading font */
+$font-heading: 'Roboto', sans-serif !default; /* heading font */
 $font-body: 'Open Sans', sans-serif !default; /* body font */
 
 /* fonts */
@@ -44,7 +44,7 @@ $line-height-body: 1.35em !default;
 /* headings */
 $font-size-small: $font-size-body * 0.9 !default;
 /* h1 */
-$font-weight-h1: normal !default;
+$font-weight-h1: 700 !default;
 $font-size-h1: $font-size-body * 2.75 !default;
 $line-height-h1: 1.15em !default;
 $color-h1: $color-2;
