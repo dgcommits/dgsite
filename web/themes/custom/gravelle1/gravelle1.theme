@@ -22,6 +22,13 @@ function gravelle1_preprocess_block(array &$variables) {
     // menu__pushy so only the drawer uses Pushy submenu markup.
     _gravelle1_switch_menu_theme($variables['content']);
   }
+
+  // Expose view mode for banner_announcement blocks to Twig.
+  if (!empty($variables['content']) && isset($variables['elements']['#base_plugin_id']) && $variables['elements']['#base_plugin_id'] === 'block_content') {
+    // Try to read the rendered entity view mode from the content render array.
+    $view_mode = $variables['elements']['content']['#view_mode'] ?? 'default';
+    $variables['banner_announcement_view_mode'] = $view_mode;
+  }
 }
 
 /**

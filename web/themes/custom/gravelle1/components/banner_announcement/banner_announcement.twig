@@ -1,0 +1,12 @@
+{#
+  Banner Announcement SDC (component template)
+  Mirrors banner_announcement.html.twig so SDC can resolve the template.
+#}
+
+{{ attach_library('gravelle1/banner_announcement') }}
+
+{% set vm = props.view_mode|default('default') %}
+{{ include([
+  '@gravelle1/components/banner_announcement/partials/' ~ vm ~ '.html.twig',
+  '@gravelle1/components/banner_announcement/partials/default.html.twig'
+], { props: props }) }}
