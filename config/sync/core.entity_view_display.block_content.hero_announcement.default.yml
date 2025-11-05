@@ -1,0 +1,44 @@
+uuid: 3b46219c-9c18-4b0f-b4d6-c8abf9c82c32
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_announcement
+    - field.field.block_content.hero_announcement.field_block_image
+    - field.field.block_content.hero_announcement.field_block_link
+    - field.field.block_content.hero_announcement.field_block_text
+    - field.field.block_content.hero_announcement.field_block_title
+id: block_content.hero_announcement.default
+targetEntityType: block_content
+bundle: hero_announcement
+mode: default
+content:
+  field_block_image:
+    type: image
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_block_link:
+    type: link
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_block_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_block_title:
+    type: string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -23,11 +23,11 @@ function gravelle1_preprocess_block(array &$variables) {
     _gravelle1_switch_menu_theme($variables['content']);
   }
 
-  // Expose view mode for banner_announcement blocks to Twig.
+  // Expose view mode for custom block content to Twig.
   if (!empty($variables['content']) && isset($variables['elements']['#base_plugin_id']) && $variables['elements']['#base_plugin_id'] === 'block_content') {
     // Try to read the rendered entity view mode from the content render array.
     $view_mode = $variables['elements']['content']['#view_mode'] ?? 'default';
-    $variables['banner_announcement_view_mode'] = $view_mode;
+    $variables['block_view_mode'] = $view_mode;
   }
 }
 

@@ -1,0 +1,11 @@
+uuid: 6c8b1c1e-1b8f-4f5c-9c6c-7e7e0b5a4d11
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.variant_01
+label: 'Variant 01'
+description: null
+targetEntityType: block_content
+cache: true

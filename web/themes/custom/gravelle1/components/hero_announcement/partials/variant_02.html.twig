@@ -1,0 +1,18 @@
+<div class="block-wrap{{ props.has_label ? ' wlabel' }}">
+  {% if props.image %}
+    <div class="image">
+      {% if props.url %}
+        <a href="{{ props.url }}">{{ props.image|raw }}</a>
+      {% else %}
+        {{ props.image|raw }}
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if props.has_label and props.label %}
+    <div class="title"><h3>{{ props.label }}</h3></div>
+  {% endif %}
+  <div class="content"><div class="text">
+    <span class="copy">{{ props.text|raw }}</span>
+  </div></div>
+</div>
+{% if props.url %}<a class="display-link" href="{{ props.url }}">&nbsp;</a>{% endif %}

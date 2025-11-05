@@ -1,8 +1,0 @@
-uuid: e19039a9-4c69-4e37-af2d-49db76f5ab25
-langcode: en
-status: true
-dependencies: {  }
-id: banner_announcement
-label: 'Banner Announcement'
-revision: false
-description: 'An announcement banner with text and image.'

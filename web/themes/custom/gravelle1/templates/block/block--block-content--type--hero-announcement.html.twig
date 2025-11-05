@@ -1,0 +1,35 @@
+{# Generic template for all hero_announcement view modes.
+   Delegates full markup to the existing SDC (currently banner_announcement) until SDC is relocated. #}
+
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-type--hero_announcement',
+  'block-view-mode--' ~ (block_view_mode|default('default')),
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {# Map fields to component props #}
+    {% set _link_obj = content.field_block_link is defined and content.field_block_link|render|striptags|trim ? content.field_block_link.0['#url'] : null %}
+    {% set _link_url = _link_obj %}
+    {% set _link_title = content.field_block_link is defined and content.field_block_link|render|striptags|trim ? content.field_block_link.0['#title'] : null %}
+    {% set _image = content.field_block_image is defined ? content.field_block_image|render : null %}
+    {% set _text = content.field_block_text is defined ? content.field_block_text|render : '' %}
+    {% set _vm = block_view_mode|default('default') %}
+
+    {{ include('@gravelle1/components/hero_announcement/hero_announcement.html.twig', {
+      props: {
+        has_label: label ? true : false,
+        label: label,
+        text: _text,
+        url: _link_url,
+        link_title: _link_title,
+        image: _image,
+        view_mode: _vm,
+      }
+    }) }}
+  {% endblock %}
+</div>

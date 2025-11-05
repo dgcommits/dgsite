@@ -1,0 +1,11 @@
+uuid: 0da2c8e4-3a0a-4c86-9f3c-8b0e69e6b2a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.variant_02
+label: 'Variant 02'
+description: null
+targetEntityType: block_content
+cache: true

@@ -133,3 +133,8 @@ banner_announcement:
   css:
     theme:
       components/banner_announcement/banner_announcement.css: {}
+
+hero_announcement:
+  css:
+    theme:
+      components/hero_announcement/hero_announcement.css: {}

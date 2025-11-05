@@ -1,41 +1,69 @@
-# Custom blocks
+# Custom Blocks (SDC standard)
 
-Custom block on this site are design for usage. For example, a "banner" will fill the full wiwth of the contenet where a "grid" will display a set of content items.
+This site’s custom blocks are implemented as Single‑Directory Components (SDCs) so each block’s template, variants, and styles live together and are easy to maintain.
 
-Custom blocks ar stored as Drupal SDCs so files are consolidated. Where there are
+Key ideas
+- Keep block bundles stable and intentional (hero_*, grid_*, media_text, quote_*, text_rich).
+- Use view modes only for structural/formatter differences (different fields/order/formatters).
+- Use SDC props for styling/behavior (clickable, density, theme, media style).
 
-Custom blocks allow fro multiple "view-modes" to suit user preferences. View mode machine names are ordered 00-99 to keep naming concsisitent, but lables can be used on the frontend to helpo content editor dirrentiate their use.
+When to add a view mode vs. a prop
+- View mode: you must change field composition or formatters (e.g., split_left vs split_right layouts).
+- Prop: same fields, different behavior or style (e.g., make the whole block clickable, compact spacing).
 
-Custom block view modes are are set up in the SDC in the partials folder (which cold be changed to "displays" or "view-modes")
+Standard SDC layout (per bundle)
 
-### Example Custom Block folder setup
-
-Block templates delegate the blocks and view-mode rendering to the SDC:
+Block template delegates all rendering to the SDC based on the current view mode:
 
 ```
-templates/block/block--block-content--type--banner-announcement.html.twig
+templates/block/block--block-content--type--<bundle>.html.twig
 ```
 
+Component folder and files:
+
 ```
-banner_announcement/
+components/<bundle>/
 ├─ partials/
-│ ├─ banner_announcement_01.html.twig
-│ ├─ banner_announcement_02.html.twig
+│ ├─ <view_mode>.html.twig
 │ └─ default.html.twig
-├─ banner_announcement.component.yml
-├─ banner_announcement.css
-├─ banner_announcement.css.map
-├─ banner_announcement.html.twig
-├─ banner_announcement.scss
-└─ banner_announcement.twig
+├─ <bundle>.component.yml
+├─ <bundle>.twig (or .html.twig)
+├─ <bundle>.scss → compiled to <bundle>.css (+ .map)
 ```
 
-CSS is imported into the them from the library file:
+Component library is attached by the component and declared in the theme:
 
 ```
-# SDC component library: Banner Announcement
-banner_announcement:
+# SDC component library example
+<bundle>:
   css:
     theme:
-      components/banner_announcement/banner_announcement.css: {}
+      components/<bundle>/<bundle>.css: {}
 ```
+
+Current bundles and variants (target naming)
+- hero_announcement (was banner_announcement)
+  - View modes: default, variant_01 (only if structurally different)
+  - Props: clickable (bool), density: default|compact, theme: light|dark
+- hero_headline (was banner_headline)
+  - View modes: default, compact (only if formatter/visibility differ)
+  - Props: density, theme
+- hero_media (was banner_media)
+  - View modes: split_left, split_right (stacked only if structural)
+  - Props: density, theme, media_format (e.g., wide|square)
+- quote_feature (was banner_quotes)
+  - View modes: default
+  - Props: slider: none|carousel, autoplay (bool), density, theme
+- grid_topics (kept)
+  - View modes: default (cards VM only if item formatter/fields differ)
+  - Props: columns: 2|3|4, density, clickable, theme
+- media_text (was grid_text_image_pair)
+  - View modes: split_left, split_right (stacked only if structural)
+  - Props: density, theme
+- text_rich (was custom_text)
+  - View modes: default
+  - Props: density, theme, clickable
+
+Migration notes
+- During migration, legacy bundles (e.g., banner_announcement) can be routed to the new SDCs via a generic block template so content remains intact while naming is updated.
+- Rename numeric view modes to semantic labels when meaning is clear; otherwise, use variant_01/variant_02 as machine IDs and set editor‑friendly labels in UI.

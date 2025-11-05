@@ -1,0 +1,22 @@
+uuid: 33e76a87-6aaf-4a2f-975e-495aad1f37ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_announcement
+    - field.storage.block_content.field_block_text
+id: block_content.hero_announcement.field_block_text
+field_name: field_block_text
+entity_type: block_content
+bundle: hero_announcement
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

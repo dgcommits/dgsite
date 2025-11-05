@@ -1,0 +1,8 @@
+uuid: 6fcd0fec-8d34-400a-832f-0be60793ef7d
+langcode: en
+status: true
+dependencies: {  }
+id: hero_announcement
+label: 'Hero announcement'
+revision: true
+description: 'Large promotional/announcement surface.'
