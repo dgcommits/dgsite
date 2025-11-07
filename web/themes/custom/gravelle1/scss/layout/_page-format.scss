@@ -16,6 +16,20 @@ body {
   color: $color-text;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ul,
+ol,
+li {
+  font-weight: normal;
+}
+
 a:link,
 a:visited {
   color: $color-text;
@@ -147,14 +161,14 @@ h1 {
   color: $color-h1;
   line-height: $line-height-h1;
   text-align: left;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   word-break: break-word;
   padding: 0.5em 0 0.25em 0;
   margin-bottom: 0;
 
   @include desktop-small {
     font-size: $font-size-h1;
-    padding: 0.5em 0 0.25em 0;
+    padding: 0.5em 2.4em 0.25em 0;
   }
 }
 
@@ -213,53 +227,22 @@ h2.pane-title {
 .section-header h2 a:hover {
 }
 
+h2 {
+  @include body-h2;
+}
+
 h3 {
+  @include body-h3;
 }
 
 h4 {
+  @include body-h4;
 }
 
 h5 {
+  @include body-h5;
 }
 
 h6 {
-}
-
-/* ***************************************** */
-@media all and (min-width: 768px) {
-  /* page layout for desktop screens */
-
-  h1 {
-    padding: 0.5em 1.25em 0.25em 0;
-  }
-
-  h2 {
-    font-size: $font-size-h2;
-  }
-
-  h2.pane-title {
-  }
-
-  h2.section {
-    /* flex */
-    height: $d-section-h2-height;
-  }
-
-  h2.section a:link,
-  h2.section a:visited {
-    display: block;
-    color: $color-1;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    border: $stroke-1 * 0.5 solid rgba(transparent, 0);
-  }
-
-  h2.section a:hover {
-    color: $color-2;
-    text-decoration: none;
-    border: $stroke-1 * 0.5 solid rgba(transparent, 0);
-  }
-
-  /* /end - page formatting for desktop screens */
+  @include body-h6;
 }

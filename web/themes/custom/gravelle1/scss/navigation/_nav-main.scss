@@ -1,23 +1,37 @@
 @use '../base' as *;
 
-@media all and (min-width: 768px) {
-  nav.menu--main {
+nav.menu--main {
+  @include nav-horz;
+
+  ul.menu {
   }
 
-  nav.menu--main ul.menu {
+  ul.menu > li.menu-item {
+    margin: 0 0.5em;
   }
 
-  nav.menu--main ul.menu > li.menu-item {
-  }
-
-  nav.menu--main ul.menu > li.menu-item span,
-  nav.menu--main ul.menu > li.menu-item a,
-  nav.menu--main ul.menu > li.menu-item a:visited {
-    line-height: $link-height * 1.1;
-    font-size: $m-link-size * 1.2;
+  ul.menu > li.menu-item span,
+  ul.menu > li.menu-item a,
+  ul.menu > li.menu-item a:visited {
     @include bodytext;
+    & {
+      line-height: $link-height * 0.9;
+      font-size: $m-link-size * 1.2;
+      background-color: rgba($site-bgcolor, 0.45);
+      color: $color-text;
+    }
   }
 
-  nav.menu--main ul.menu > li.menu-item a.is-active {
+  ul.menu > li.menu-item a:hover {
+    background-color: rgba($site-bgcolor, 0.75);
+    color: $text-bright;
+  }
+
+  ul.menu > li.menu-item a:active {
+    color: $text-bright;
+  }
+
+  ul.menu > li.menu-item a.is-active {
+    color: $brand-primary;
   }
 }

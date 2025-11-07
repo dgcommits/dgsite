@@ -49,5 +49,3 @@ function _gravelle1_switch_menu_theme(&$element) {
   }
   return FALSE;
 }
-
-// (Intentionally no block suggestion hook; Pushy is applied via preprocess)

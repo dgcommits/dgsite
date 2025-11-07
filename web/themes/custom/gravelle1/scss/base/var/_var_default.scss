@@ -109,8 +109,10 @@ $color-h1: $brand-primary !default;
 $color-h2: $brand-accent !default;
 $color-h3: $brand-neutral !default;
 
-$font-heading: 'League Spartan', sans-serif !default; /* heading font */
-$font-body: 'Inter', sans-serif !default; /* body font */
+$font-heading: 'Archivo', sans-serif !default; /* heading font */
+$font-heading-narrow:
+  'Archivo Narrow', sans-serif !default; /* heading narrow font */
+$font-body: 'Roboto', sans-serif !default; /* body font */
 
 /* fonts */
 /* body */
@@ -123,17 +125,17 @@ $line-height-body: 1.35em !default;
 /* headings */
 $font-size-small: $font-size-body * 0.9 !default;
 /* h1 */
-$font-weight-h1: 600 !default; /* Poppins bold for headings */
-$font-size-h1: $font-size-body * 2.75 !default;
+$font-weight-h1: 800 !default; /* Poppins bold for headings */
+$font-size-h1: $font-size-body * 2.25 !default;
 $line-height-h1: 1.1em !default;
 $color-h1: $color-2 !default;
 /* h2 */
-$font-weight-h2: 300 !default; /* lighter than regular for better balance */
+$font-weight-h2: 500 !default; /* lighter than regular for better balance */
 $font-size-h2: $font-size-body * 1.9 !default;
 $line-height-h2: 1.15em !default;
 $color-h2: $brand-accent !default; /* h2 accent */
 /* h3 */
-$font-weight-h3: 300 !default;
+$font-weight-h3: 700 !default;
 $font-size-h3: $font-size-body * 1.2 !default;
 $line-height-h3: 1.15em !default;
 $color-h3: $brand-neutral !default;
@@ -154,9 +156,9 @@ $line-height-h6: 1.15em !default;
 $color-h6: $color-1;
 
 /* stroke */
-$stroke-1: 0.05em !default;
-$stroke-2: 0.15em !default;
-$stroke-3: 0.5em !default;
+$stroke-1: 0.025em !default;
+$stroke-2: 0.075em !default;
+$stroke-3: 0.01em !default;
 
 /* border */
 $border-light: 0.05em solid #ccc !default;
@@ -198,13 +200,13 @@ $link-radius: 0.25em !default;
 
 /* menu links - link color */
 $link-color: $color-2 !default;
-$link-hover-color: $color-1 !default;
+$link-hover-color: $white !default;
 $link-click-color: $color-1 !default;
 $link-border: $stroke-1 solid rgba($color-1, 0.3) !default;
 
 /* menu links - background color */
-$link-bgcolor: rgba($site-bgcolor, 0.975) !default;
-$link-hover-bgcolor: rgba(transparent, 0) !default;
+$link-bgcolor: rgba(transparent, 0) !default;
+$link-hover-bgcolor: rgba($site-bgcolor, 0.5) !default;
 $link-click-bgcolor: rgba($color-1, 0.3) !default;
 
 /* menu links - border weight, stroke and color */

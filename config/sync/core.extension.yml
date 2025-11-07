@@ -46,6 +46,7 @@ module:
   path_alias: 0
   prism: 0
   responsive_bg_image_formatter: 0
+  responsive_favicons: 0
   responsive_image: 0
   search: 0
   shortcut: 0
