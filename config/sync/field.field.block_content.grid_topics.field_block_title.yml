@@ -1,0 +1,20 @@
+uuid: 1c7235c3-d6f4-430f-a06a-5d299920c1bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.grid_topics
+    - field.storage.block_content.field_block_title
+id: block_content.grid_topics.field_block_title
+field_name: field_block_title
+entity_type: block_content
+bundle: grid_topics
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

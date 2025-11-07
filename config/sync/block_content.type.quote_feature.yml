@@ -1,0 +1,8 @@
+uuid: 3ef60efe-2a93-4f42-843c-cae2eee651f4
+langcode: en
+status: true
+dependencies: {  }
+id: quote_feature
+label: 'Quote feature'
+revision: true
+description: 'Quote-led promotional/feature block.'

@@ -1,0 +1,20 @@
+uuid: 1a63a4a1-beef-4498-bd7c-91f13975345d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quote_feature
+    - field.storage.block_content.field_block_title
+id: block_content.quote_feature.field_block_title
+field_name: field_block_title
+entity_type: block_content
+bundle: quote_feature
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

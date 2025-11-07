@@ -1,0 +1,8 @@
+@use 'base' as *;
+.block-type--media_text {
+  .block-wrap { display: grid; gap: $siteg; }
+  &.wsplit-left { grid-template-columns: 1fr 1fr; }
+  &.wsplit-right { grid-template-columns: 1fr 1fr; }
+  .title h3 { color: $color-1; font-weight: 700; }
+}
+

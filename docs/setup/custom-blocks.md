@@ -3,11 +3,14 @@
 This site’s custom blocks are implemented as Single‑Directory Components (SDCs) so each block’s template, variants, and styles live together and are easy to maintain.
 
 Key ideas
-- Keep block bundles stable and intentional (hero_*, grid_*, media_text, quote_*, text_rich).
+
+- Keep block bundles stable and intentional (hero*\*, grid*_, media*text, quote*_, text_rich).
 - Use view modes only for structural/formatter differences (different fields/order/formatters).
 - Use SDC props for styling/behavior (clickable, density, theme, media style).
+- blocks can reuse field machine names like, block_text, block_image, block_link, etc.
 
 When to add a view mode vs. a prop
+
 - View mode: you must change field composition or formatters (e.g., split_left vs split_right layouts).
 - Prop: same fields, different behavior or style (e.g., make the whole block clickable, compact spacing).
 
@@ -42,6 +45,7 @@ Component library is attached by the component and declared in the theme:
 ```
 
 Current bundles and variants (target naming)
+
 - hero_announcement (was banner_announcement)
   - View modes: default, variant_01 (only if structurally different)
   - Props: clickable (bool), density: default|compact, theme: light|dark
@@ -63,7 +67,3 @@ Current bundles and variants (target naming)
 - text_rich (was custom_text)
   - View modes: default
   - Props: density, theme, clickable
-
-Migration notes
-- During migration, legacy bundles (e.g., banner_announcement) can be routed to the new SDCs via a generic block template so content remains intact while naming is updated.
-- Rename numeric view modes to semantic labels when meaning is clear; otherwise, use variant_01/variant_02 as machine IDs and set editor‑friendly labels in UI.

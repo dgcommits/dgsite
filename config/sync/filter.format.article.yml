@@ -21,6 +21,7 @@ dependencies:
     - core.entity_view_mode.media.main_66_4x3
   module:
     - media
+    - prism
 name: Article
 format: article
 weight: 0
@@ -85,3 +86,10 @@ filters:
         main_66_4x3: main_66_4x3
       allowed_media_types:
         image: image
+  prism_filter:
+    id: prism_filter
+    provider: prism
+    status: true
+    weight: 0
+    settings:
+      always_include_prism_library: false

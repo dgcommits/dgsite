@@ -14,6 +14,7 @@
 /* block box-1 */
 /* box styles include border background and padding */
 .box-1 {
+  @include block-pop;
   padding: 1.5em;
   border-radius: 0;
   border: $stroke-1 solid rgba($gray, 0.35);

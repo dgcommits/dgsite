@@ -1,5 +1,5 @@
 /* variables */
-
+@use 'sass:color';
 /* layout positioning */
 $m-page-header: 8em !default;
 $d-page-header: 15em !default;
@@ -14,10 +14,85 @@ $d-page-footer: 5em !default;
 $m-section-h2-height: 2em !default;
 $d-section-h2-height: 2em !default;
 
-/* colors */
-$color-1: #968c78 !default; /* primary - brand color */
-$color-2: #c9a764 !default; /* secondary - contrast color */
-$color-3: #7ba1af !default; /* highlight color - looks good behind text */
+/* brand colors */
+/* Core brand tokens (raw palette) */
+$brand-bg: #635d59 !default; /* background */
+$brand-primary: #d5b35b !default; /* gold - primary brand */
+$brand-accent: #3ea0d8 !default; /* blue - accent */
+$brand-neutral: #a28d7a !default; /* taupe - neutral */
+
+/* Back-compat aliases for existing code paths */
+$color-1: $brand-bg !default; /* background */
+$color-2: $brand-primary !default; /* primary */
+$color-3: $brand-accent !default; /* secondary */
+$color-4: $brand-neutral !default; /* alternative */
+
+/* text */
+/* Establish a base text color, then derive a small ramp from it. */
+$text-base: #f0e5d4 !default; /* brighter base for text */
+/* Tone-based text ramp (blend background INTO text; weight applies to first color) */
+$text-bright: color.mix(
+  $brand-bg,
+  $text-base,
+  0%
+) !default; /* 0% bg, 100% text */
+$text-high: color.mix(
+  $brand-bg,
+  $text-base,
+  15%
+) !default; /* 15% bg, 85% text */
+$text-muted: color.mix(
+  $brand-bg,
+  $text-base,
+  25%
+) !default; /* 25% bg, 75% text */
+$text-subtle: color.mix(
+  $brand-bg,
+  $text-base,
+  35%
+) !default; /* 35% bg, 65% text */
+/* Optional alpha variants when blending is desired */
+$text-muted-alpha: rgba($text-base, 0.75) !default;
+$text-subtle-alpha: rgba($text-base, 0.6) !default;
+/* Choose the sitewide default text role. You can re-point this to any variant. */
+$color-text: $text-muted !default; /* set to any variant (e.g., $text-muted) */
+
+/* Minimal tonal helpers */
+/* Note: weight is percentage of the second color in color.mix().
+   Define helpers so $p means "add $p of white/black to $c". */
+@function tint($c, $p) {
+  @return color.mix($c, white, $p);
+}
+@function shade($c, $p) {
+  @return color.mix($c, black, $p);
+}
+
+/* Small ramps per brand */
+$primary-light: tint($brand-primary, 18%) !default;
+$primary-dark: shade($brand-primary, 18%) !default;
+
+$accent-light: tint($brand-accent, 18%) !default;
+$accent-dark: shade($brand-accent, 18%) !default;
+
+$neutral-light: tint($brand-neutral, 14%) !default;
+$neutral-dark: shade($brand-neutral, 14%) !default;
+
+/* Surfaces */
+$surface-0: $brand-bg !default; /* page bg */
+$surface-1: tint($brand-bg, 6%) !default; /* cards/blocks */
+$surface-2: tint($brand-bg, 10%) !default; /* elevated */
+
+/* Borders and rules */
+$rule: rgba($brand-neutral, 0.5) !default; /* hr/underlines */
+$border: rgba($brand-neutral, 0.35) !default; /* control borders */
+
+/* Focus & selection */
+$focus-ring: rgba($brand-accent, 0.85) !default;
+$selection: rgba($brand-accent, 0.25) !default;
+
+/* Link role tokens (defined after strokes) */
+/* moved below to ensure $stroke-* is defined */
+/* suporting colors */
 $gray: #959595 !default; /* neutral gray */
 $gray-dark: #6d6863 !default; /* darker gray */
 $white: #ffffff !default; /* white */
@@ -28,36 +103,40 @@ $violet: #c512e1 !default; /* violet - error */
 $green: #b4dc7f !default; /* green - tips */
 $yellow: #f0d27b !default; /* yellow - notes */
 $black: #000000 !default; /* black */
-$color-text: #fff5e4 !default;
 
-$font-heading: 'Roboto', sans-serif !default; /* heading font */
-$font-body: 'Open Sans', sans-serif !default; /* body font */
+/* map to existing heading roles */
+$color-h1: $brand-primary !default;
+$color-h2: $brand-accent !default;
+$color-h3: $brand-neutral !default;
+
+$font-heading: 'League Spartan', sans-serif !default; /* heading font */
+$font-body: 'Inter', sans-serif !default; /* body font */
 
 /* fonts */
 /* body */
-$font-weight-body: 100 !default;
-$font-weight-body-light: 100 !default;
-$font-weight-body-medium: 300 !default;
+$font-weight-body: 300 !default; /* Inter Regular becomes Normal */
+$font-weight-body-light: 200 !default; /* Inter ExtraLight */
+$font-weight-body-medium: 400 !default; /* Inter Medium becomes Medium */
 $font-size-body: 1.7em !default;
 $line-height-body: 1.35em !default;
 
 /* headings */
 $font-size-small: $font-size-body * 0.9 !default;
 /* h1 */
-$font-weight-h1: 700 !default;
+$font-weight-h1: 600 !default; /* Poppins bold for headings */
 $font-size-h1: $font-size-body * 2.75 !default;
-$line-height-h1: 1.15em !default;
-$color-h1: $color-2;
+$line-height-h1: 1.1em !default;
+$color-h1: $color-2 !default;
 /* h2 */
-$font-weight-h2: 100 !default;
+$font-weight-h2: 300 !default; /* lighter than regular for better balance */
 $font-size-h2: $font-size-body * 1.9 !default;
 $line-height-h2: 1.15em !default;
-$color-h2: $color-3;
+$color-h2: $brand-accent !default; /* h2 accent */
 /* h3 */
-$font-weight-h3: 700 !default;
+$font-weight-h3: 300 !default;
 $font-size-h3: $font-size-body * 1.2 !default;
 $line-height-h3: 1.15em !default;
-$color-h3: $color-1;
+$color-h3: $brand-neutral !default;
 /* h4 */
 $font-weight-h4: 500 !default;
 $font-size-h4: $font-size-body * 1.1 !default;
@@ -75,8 +154,8 @@ $line-height-h6: 1.15em !default;
 $color-h6: $color-1;
 
 /* stroke */
-$stroke-1: 0.125em !default;
-$stroke-2: 0.25em !default;
+$stroke-1: 0.05em !default;
+$stroke-2: 0.15em !default;
 $stroke-3: 0.5em !default;
 
 /* border */

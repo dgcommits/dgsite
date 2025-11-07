@@ -1,0 +1,8 @@
+@use 'base' as *;
+/* Hero Headline minimal styles (extend as needed) */
+.block-type--hero_headline {
+  .title h3 { color: $color-1; font-weight: 700; }
+  .content .text { font-size: $font-size-body * 0.9; }
+}
+.block-type--hero_headline.block-view-mode--compact .content .text { font-size: $font-size-body * 0.85; }
+

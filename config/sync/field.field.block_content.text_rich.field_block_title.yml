@@ -1,0 +1,20 @@
+uuid: 0004de0c-15e3-4c4a-812b-87398fd2385d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_rich
+    - field.storage.block_content.field_block_title
+id: block_content.text_rich.field_block_title
+field_name: field_block_title
+entity_type: block_content
+bundle: text_rich
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

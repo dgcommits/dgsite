@@ -1,0 +1,8 @@
+uuid: b9ca3481-1d08-4c44-9a10-deca6e7cf39a
+langcode: en
+status: true
+dependencies: {  }
+id: grid_topics
+label: 'Grid topics'
+revision: true
+description: 'Grid of topic items.'

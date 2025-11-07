@@ -1,0 +1,36 @@
+uuid: d56a211a-9189-4f2d-9f95-62267f57841b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_headline
+    - field.storage.block_content.field_block_image
+id: block_content.hero_headline.field_block_image
+field_name: field_block_image
+entity_type: block_content
+bundle: hero_headline
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

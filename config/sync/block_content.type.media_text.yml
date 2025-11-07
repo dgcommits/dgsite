@@ -1,0 +1,8 @@
+uuid: ab6be846-b570-4dbb-82c5-05bfc82d716e
+langcode: en
+status: true
+dependencies: {  }
+id: media_text
+label: 'Media + Text'
+revision: true
+description: 'Split media/text promotional block.'

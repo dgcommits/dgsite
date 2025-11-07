@@ -19,7 +19,7 @@ libraries:
   - gravelle1/base
   - gravelle1/messages
   - gravelle1/pushy
-  - gravelle1/fonts.roboto
+  - gravelle1/fonts.typography
   - core/normalize
 libraries-extend:
   user/drupal.user:

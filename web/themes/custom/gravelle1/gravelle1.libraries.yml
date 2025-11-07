@@ -122,19 +122,35 @@ pushy:
     js/pushy/js/pushy.min.js: {}
   # Pushy v2 has no jQuery dependency
 
-fonts.roboto:
+fonts.typography:
   css:
     theme:
-      https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap:
+      https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=League+Spartan:wght@700;800&display=swap:
         type: external
 
-# SDC component library: Banner Announcement
-banner_announcement:
-  css:
-    theme:
-      components/banner_announcement/banner_announcement.css: {}
+# SDC component library: Hero Announcement
 
 hero_announcement:
   css:
     theme:
       components/hero_announcement/hero_announcement.css: {}
+hero_headline:
+  css:
+    theme:
+      components/hero_headline/hero_headline.css: {}
+media_text:
+  css:
+    theme:
+      components/media_text/media_text.css: {}
+quote_feature:
+  css:
+    theme:
+      components/quote_feature/quote_feature.css: {}
+grid_topics:
+  css:
+    theme:
+      components/grid_topics/grid_topics.css: {}
+text_rich:
+  css:
+    theme:
+      components/text_rich/text_rich.css: {}

@@ -1,0 +1,21 @@
+uuid: 1e25950d-9d92-44a8-a2bc-5e0679e17a4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.grid_topics
+    - field.storage.block_content.field_block_link
+id: block_content.grid_topics.field_block_link
+field_name: field_block_link
+entity_type: block_content
+bundle: grid_topics
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

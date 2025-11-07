@@ -42,7 +42,7 @@
   font-weight: vars.$font-weight-h2;
   &:after {
     margin-top: 0.4em;
-    border-bottom: 2px solid vars.$color-h2;
+    border-bottom: 2px solid rgba(vars.$color-h2, 0.85);
     display: flex; /* prevent border-bottom from overlapping floats */
     content: '';
   }
@@ -77,6 +77,16 @@
   font-size: vars.$font-size-h6;
   margin-top: 0;
   margin-bottom: 0.5em;
+}
+
+@mixin block-pop {
+  position: relative;
+  border-radius: vars.$block-border-radius;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  padding: 3em;
 }
 
 // ========================================

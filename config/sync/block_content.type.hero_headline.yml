@@ -1,0 +1,8 @@
+uuid: 6b9994bd-bbd8-4386-a260-91f6da2eeabe
+langcode: en
+status: true
+dependencies: {  }
+id: hero_headline
+label: 'Hero headline'
+revision: true
+description: 'Headline-focused hero/promo block.'

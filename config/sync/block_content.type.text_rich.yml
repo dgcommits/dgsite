@@ -1,0 +1,8 @@
+uuid: 313848ad-d951-44e5-bb54-bbbad89aa424
+langcode: en
+status: true
+dependencies: {  }
+id: text_rich
+label: 'Text (rich)'
+revision: true
+description: 'Rich text block with optional media and link.'

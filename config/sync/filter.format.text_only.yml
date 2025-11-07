@@ -1,0 +1,14 @@
+uuid: 0aa046d0-5a6d-45d9-9ae4-4487110e643f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Text Only'
+format: text_only
+weight: 0
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }

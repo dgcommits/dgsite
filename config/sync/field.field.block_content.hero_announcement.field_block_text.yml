@@ -5,6 +5,9 @@ dependencies:
   config:
     - block_content.type.hero_announcement
     - field.storage.block_content.field_block_text
+    - filter.format.text_only
+  module:
+    - text
 id: block_content.hero_announcement.field_block_text
 field_name: field_block_text
 entity_type: block_content
@@ -18,5 +21,6 @@ default_value_callback: ''
 settings:
   display_summary: false
   required_summary: false
-  allowed_formats: {  }
+  allowed_formats:
+    - text_only
 field_type: text_with_summary

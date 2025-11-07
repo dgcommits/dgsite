@@ -18,6 +18,7 @@
         "composer/installers": "^2.3",
         "drupal/admin_toolbar": "^3.6",
         "drupal/bg_image_formatter": "^1.18",
+        "drupal/block_class": "^4.0",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^11.2",
         "drupal/core-project-message": "^11.2",
@@ -28,6 +29,7 @@
         "drupal/layout_builder_styles": "^2.1",
         "drupal/pathauto": "^1.13",
         "drupal/prism": "^2.2",
+        "drupal/responsive_favicons": "^4.0",
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drush/drush": "^13.6"

@@ -1,0 +1,7 @@
+{{ attach_library('gravelle1/grid_topics') }}
+{% set vm = props.view_mode|default('default') %}
+{{ include([
+  '@gravelle1/components/grid_topics/partials/' ~ vm ~ '.html.twig',
+  '@gravelle1/components/grid_topics/partials/default.html.twig'
+], { props: props }) }}
+
