@@ -26,6 +26,7 @@
         "drupal/core-recommended": "^11.2",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/focal_point": "^2.1",
+        "drupal/layout_builder_modal": "^2.0",
         "drupal/layout_builder_styles": "^2.1",
         "drupal/paragraphs": "^1.19",
         "drupal/pathauto": "^1.13",
@@ -34,6 +35,7 @@
         "drupal/responsive_favicons": "^4.0",
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
+        "drupal/swiper_formatter": "^2.0",
         "drush/drush": "^13.6"
     },
     "conflict": {

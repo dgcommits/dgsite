@@ -5,9 +5,16 @@ dependencies:
   config:
     - block_content.type.grid_topics
     - field.field.block_content.grid_topics.field_block_image
+    - field.field.block_content.grid_topics.field_block_items
     - field.field.block_content.grid_topics.field_block_link
     - field.field.block_content.grid_topics.field_block_text
     - field.field.block_content.grid_topics.field_block_title
+    - image.style.thumbnail
+  module:
+    - link
+    - paragraphs
+    - svg_image
+    - text
 id: block_content.grid_topics.default
 targetEntityType: block_content
 bundle: grid_topics
@@ -21,11 +28,33 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_block_items:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: 'Topic items'
+      title_plural: 'Topic items'
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: topic_item
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
   field_block_link:
     type: link_default
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_block_text:
     type: text_textarea_with_summary
@@ -35,9 +64,10 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   field_block_title:
-    type: string_textfield
+    type: text_textfield
     weight: 0
     region: content
     settings:

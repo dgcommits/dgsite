@@ -14,6 +14,8 @@
     {% set _image = content.field_block_image is defined ? content.field_block_image|render : null %}
     {% set _text = content.field_block_text is defined ? content.field_block_text|render : '' %}
     {% set _vm = block_view_mode|default('default') %}
+    {% set _items_html = content.field_block_items is defined ? content.field_block_items|render : null %}
+    {% set _columns = 3 %}
     {{ include('@gravelle1/components/grid_topics/grid_topics.html.twig', {
       props: {
         has_label: label ? true : false,
@@ -22,9 +24,10 @@
         url: _link_url,
         link_title: _link_title,
         image: _image,
+        items_html: _items_html,
+        columns: _columns,
         view_mode: _vm,
       }
     }) }}
   {% endblock %}
 </div>
-

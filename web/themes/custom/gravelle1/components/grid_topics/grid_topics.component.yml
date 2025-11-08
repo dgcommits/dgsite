@@ -13,4 +13,5 @@ props:
     url: { type: string }
     link_title: { type: string }
     image: { type: string }
-
+    columns: { type: integer, default: 3 }
+    items_html: { type: string }

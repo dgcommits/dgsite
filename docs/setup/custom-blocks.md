@@ -61,6 +61,7 @@ Current bundles and variants (target naming)
 - grid_topics (kept)
   - View modes: default (cards VM only if item formatter/fields differ)
   - Props: columns: 2|3|4, density, clickable, theme
+  - Items: Uses Paragraphs (type: `topic_item`) for the grid cards. Fields per item: `field_block_image` (image), `field_block_title` (text), `field_block_text` (text, optional), `field_block_link` (link with title). The block bundle holds an items field `field_block_items` (Entity Reference Revisions) allowing multiple `topic_item` entries.
 - media_text (was grid_text_image_pair)
   - View modes: split_left, split_right (stacked only if structural)
   - Props: density, theme

@@ -23,6 +23,7 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -32,6 +33,7 @@ module:
   history: 0
   image: 0
   layout_builder: 0
+  layout_builder_modal: 0
   layout_builder_styles: 0
   layout_discovery: 0
   link: 0
@@ -54,6 +56,7 @@ module:
   shortcut: 0
   superfish: 0
   svg_image: 0
+  swiper_formatter: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -64,6 +67,7 @@ module:
   views_ui: 0
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable9: 0

@@ -1,0 +1,30 @@
+uuid: 2f2d2b4a-6fbd-4a34-a25f-13e7d4b9f1bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.grid_topics
+    - field.storage.block_content.field_block_items
+  module:
+    - entity_reference_revisions
+id: block_content.grid_topics.field_block_items
+field_name: field_block_items
+entity_type: block_content
+bundle: grid_topics
+label: Topics
+description: 'Add one or more topic items.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      topic_item: topic_item
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

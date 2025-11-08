@@ -1,0 +1,20 @@
+uuid: 4d2e8b7a-1c6b-4f14-9b8b-7e4a3f2a9c6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_text
+    - paragraphs.paragraphs_type.topic_item
+id: paragraph.topic_item.field_block_text
+field_name: field_block_text
+entity_type: paragraph
+bundle: topic_item
+label: Text
+description: 'Optional supporting text.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
