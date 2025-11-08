@@ -32,6 +32,9 @@ nav.menu--account {
           font-size: $m-link-size * 1.2;
           background-color: rgba($site-bgcolor, 0.45);
           color: $color-text;
+          @include desktop-small {
+            font-size: $d-link-size;
+          }
         }
       }
 

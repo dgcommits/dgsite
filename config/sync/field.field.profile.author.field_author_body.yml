@@ -1,0 +1,26 @@
+uuid: c84cb45b-4dc7-4ec7-bc12-bfc5aaac02b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_author_body
+    - filter.format.text_only
+    - profile.type.author
+  module:
+    - text
+id: profile.author.field_author_body
+field_name: field_author_body
+entity_type: profile
+bundle: author
+label: 'Author Information'
+description: 'Enter additional biographical information here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - text_only
+field_type: text_with_summary

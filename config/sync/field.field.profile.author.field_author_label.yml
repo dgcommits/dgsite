@@ -1,0 +1,21 @@
+uuid: 23b223d8-0dff-41f4-bdaf-96dd8daafb87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_author_label
+    - profile.type.author
+id: profile.author.field_author_label
+field_name: field_author_label
+entity_type: profile
+bundle: author
+label: 'Author Label'
+description: 'Optionally, use a label to identify this profile.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Author Profile'
+default_value_callback: ''
+settings: {  }
+field_type: string

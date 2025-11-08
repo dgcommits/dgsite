@@ -11,6 +11,7 @@ dependencies:
     - file
     - filter
     - media
+    - profile
     - search
     - shortcut
     - system
@@ -18,7 +19,7 @@ _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
   - 'access comments'
@@ -31,4 +32,7 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'use text format text_only'
+  - 'view any author profile'
+  - 'view any profile'
   - 'view media'
+  - 'view own profile'

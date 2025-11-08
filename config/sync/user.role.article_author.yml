@@ -1,0 +1,16 @@
+uuid: fd0841c8-6c84-4a90-a1d1-8f284f04fc37
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: article_author
+label: 'Article Author'
+weight: -8
+is_admin: false
+permissions:
+  - 'create author profile'
+  - 'delete own author profile'
+  - 'update own author profile'
+  - 'view own author profile'
+  - 'view own unpublished profile'

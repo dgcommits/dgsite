@@ -16,9 +16,12 @@ nav.menu--main {
     @include bodytext;
     & {
       line-height: $link-height * 0.9;
-      font-size: $m-link-size * 1.2;
+      font-size: $m-link-size;
       background-color: rgba($site-bgcolor, 0.45);
       color: $color-text;
+      @include desktop-small {
+        font-size: $d-link-size;
+      }
     }
   }
 

@@ -1,0 +1,19 @@
+uuid: cd44681a-cda4-4a7c-bcae-8fa61214fad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_author_name
+    - profile.type.author
+id: profile.author.field_author_name
+field_name: field_author_name
+entity_type: profile
+bundle: author
+label: 'Author Name'
+description: 'Enter your author name to display in your author profile and bylines.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 21cc9b77-2c3f-4aae-bca2-36b927c50ef3
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: article_editor
+label: 'Article Editor'
+weight: -7
+is_admin: false
+permissions:
+  - 'access profile overview'
+  - 'administer profile'
+  - 'create author profile'
+  - 'delete any author profile'
+  - 'delete own author profile'
+  - 'update any author profile'
+  - 'update own author profile'
+  - 'view own unpublished profile'

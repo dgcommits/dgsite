@@ -1,0 +1,19 @@
+uuid: 24561e7d-4ea9-4b1b-a03f-ef9a1dc28085
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+    - text
+id: profile.field_author_short
+field_name: field_author_short
+entity_type: profile
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

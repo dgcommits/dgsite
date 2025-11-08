@@ -1,0 +1,14 @@
+uuid: 2c52f4e2-2f2e-454b-9537-86a0610f2d1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.article_author
+  module:
+    - user
+id: user_add_role_action.article_author
+label: 'Add the Article Author role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: article_author

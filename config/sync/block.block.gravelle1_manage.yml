@@ -23,9 +23,9 @@ settings:
   depth: null
   expand_all_items: false
   menu_type: horizontal
-  style: default
+  style: none
   arrow: 1
-  shadow: 1
+  shadow: 0
   speed: fast
   delay: 800
   slide: vertical

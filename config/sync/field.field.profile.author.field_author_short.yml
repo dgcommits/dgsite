@@ -1,0 +1,24 @@
+uuid: 8c601b78-0882-408d-bfa8-d606e260586a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_author_short
+    - filter.format.text_only
+    - profile.type.author
+  module:
+    - text
+id: profile.author.field_author_short
+field_name: field_author_short
+entity_type: profile
+bundle: author
+label: 'Author Short'
+description: 'Enter a short description or blurb to appear on your Author Profile and bylines.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - text_only
+field_type: text_long
