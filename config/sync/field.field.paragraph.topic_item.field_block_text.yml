@@ -4,17 +4,21 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_block_text
+    - filter.format.text_only
     - paragraphs.paragraphs_type.topic_item
+  module:
+    - text
 id: paragraph.topic_item.field_block_text
 field_name: field_block_text
 entity_type: paragraph
 bundle: topic_item
 label: Text
 description: 'Optional supporting text.'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - text_only
 field_type: text_long

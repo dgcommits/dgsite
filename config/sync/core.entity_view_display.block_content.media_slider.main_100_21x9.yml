@@ -1,0 +1,23 @@
+uuid: c1d2e3f4-a5b6-47c8-9d0e-1f2a3b4c5d6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slider
+    - field.field.block_content.media_slider.field_block_media
+    - core.entity_view_mode.block_content.main_100_21x9
+id: block_content.media_slider.main_100_21x9
+targetEntityType: block_content
+bundle: media_slider
+mode: main_100_21x9
+content:
+  field_block_media:
+    type: swiper_formatter_entity
+    label: hidden
+    settings:
+      view_mode: main_100_21x9
+      template: default
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

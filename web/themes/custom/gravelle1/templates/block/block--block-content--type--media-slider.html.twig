@@ -1,0 +1,26 @@
+{# Media Slider block delegates rendering to the SDC component. #}
+
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-type--media_slider',
+  'block-view-mode--' ~ (block_view_mode|default('default')),
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {% set _media = content.field_block_media is defined ? content.field_block_media|render : '' %}
+    {% set _vm = block_view_mode|default('default') %}
+
+    {{ include('@gravelle1/components/media_slider/media_slider.html.twig', {
+      props: {
+        has_label: label ? true : false,
+        label: label,
+        media: _media,
+        view_mode: _vm,
+      }
+    }) }}
+  {% endblock %}
+</div>

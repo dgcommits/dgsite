@@ -1,0 +1,8 @@
+uuid: 9d9b6e3f-8b6a-4c7f-8e5e-2f3a6c1d4b9a
+langcode: en
+status: true
+dependencies: {  }
+id: media_slider
+label: 'Media slider'
+revision: true
+description: 'A simple media-based image slider block using Swiper.'

@@ -1,0 +1,10 @@
+uuid: dee9c61e-54ff-4482-9646-bba8313b9f19
+langcode: en
+status: true
+dependencies: {  }
+id: media_item
+label: 'Media Item'
+icon_uuid: null
+icon_default: null
+description: 'Use a media field as the subject and include supporting fields.'
+behavior_plugins: {  }

@@ -154,3 +154,7 @@ text_rich:
   css:
     theme:
       components/text_rich/text_rich.css: {}
+media_slider:
+  css:
+    theme:
+      components/media_slider/media_slider.css: {}

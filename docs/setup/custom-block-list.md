@@ -23,6 +23,12 @@ This site implements custom blocks as Single‑Directory Components (SDC). Below
 - text_rich
   - Variants: default
   - Uses: general rich‑text content blocks with optional CTA.
+- media_slider
+  - Variants: default, Landscape HD, Cinemascope
+  - Uses: multiple image carousel using Swiper Formatter.
+  - Notes: Field `field_block_media` (Media reference → Image, multiple). Formatter uses Swiper Entity with media view mode:
+    - Landscape HD → `main_100_16x9`
+    - Cinemascope → `main_100_21x9`
 
 ## Legacy/Transitional
 

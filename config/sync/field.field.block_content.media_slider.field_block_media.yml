@@ -1,0 +1,30 @@
+uuid: 4c5d6e7f-8a90-4b1c-9d2e-3f4a5b6c7d8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slider
+    - field.storage.block_content.field_block_media
+  module:
+    - media
+id: block_content.media_slider.field_block_media
+field_name: field_block_media
+entity_type: block_content
+bundle: media_slider
+label: Media
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

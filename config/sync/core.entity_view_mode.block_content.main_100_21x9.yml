@@ -1,0 +1,9 @@
+uuid: 8b9fd5db-3c22-4b9c-8dc2-6a4a7a56a3b2
+langcode: en
+status: true
+dependencies: {  }
+id: block_content.main_100_21x9
+label: Cinemascope
+description: null
+targetEntityType: block_content
+cache: true
