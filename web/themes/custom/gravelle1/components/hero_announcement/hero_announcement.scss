@@ -246,6 +246,7 @@
 }
 
 .block-type--hero_announcement.block-view-mode--variant_02 {
+  padding: 0;
   .block-wrap {
     display: grid;
     grid-template-columns: auto;
@@ -365,7 +366,7 @@
     line-height: $line-height-body * 1.1;
     text-align: center;
     @include desktop-small {
-      font-size: $font-size-body * 0.85;
+      font-size: $font-size-body;
       text-align: left;
     }
   }

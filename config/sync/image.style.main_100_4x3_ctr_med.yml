@@ -1,0 +1,41 @@
+uuid: 8ab555ce-555a-41fa-8a4f-483668f74ae7
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: main_100_4x3_ctr_med
+label: main_100_4x3_ctr_med
+effects:
+  25fc151c-0957-43a8-b03e-c304feb0f994:
+    uuid: 25fc151c-0957-43a8-b03e-c304feb0f994
+    id: image_scale
+    weight: -9
+    data:
+      width: 1024
+      height: 768
+      upscale: false
+  6948f5b2-aeac-44d6-b7d5-3444fe75b1fb:
+    uuid: 6948f5b2-aeac-44d6-b7d5-3444fe75b1fb
+    id: image_effects_set_canvas
+    weight: -8
+    data:
+      canvas_size: exact
+      canvas_color: ''
+      exact:
+        width: '1024'
+        height: '768'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+  857b16af-9bb7-43b9-a486-e7a35593f4a1:
+    uuid: 857b16af-9bb7-43b9-a486-e7a35593f4a1
+    id: image_convert
+    weight: -10
+    data:
+      extension: png

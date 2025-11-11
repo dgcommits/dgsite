@@ -1,0 +1,32 @@
+uuid: 8091a2b3-4c5d-46e9-8012-3a4b5c6d7e72
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.image_slider
+    - core.entity_view_mode.block_content.main_100_21x9
+    - field.field.block_content.image_slider.field_block_images
+    - responsive_image.styles.main_100_21x9
+  module:
+    - gravelle_slider
+id: block_content.image_slider.main_100_21x9
+targetEntityType: block_content
+bundle: image_slider
+mode: main_100_21x9
+content:
+  block_images_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_block_images:
+    type: swiper_formatter_responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: main_100_21x9
+      image_link: ''
+      template: default
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

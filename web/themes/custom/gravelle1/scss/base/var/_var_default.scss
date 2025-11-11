@@ -280,7 +280,7 @@ $button-pad-right: 0.75em !default;
 $button-pad-bottom: 0 !default;
 $button-pad-left: 0.75em !default;
 $button-pad: $button-pad-top $button-pad-right $button-pad-bottom
-  $button-pad-left !default;
+  $button-pad-left;
 $button-radius: 0.25em !default;
 /* button colors */
 $button-color: $white !default;
