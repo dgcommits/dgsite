@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.banner_headline
     - core.entity_view_mode.block_content.banner_announcement_01
     - field.field.block_content.banner_headline.field_block_background
+    - field.field.block_content.banner_headline.field_block_icon
     - field.field.block_content.banner_headline.field_block_image
     - field.field.block_content.banner_headline.field_block_link
     - field.field.block_content.banner_headline.field_block_text
@@ -54,3 +55,4 @@ content:
     region: content
 hidden:
   field_block_background: true
+  field_block_icon: true

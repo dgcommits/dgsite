@@ -1,34 +1,36 @@
-uuid: b2e727bf-865a-4f6f-a757-359242339be7
+uuid: 9ba40c0d-98ba-4624-940c-1aa89efd7e3c
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.grid_topics
-    - field.storage.block_content.field_block_image
-id: block_content.grid_topics.field_block_image
-field_name: field_block_image
-entity_type: block_content
-bundle: grid_topics
+    - field.storage.media.field_media_image
+    - media.type.icon
+  module:
+    - image
+id: media.icon.field_media_image
+field_name: field_media_image
+entity_type: media
+bundle: icon
 label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: default
+  handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg webp'
+  file_extensions: svg
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: true
-  alt_field_required: true
+  alt_field: false
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null

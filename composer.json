@@ -28,6 +28,7 @@
         "drupal/eva": "3.1.x-dev@dev",
         "drupal/focal_point": "^2.1",
         "drupal/image_effects": "^4.1@beta",
+        "drupal/inline_svg": "^1.0",
         "drupal/layout_builder_modal": "^2.0",
         "drupal/layout_builder_styles": "^2.1",
         "drupal/paragraphs": "^1.19",

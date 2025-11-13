@@ -5,12 +5,14 @@ dependencies:
   config:
     - block_content.type.banner_headline
     - field.field.block_content.banner_headline.field_block_background
+    - field.field.block_content.banner_headline.field_block_icon
     - field.field.block_content.banner_headline.field_block_image
     - field.field.block_content.banner_headline.field_block_link
     - field.field.block_content.banner_headline.field_block_text
     - image.style.thumbnail
   module:
     - link
+    - media_library
     - svg_image
     - text
 id: block_content.banner_headline.default
@@ -25,6 +27,13 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_block_icon:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_block_image:
     type: image_image

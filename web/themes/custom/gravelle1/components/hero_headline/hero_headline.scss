@@ -1,8 +1,66 @@
 @use 'base' as *;
 /* Hero Headline minimal styles (extend as needed) */
 .block-type--hero_headline {
-  .title h3 { color: $color-1; font-weight: 700; }
-  .content .text { font-size: $font-size-body * 0.9; }
+  .title h3 {
+    color: $color-1;
+    font-weight: 700;
+  }
+  .content .text {
+    font-size: $font-size-body * 0.9;
+  }
 }
-.block-type--hero_headline.block-view-mode--compact .content .text { font-size: $font-size-body * 0.85; }
+.block-type--hero_headline.block-view-mode--compact .content .text {
+  font-size: $font-size-body * 0.85;
+}
 
+.block-type--hero_headline.block-view-mode--default {
+  /* nested */
+
+  .block-wrap {
+    /* block wrap sets the display type */
+  }
+
+  h2 {
+    color: $color-2;
+  }
+
+  .image svg path {
+    fill: rgba($color-text, 0.5);
+    opacity: 1;
+  }
+
+  .text * {
+    color: $color-text;
+  }
+
+  .cta .field__items > .field__item a,
+  .cta .field__items > .field__item a:visited {
+    background-color: rgba($color-2, 1);
+    color: $white;
+  }
+
+  /* /nested */
+}
+
+.block-type--hero_headline.block-view-mode--default.reverse-1 {
+  background-color: $color-1;
+  /* nested */
+
+  .block-wrap {
+  }
+
+  .image svg path {
+    fill: $white;
+    opacity: 1;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  .text * {
+    color: $white;
+  }
+
+  /* /reverse nested */
+}

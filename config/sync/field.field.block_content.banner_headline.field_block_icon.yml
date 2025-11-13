@@ -1,0 +1,29 @@
+uuid: f406db60-30d9-433b-b619-feb7300f2083
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_headline
+    - field.storage.block_content.field_block_icon
+    - media.type.icon
+id: block_content.banner_headline.field_block_icon
+field_name: field_block_icon
+entity_type: block_content
+bundle: banner_headline
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

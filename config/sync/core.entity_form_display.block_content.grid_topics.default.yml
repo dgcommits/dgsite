@@ -4,30 +4,19 @@ status: true
 dependencies:
   config:
     - block_content.type.grid_topics
-    - field.field.block_content.grid_topics.field_block_image
     - field.field.block_content.grid_topics.field_block_items
     - field.field.block_content.grid_topics.field_block_link
     - field.field.block_content.grid_topics.field_block_text
     - field.field.block_content.grid_topics.field_block_title
-    - image.style.thumbnail
   module:
     - link
     - paragraphs
-    - svg_image
     - text
 id: block_content.grid_topics.default
 targetEntityType: block_content
 bundle: grid_topics
 mode: default
 content:
-  field_block_image:
-    type: image_image
-    weight: 1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   field_block_items:
     type: paragraphs
     weight: 4

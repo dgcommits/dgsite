@@ -4,15 +4,29 @@ status: true
 dependencies:
   config:
     - block_content.type.hero_headline
+    - field.field.block_content.hero_headline.field_block_icon
     - field.field.block_content.hero_headline.field_block_image
     - field.field.block_content.hero_headline.field_block_link
     - field.field.block_content.hero_headline.field_block_text
     - field.field.block_content.hero_headline.field_block_title
+    - image.style.thumbnail
+  module:
+    - link
+    - media_library
+    - svg_image
+    - text
 id: block_content.hero_headline.default
 targetEntityType: block_content
 bundle: hero_headline
 mode: default
 content:
+  field_block_icon:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_block_image:
     type: image_image
     weight: 1

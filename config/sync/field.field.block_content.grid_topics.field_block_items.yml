@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.grid_topics
     - field.storage.block_content.field_block_items
+    - paragraphs.paragraphs_type.topic
   module:
     - entity_reference_revisions
 id: block_content.grid_topics.field_block_items
@@ -21,10 +22,16 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      topic_item: topic_item
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
+      topic: topic
+    negate: 0
+    target_bundles_drag_drop:
+      media_item:
+        weight: 4
+        enabled: false
+      topic:
+        weight: 5
+        enabled: true
+      topic_item:
+        weight: 6
+        enabled: false
 field_type: entity_reference_revisions

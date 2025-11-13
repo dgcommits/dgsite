@@ -1,10 +1,10 @@
 <div class="block-wrap{{ props.has_label ? ' wlabel' }}">
-  {% if props.image %}
+  {% if props.icon %}
     <div class="image">
       {% if props.url %}
-        <a href="{{ props.url }}">{{ props.image|raw }}</a>
+        <a href="{{ props.url }}">{{ props.icon|raw }}</a>
       {% else %}
-        {{ props.image|raw }}
+        {{ props.icon|raw }}
       {% endif %}
     </div>
   {% endif %}

@@ -4,42 +4,69 @@ status: true
 dependencies:
   config:
     - block_content.type.hero_headline
+    - core.entity_view_mode.block_content.compact
+    - field.field.block_content.hero_headline.field_block_icon
     - field.field.block_content.hero_headline.field_block_image
     - field.field.block_content.hero_headline.field_block_link
     - field.field.block_content.hero_headline.field_block_text
     - field.field.block_content.hero_headline.field_block_title
-    - core.entity_view_mode.block_content.compact
+  module:
+    - link
+    - svg_image
+    - text
 id: block_content.hero_headline.compact
 targetEntityType: block_content
 bundle: hero_headline
 mode: compact
 content:
+  field_block_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_block_image:
     type: image
     label: hidden
-    settings: {  }
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
   field_block_link:
     type: link
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_block_text:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_block_title:
-    type: string
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden: {  }

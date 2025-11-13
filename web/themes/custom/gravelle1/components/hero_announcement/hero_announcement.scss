@@ -2,7 +2,8 @@
 
 /* Hero Announcement - consolidated SDC styles */
 
-.block-type--hero_announcement.block-view-mode--default {
+.block-type--hero_announcement.block-view-mode--default,
+.block-type--banner_announcement.block-view-mode--default {
   .block-wrap {
     grid-template-rows: 5em auto;
     grid-template-columns: auto;
@@ -59,7 +60,8 @@
 }
 
 @include desktop-small {
-  .block-type--hero_announcement.block-view-mode--default {
+  .block-type--hero_announcement.block-view-mode--default,
+  .block-type--banner_announcement.block-view-mode--default {
     .block-wrap {
       display: grid;
       grid-template-columns: 13em auto;
@@ -117,7 +119,8 @@
   }
 }
 
-.block-type--hero_announcement.block-view-mode--variant_01 {
+.block-type--hero_announcement.block-view-mode--variant_01,
+.block-type--banner_announcement.block-view-mode--variant_01 {
   .block-wrap {
     display: grid;
     grid-template-columns: auto;
@@ -191,7 +194,8 @@
 }
 
 @include desktop-small {
-  .block-type--hero_announcement.block-view-mode--variant_01 {
+  .block-type--hero_announcement.block-view-mode--variant_01,
+  .block-type--banner_announcement.block-view-mode--variant_01 {
     .block-wrap {
       grid-template-columns: auto 11em;
       grid-template-rows: auto;
@@ -245,7 +249,8 @@
   }
 }
 
-.block-type--hero_announcement.block-view-mode--variant_02 {
+.block-type--hero_announcement.block-view-mode--variant_02,
+.block-type--banner_announcement.block-view-mode--variant_02 {
   padding: 0;
   .block-wrap {
     display: grid;

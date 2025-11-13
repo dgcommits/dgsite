@@ -1,0 +1,19 @@
+uuid: fc6f809b-25bb-480d-902b-3a78bec304db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic_text
+    - paragraphs.paragraphs_type.topic
+id: paragraph.topic.field_topic_text
+field_name: field_topic_text
+entity_type: paragraph
+bundle: topic
+label: 'Topic Text'
+description: 'Enter optional topic text.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -25,6 +25,6 @@ props:
     link_title:
       type: string
       description: 'Link title (optional).'
-    image:
+    icon:
       type: string
-      description: 'Rendered image/media markup (optional).'
+      description: 'Rendered icon/media markup (optional).'

@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.banner_headline
     - field.field.block_content.banner_headline.field_block_background
+    - field.field.block_content.banner_headline.field_block_icon
     - field.field.block_content.banner_headline.field_block_image
     - field.field.block_content.banner_headline.field_block_link
     - field.field.block_content.banner_headline.field_block_text
@@ -38,6 +39,15 @@ content:
         bg_image_gradient: ''
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_block_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_block_image:
     type: responsive_bg_image_formatter

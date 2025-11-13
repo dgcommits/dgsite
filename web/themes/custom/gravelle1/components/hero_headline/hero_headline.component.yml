@@ -20,6 +20,5 @@ props:
       type: string
     link_title:
       type: string
-    image:
+    icon:
       type: string
-

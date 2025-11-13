@@ -38,6 +38,7 @@ module:
   history: 0
   image: 0
   image_effects: 0
+  inline_svg: 0
   layout_builder: 0
   layout_builder_modal: 0
   layout_builder_styles: 0

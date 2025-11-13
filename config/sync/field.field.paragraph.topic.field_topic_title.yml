@@ -1,0 +1,19 @@
+uuid: 70333431-fb57-4628-91e9-7b20695447d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic_title
+    - paragraphs.paragraphs_type.topic
+id: paragraph.topic.field_topic_title
+field_name: field_topic_title
+entity_type: paragraph
+bundle: topic
+label: 'Topic Title'
+description: 'Enter a title for this topic.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
