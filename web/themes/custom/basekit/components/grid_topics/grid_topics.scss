@@ -1,0 +1,72 @@
+@use 'base' as *;
+
+.block-type--grid_topics.block-view-mode--full {
+  .block-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $siteg;
+
+    @include desktop-small {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .paragraph {
+      display: grid;
+      gap: $siteg;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas:
+        'icon'
+        'title'
+        'text';
+      margin-bottom: 2em;
+      @include desktop-small {
+        grid-template-columns: 6em auto;
+        grid-template-rows: 6em auto;
+        grid-template-areas:
+          'icon title'
+          'text text';
+      }
+      .field--name-field-topic-icon {
+        grid-area: icon;
+        display: flex;
+        @include desktop-small {
+          justify-content: center;
+          align-items: center;
+        }
+        .media {
+          width: 40%;
+          @include desktop-small {
+            width: 80%;
+          }
+        }
+        & img,
+        & svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .field--name-field-topic-icon svg,
+      .field--name-field-topic-icon svg * {
+        fill: currentColor !important;
+        stroke: currentColor !important;
+      }
+      .field.field--name-field-topic-title {
+        grid-area: title;
+        @include headingtext;
+        font-size: $font-size-h3;
+        display: flex;
+        @include desktop-small {
+          align-items: center;
+        }
+      }
+      .field--name-field-topic-text {
+        grid-area: text;
+        @include bodytext;
+        font-size: $font-size-body;
+        line-height: $line-height-body;
+      }
+    }
+  }
+}

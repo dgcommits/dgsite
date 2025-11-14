@@ -1,0 +1,6 @@
+@use 'base' as *;
+.block-type--quote_feature {
+  blockquote { font-style: italic; color: $color-1; }
+  .title h3 { color: $color-1; font-weight: 700; }
+}
+

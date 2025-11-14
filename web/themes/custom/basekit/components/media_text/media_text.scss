@@ -1,0 +1,13 @@
+@use 'base' as *;
+.block-type--media_text {
+  .block-wrap { display: grid; gap: $siteg; }
+  .title h3 { color: $color-1; font-weight: 700; }
+}
+
+.block-type--media_text.block-view-mode--split_left {
+  .block-wrap { grid-template-columns: 1fr 1fr; }
+}
+
+.block-type--media_text.block-view-mode--split_right {
+  .block-wrap { grid-template-columns: 1fr 1fr; }
+}

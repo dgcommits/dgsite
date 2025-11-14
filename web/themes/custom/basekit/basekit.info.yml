@@ -1,6 +1,6 @@
-name: gravelle1
+name: BaseKit
 type: theme
-'base theme': basekit
+'base theme': stable9
 version: 1.0.0
 regions:
   header: Header
@@ -16,31 +16,24 @@ regions:
   sidebar_second: Sidebar second
   footer: Footer
 libraries:
-  - gravelle1/base
-  - gravelle1/messages
-  - gravelle1/pushy
-  - gravelle1/fonts.typography
+  - basekit/base
+  - basekit/messages
+  - basekit/pushy
+  - basekit/fonts.typography
   - core/normalize
 libraries-extend:
   user/drupal.user:
-    - gravelle1/user
+    - basekit/user
   core/drupal.dropbutton:
-    - gravelle1/dropbutton
+    - basekit/dropbutton
   core/drupal.dialog:
-    - gravelle1/dialog
+    - basekit/dialog
   file/drupal.file:
-    - gravelle1/file
+    - basekit/file
   core/drupal.progress:
-    - gravelle1/progress
+    - basekit/progress
   core/drupal.tablesort:
-    - gravelle1/drupal.tablesort
-# Prevent double-loading of base theme CSS/JS. The sub-theme (gravelle1)
-# provides its own compiled assets and components.
-libraries-override:
-  basekit/base: false
-  basekit/messages: false
-  basekit/pushy: false
-  basekit/fonts.typography: false
+    - basekit/drupal.tablesort
 description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.2'
