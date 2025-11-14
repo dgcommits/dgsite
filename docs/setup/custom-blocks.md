@@ -1,28 +1,44 @@
-# Custom Blocks (SDC standard)
+# Custom Blocks (Template + SDC Standard)
 
-This site’s custom blocks are implemented as Single‑Directory Components (SDCs) so each block’s template, variants, and styles live together and are easy to maintain.
+This site’s custom blocks are implemented as Single‑Directory Components (SDCs) rendered inside a shared base template. The base template enforces a consistent, predictable wrapper and classes for all custom blocks; each bundle’s SDC provides the inner markup and styles.
 
 Key ideas
 
-- Keep block bundles stable and intentional (hero*\*, grid*_, media*text, quote*_, text_rich).
-- Use view modes only for structural/formatter differences (different fields/order/formatters).
-- Use SDC props for styling/behavior (clickable, density, theme, media style).
-- blocks can reuse field machine names like, block_text, block_image, block_link, etc.
+- Base wrapper lives in `templates/block/block--block-content.html.twig` and applies to ALL custom block bundles.
+- Every custom block renders with a single inner wrapper `.block-wrap` inside the outer `.block` container.
+- SDC partials must NOT output `.block-wrap`; they render only their inner structure (image/title/content/text/etc.).
+- View modes are exposed as classes and should drive styling differences where possible.
+- If a bundle needs a special wrapper, create a more specific block template override (keep the required classes/elements).
+- Lists/grids inside blocks use the unified `.block-items` pattern. See Custom Block Displays: [custom-block-display.md](custom-block-display.md).
 
-When to add a view mode vs. a prop
+Required structure and classes
 
-- View mode: you must change field composition or formatters (e.g., split_left vs split_right layouts).
-- Prop: same fields, different behavior or style (e.g., make the whole block clickable, compact spacing).
+- Outer container: `.block` with standard classes
+  - `block`
+  - `block-{provider}` (e.g., `block-block-content`)
+  - `block-{plugin_id}` (from Drupal)
+  - `block-type--{bundle}` when available (exposed via preprocess)
+  - `block-view-mode--{view_mode}` when available (exposed via preprocess)
+- Inner wrapper: `.block-wrap`
+  - The base template adds `<div class="block-wrap">…</div>`
+  - Adds `wlabel` when the block has a label so components can style labeled vs unlabeled states.
+- Label handling:
+  - The base template suppresses the default H2. Components output any visual title (commonly `<div class="title"><h3>…</h3></div>` when `props.has_label`).
 
-Standard SDC layout (per bundle)
+Base template for custom blocks
 
-Block template delegates all rendering to the SDC based on the current view mode:
+- Location: `templates/block/block--block-content.html.twig`
+- Responsibility: add required classes/wrappers and render `{{ content }}` inside `.block-wrap`.
+- Never add bundle‑specific logic here. If a bundle/view mode needs extra structure or classes, override with a more specific suggestion (see below).
 
-```
-templates/block/block--block-content--type--<bundle>.html.twig
-```
+Per‑bundle block templates
 
-Component folder and files:
+- Path: `templates/block/block--block-content--type--<bundle>.html.twig`
+- Always extend the base and only override `{% block content %}` to map fields and include the SDC:
+  - `{% extends "block--block-content.html.twig" %}`
+  - `{% block content %} {{ include('@gravelle1/components/<bundle>/<bundle>.html.twig', { props: { … } }) }} {% endblock %}`
+
+SDC component layout (per bundle)
 
 ```
 components/<bundle>/
@@ -30,41 +46,57 @@ components/<bundle>/
 │ ├─ <view_mode>.html.twig
 │ └─ default.html.twig
 ├─ <bundle>.component.yml
-├─ <bundle>.twig (or .html.twig)
+├─ <bundle>.twig or <bundle>.html.twig
 ├─ <bundle>.scss → compiled to <bundle>.css (+ .map)
 ```
 
-Component library is attached by the component and declared in the theme:
+Component rules
 
-```
-# SDC component library example
-<bundle>:
-  css:
-    theme:
-      components/<bundle>/<bundle>.css: {}
-```
+- Do not output `.block-wrap`; the base template provides it.
+- Keep markup focused on content structure: `.image`, `.title`, `.content`, `.text`, etc.
+- Attach your library in the SDC entry template (not in the block template).
 
-Current bundles and variants (target naming)
+View modes and CSS
 
-- hero_announcement (was banner_announcement)
-  - View modes: default, variant_01 (only if structurally different)
-  - Props: clickable (bool), density: default|compact, theme: light|dark
-- hero_headline (was banner_headline)
-  - View modes: default, compact (only if formatter/visibility differ)
-  - Props: density, theme
-- hero_media (was banner_media)
-  - View modes: split_left, split_right (stacked only if structural)
-  - Props: density, theme, media_format (e.g., wide|square)
-- quote_feature (was banner_quotes)
-  - View modes: default
-  - Props: slider: none|carousel, autoplay (bool), density, theme
-- grid_topics (kept)
-  - View modes: default (cards VM only if item formatter/fields differ)
-  - Props: columns: 2|3|4, density, clickable, theme
-  - Items: Uses Paragraphs (type: `topic_item`) for the grid cards. Fields per item: `field_block_image` (image), `field_block_title` (text), `field_block_text` (text, optional), `field_block_link` (link with title). The block bundle holds an items field `field_block_items` (Entity Reference Revisions) allowing multiple `topic_item` entries.
-- media_text (was grid_text_image_pair)
-  - View modes: split_left, split_right (stacked only if structural)
-  - Props: density, theme
-- text_rich (was custom_text)
-  - View modes: default
-  - Props: density, theme, clickable
+- Preprocess exposes `block_view_mode`, added as `block-view-mode--{vm}` on the outer `.block`.
+- Prefer styling based on bundle + view mode classes, e.g.:
+  - `.block-type--media_text.block-view-mode--split_left .block-wrap { grid-template-columns: 1fr 1fr; }`
+- Keep structural changes (field composition/formatters) in view modes; use component props for purely stylistic variations.
+
+Working with block items (grids/lists)
+
+- Field template `templates/field/field--block-content--field-block-items.html.twig` wraps items in a unified `.block-items` container and outputs items without extra wrappers.
+- SDCs can render additional layout inside `.block-wrap`, but avoid adding a second container around `.block-items` unless necessary.
+- For full details and templates, see `custom-block-display.md`.
+
+Overrides and special cases
+
+- If a specific bundle or view mode needs extra wrapper classes/elements, create a more specific block template suggestion and include the required structure:
+  - `block--block-content--type--<bundle>--<view_mode>.html.twig`, or other Drupal suggestion variants.
+  - Keep: the outer `.block` with standard classes, and one `.block-wrap` inside it.
+- Do not add per‑bundle exceptions in the base template.
+
+Preprocess variables
+
+- `gravelle1_preprocess_block()` exposes:
+  - `block_view_mode` for custom block content
+  - `block_bundle` when available from the rendered entity
+
+Naming and bundle guidance
+
+- Keep block bundles stable and intentional (hero*\*, grid\*\*, media\_*text, quote\_\*, text_rich).
+- Reuse field machine names where possible (e.g., `field_block_text`, `field_block_image`, `field_block_link`).
+- View mode when changing structure/formatters (e.g., `split_left` vs `split_right`).
+- Component props for behavior/style toggles (e.g., density, theme, clickable).
+
+Example: media_text
+
+- Block template: `templates/block/block--block-content--type--media-text.html.twig` extends the base, maps fields, and includes `@gravelle1/components/media_text/media_text.html.twig`.
+- CSS targets the standard classes:
+  - `.block-type--media_text.block-view-mode--split_left .block-wrap { grid-template-columns: 1fr 1fr; }`
+
+Build and cache
+
+- After changing Twig or SCSS:
+  - `cd web/themes/custom/gravelle1 && lando gulp`
+  - `lando drush cr`

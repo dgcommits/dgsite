@@ -1,17 +1,10 @@
+{% extends "block--block-content.html.twig" %}
 {# Simplified template for grid_topics; render unified .block-items directly #}
-{% set classes = [
-  'block',
-  'block-' ~ configuration.provider|clean_class,
-  'block-type--grid_topics',
-  'block-view-mode--' ~ (block_view_mode|default('default')),
-] %}
-<div{{ attributes.addClass(classes) }}>
+
+{% block content %}
   {{ attach_library('gravelle1/grid_topics') }}
-  {{ title_prefix }}{{ title_suffix }}
-  {% block content %}
-    {# Output only the items field; field template provides .block-items wrapper #}
-    {% if content.field_block_items is defined %}
-      {{ content.field_block_items|render }}
-    {% endif %}
-  {% endblock %}
-</div>
+  {# Output only the items field; field template provides .block-items wrapper #}
+  {% if content.field_block_items is defined %}
+    {{ content.field_block_items|render }}
+  {% endif %}
+{% endblock %}

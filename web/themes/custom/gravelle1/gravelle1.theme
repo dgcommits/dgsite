@@ -28,6 +28,14 @@ function gravelle1_preprocess_block(array &$variables) {
     // Try to read the rendered entity view mode from the content render array.
     $view_mode = $variables['elements']['content']['#view_mode'] ?? 'default';
     $variables['block_view_mode'] = $view_mode;
+
+    // Expose the custom block bundle to Twig for standardized classes.
+    // The block content entity is typically available on the content render
+    // array as #block_content when rendered via the entity view builder.
+    $block_content = $variables['elements']['content']['#block_content'] ?? NULL;
+    if (is_object($block_content) && method_exists($block_content, 'bundle')) {
+      $variables['block_bundle'] = $block_content->bundle();
+    }
   }
 }
 
