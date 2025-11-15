@@ -4,7 +4,7 @@
 
 - [Installation](installation/installation.md)
 - [basekit base theme](installation/base-theme.md)
-- [basekit Recipe](installation/basekit-recipe.md)
+- [basekit Recipe](installation/base-recipe.md)
 
 ## Setup
 

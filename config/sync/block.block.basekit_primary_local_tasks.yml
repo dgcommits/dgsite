@@ -1,0 +1,22 @@
+uuid: d54147b8-12f8-4185-92f0-637738a454f4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - basekit
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: basekit_primary_local_tasks
+theme: basekit
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

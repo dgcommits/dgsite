@@ -81,4 +81,5 @@ module:
 theme:
   stable9: 0
   gravelle1: 0
+  basekit: 0
 profile: standard
