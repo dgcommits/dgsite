@@ -50,3 +50,4 @@ node_modules
 /private/*
 /web/robots.txt
 /.editorconfigweb/themes/custom/basekit/
+docs/

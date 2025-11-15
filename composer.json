@@ -15,6 +15,18 @@
         },
         {
             "type": "vcs",
+            "url": "git@github.com:gravellian/basekit-docs.git",
+            "no-api": true
+        },
+        {
+            "type": "path",
+            "url": "../basekit",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:gravellian/basekit.git",
             "no-api": true
         }
@@ -46,8 +58,10 @@
         "drupal/swiper_formatter": "^2.0",
         "drupal/viewfield": "^3.0@beta",
         "drupal/viewsreference": "2.x-dev@dev",
+        "drush/drush": "^13.6",
         "gravellian/basekit": "dev-main",
-        "drush/drush": "^13.6"
+        "gravellian/basekit-docs": "dev-main",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -60,6 +74,7 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-recipe-unpack": true,
             "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
@@ -89,6 +104,9 @@
             "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
+            "web/themes/custom/basekit": [
+                "gravellian/basekit"
+            ],
             "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
             ],
@@ -99,11 +117,13 @@
                 "type:drupal-custom-profile"
             ],
             "web/themes/custom/{$name}": [
-                "type:drupal-custom-theme",
-                "gravellian/basekit"
+                "type:drupal-custom-theme"
             ],
             "recipes/{$name}": [
                 "type:drupal-recipe"
+            ],
+            "docs/": [
+                "type:gravellian-docs"
             ]
         },
         "drupal-core-project-message": {
@@ -113,7 +133,7 @@
             ],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
                 "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
                 "<bg=blue;fg=white>                                                         </>",
                 "",
@@ -126,7 +146,10 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-        }
+        },
+        "installer-types": [
+            "gravellian-docs"
+        ]
     },
     "require-dev": {
         "drupal/coder": "^8.3",

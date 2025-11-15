@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f2cbd3078e57e580f5add89141dbb32",
+    "content-hash": "dd2820a1afd4360d398e908591b43afb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3833,27 +3833,45 @@
         {
             "name": "gravellian/basekit",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:gravellian/basekit.git",
-                "reference": "8eac6b4656ac3d2f1354abb4ba0c23978a4da21a"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gravellian/basekit/zipball/8eac6b4656ac3d2f1354abb4ba0c23978a4da21a",
-                "reference": "8eac6b4656ac3d2f1354abb4ba0c23978a4da21a",
-                "shasum": ""
+                "type": "path",
+                "url": "../basekit",
+                "reference": "91011860561d5c16ebd9842657fd0e7aa44145f0"
             },
             "require": {
                 "php": ">=8.1"
             },
-            "default-branch": true,
             "type": "drupal-theme",
             "license": [
                 "proprietary"
             ],
             "description": "BaseKit Drupal 11 base theme",
-            "time": "2025-11-15T18:49:52+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "gravellian/basekit-docs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gravellian/basekit-docs.git",
+                "reference": "a842a9617dc0e5fa1314ee0df22b72569320d30e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/a842a9617dc0e5fa1314ee0df22b72569320d30e",
+                "reference": "a842a9617dc0e5fa1314ee0df22b72569320d30e",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "gravellian-docs",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Documentation for the BaseKit distribution (installation, recipes, SDCs, sub-theme starter)",
+            "time": "2025-11-15T20:50:30+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -4537,6 +4555,63 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.2"
             },
             "time": "2025-10-21T19:32:17+00:00"
+        },
+        {
+            "name": "oomphinc/composer-installers-extender",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oomphinc/composer-installers-extender.git",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "composer/installers": "^1.0 || ^2.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^7.2",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "OomphInc\\ComposerInstallersExtender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "email": "stephen@oomphinc.com",
+                    "homepage": "https://github.com/balbuf"
+                },
+                {
+                    "name": "Nathan Dentzau",
+                    "email": "nate@oomphinc.com",
+                    "homepage": "http://oomph.is/ndentzau"
+                }
+            ],
+            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+            "homepage": "http://www.oomphinc.com/",
+            "support": {
+                "issues": "https://github.com/oomphinc/composer-installers-extender/issues",
+                "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
+            },
+            "time": "2021-12-15T12:32:42+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -9954,7 +10029,8 @@
         "drupal/image_effects": 10,
         "drupal/viewfield": 10,
         "drupal/viewsreference": 20,
-        "gravellian/basekit": 20
+        "gravellian/basekit": 20,
+        "gravellian/basekit-docs": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
