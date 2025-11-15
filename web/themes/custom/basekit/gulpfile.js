@@ -18,7 +18,10 @@ const sassTask = () => {
   return gulp.src('scss/**/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
+    .pipe(gulpSass({
+      includePaths: ['scss', '../basekit/scss', '../basekit/components'],
+      silenceDeprecations: ['legacy-js-api']
+    }).on('error', gulpSass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'));
@@ -30,7 +33,7 @@ const componentSassTask = () => {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(gulpSass({
-      includePaths: ['scss'],
+      includePaths: ['scss', '../basekit/scss', '../basekit/components'],
       silenceDeprecations: ['legacy-js-api']
     }).on('error', gulpSass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))

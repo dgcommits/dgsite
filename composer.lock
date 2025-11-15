@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "371900790b91bca5ad65cb6ca3f078ce",
+    "content-hash": "8f2cbd3078e57e580f5add89141dbb32",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3829,6 +3829,31 @@
                 "source": "https://github.com/grasmash/yaml-cli/tree/3.2.1"
             },
             "time": "2024-04-23T02:10:57+00:00"
+        },
+        {
+            "name": "gravellian/basekit",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gravellian/basekit.git",
+                "reference": "c1f829bb4a1bb7c92aca4ff2d2a5902d4c8eaa4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit/zipball/c1f829bb4a1bb7c92aca4ff2d2a5902d4c8eaa4b",
+                "reference": "c1f829bb4a1bb7c92aca4ff2d2a5902d4c8eaa4b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "default-branch": true,
+            "type": "drupal-theme",
+            "license": [
+                "proprietary"
+            ],
+            "description": "BaseKit Drupal 11 base theme",
+            "time": "2025-11-15T00:10:41+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -9928,7 +9953,8 @@
         "drupal/eva": 20,
         "drupal/image_effects": 10,
         "drupal/viewfield": 10,
-        "drupal/viewsreference": 20
+        "drupal/viewsreference": 20,
+        "gravellian/basekit": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

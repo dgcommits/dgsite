@@ -12,6 +12,11 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:gravellian/basekit.git",
+            "no-api": true
         }
     ],
     "require": {
@@ -41,6 +46,7 @@
         "drupal/swiper_formatter": "^2.0",
         "drupal/viewfield": "^3.0@beta",
         "drupal/viewsreference": "2.x-dev@dev",
+        "gravellian/basekit": "dev-main",
         "drush/drush": "^13.6"
     },
     "conflict": {
@@ -93,7 +99,8 @@
                 "type:drupal-custom-profile"
             ],
             "web/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
+                "type:drupal-custom-theme",
+                "gravellian/basekit"
             ],
             "recipes/{$name}": [
                 "type:drupal-recipe"

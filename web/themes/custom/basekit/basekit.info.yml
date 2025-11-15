@@ -34,6 +34,8 @@ libraries-extend:
     - basekit/progress
   core/drupal.tablesort:
     - basekit/drupal.tablesort
+# Prevent double-loading of base theme CSS/JS. The sub-theme (basekit)
+# provides its own compiled assets and components.
 description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.2'
