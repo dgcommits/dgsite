@@ -1,5 +1,11 @@
 # Gravelle Creative Site
 
+## Installation
+
+- [Installation](installation/installation.md)
+- [basekit base theme](installation/base-theme.md)
+- [basekit Recipe](installation/basekit-recipe.md)
+
 ## Setup
 
 - [Responsive Media Styles](setup/responsive-media.md)

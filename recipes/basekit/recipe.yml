@@ -1,0 +1,29 @@
+name: BaseKit
+description: Baseline modules and shared configuration for the BaseKit distribution.
+type: recipe
+core_version_requirement: ^11
+
+install:
+  # Core/contrib modules your sites should have by default.
+  - drupal:layout_builder
+  - drupal:media
+  - drupal:responsive_image
+  - drupal:svg_image
+
+config:
+  import:
+    # All reusable YAML for the base layer goes here.
+    - recipes/basekit/config
+  actions:
+    # Example: if you ship region-based block placements in this recipe,
+    # map the placement 'theme' to the active sub-theme per site.
+    # Duplicate or edit these for each block.block.* you include.
+    - config: block.block.gravelle1_site_branding
+      op: set
+      path: theme
+      value: gravelle1
+    - config: block.block.gravelle1_main_menu
+      op: set
+      path: theme
+      value: gravelle1
+
