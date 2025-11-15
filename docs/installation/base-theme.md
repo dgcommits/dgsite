@@ -103,7 +103,20 @@ If you see “MissingThemeDependencyException: Base theme basekit has not been i
 
 ## Adding a New Site/Theme
 
-1) Create a new sub‑theme folder under `web/themes/custom/<site>` with:
+1) Option A — Scaffold from the starter (recommended)
+
+- Run the scaffold script (from project root):
+
+  bash web/themes/custom/basekit/subtheme-starter/scripts/new-subtheme.sh mysite "My Site"
+
+- Build and enable:
+
+  cd web/themes/custom/mysite && lando npm install && lando gulp
+  lando drush then mysite -y && lando drush cset system.theme default mysite -y && lando drush cr
+
+2) Option B — Manual sub‑theme
+
+Create a new sub‑theme folder under `web/themes/custom/<site>` with:
 - `<site>.info.yml` containing `base theme: basekit`
 - `<site>.libraries.yml` with a `base` library pointing to your compiled CSS
 - `scss/_tokens.scss` (configure tokens) and `scss/styles.scss` (import tokens, then BaseKit styles/your additions)

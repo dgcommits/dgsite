@@ -3836,12 +3836,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:gravellian/basekit.git",
-                "reference": "c1f829bb4a1bb7c92aca4ff2d2a5902d4c8eaa4b"
+                "reference": "8eac6b4656ac3d2f1354abb4ba0c23978a4da21a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gravellian/basekit/zipball/c1f829bb4a1bb7c92aca4ff2d2a5902d4c8eaa4b",
-                "reference": "c1f829bb4a1bb7c92aca4ff2d2a5902d4c8eaa4b",
+                "url": "https://api.github.com/repos/gravellian/basekit/zipball/8eac6b4656ac3d2f1354abb4ba0c23978a4da21a",
+                "reference": "8eac6b4656ac3d2f1354abb4ba0c23978a4da21a",
                 "shasum": ""
             },
             "require": {
@@ -3853,7 +3853,7 @@
                 "proprietary"
             ],
             "description": "BaseKit Drupal 11 base theme",
-            "time": "2025-11-15T00:10:41+00:00"
+            "time": "2025-11-15T18:49:52+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
