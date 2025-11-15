@@ -49,4 +49,4 @@ node_modules
 # ignored folders and files
 /private/*
 /web/robots.txt
-/.editorconfig
+/.editorconfigweb/themes/custom/basekit/
