@@ -51,3 +51,8 @@ node_modules
 /web/robots.txt
 /.editorconfigweb/themes/custom/basekit/
 docs/
+
+# Ignore Composer-unpacked Drupal recipes (managed by drupal/core-recipe-unpack)
+# Keep any local project recipes (e.g., recipes/site) tracked if you add them.
+recipes/basekit-recipe/
+recipes/*-recipe/
