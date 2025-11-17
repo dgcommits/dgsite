@@ -469,7 +469,7 @@ display:
         weight: 0
         expanded: false
         menu_name: manage
-        parent: 'views_view:views.manage_content.page_1'
+        parent: ''
         context: '0'
     cache_metadata:
       max-age: -1

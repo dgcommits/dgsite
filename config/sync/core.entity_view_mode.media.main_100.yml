@@ -1,11 +1,11 @@
-uuid: d1b4c6ef-0c8a-417b-af22-337d91f93ba4
+uuid: b5d38bf5-0f36-41fa-9c0f-27b2e5c9d1ab
 langcode: en
 status: true
 dependencies:
   module:
     - media
 id: media.main_100
-label: main_100
+label: 'Main 100'
 description: null
 targetEntityType: media
 cache: true

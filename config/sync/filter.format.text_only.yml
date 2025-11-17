@@ -1,14 +1,23 @@
-uuid: 0aa046d0-5a6d-45d9-9ae4-4487110e643f
+uuid: 80208822-b4bc-4b25-9a1c-e03c512cd417
 langcode: en
 status: true
 dependencies: {  }
-name: 'Text Only'
+name: 'Text only'
 format: text_only
 weight: 0
 filters:
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
+  filter_autop:
+    status: false
+    weight: 0
+    settings: {  }
+  filter_html:
     status: true
     weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_url:
+    status: true
+    weight: 0
     settings: {  }
