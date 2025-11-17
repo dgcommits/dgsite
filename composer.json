@@ -8,32 +8,30 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "basekit-recipe": {
+            "type": "vcs",
+            "url": "git@github.com:gravellian/basekit-recipe.git"
+        },
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        {
+        "1": {
             "type": "vcs",
             "url": "git@github.com:gravellian/basekit-docs.git",
             "no-api": true
         },
-        {
-            "type": "path",
-            "url": "../basekit",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
+        "2": {
             "type": "vcs",
             "url": "git@github.com:gravellian/basekit.git",
             "no-api": true
         }
-    ],
+    },
     "require": {
         "composer/installers": "^2.3",
         "drupal/admin_toolbar": "^3.6",
+        "drupal/admin_toolbar_tools": "^3.6",
         "drupal/bg_image_formatter": "^1.18",
         "drupal/block_class": "^4.0",
         "drupal/config_split": "^2.0",
@@ -41,6 +39,7 @@
         "drupal/core-project-message": "^11.2",
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
+        "drupal/crop": "^2.5",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/eva": "3.1.x-dev@dev",
         "drupal/focal_point": "^2.1",
@@ -56,6 +55,7 @@
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drupal/swiper_formatter": "^2.0",
+        "drupal/token": "^1.13",
         "drupal/viewfield": "^3.0@beta",
         "drupal/viewsreference": "2.x-dev@dev",
         "drush/drush": "^13.6",
@@ -80,7 +80,10 @@
             "php-http/discovery": true,
             "php-tuf/composer-integration": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": {
+            "gravellian/basekit": "source"
+        }
     },
     "extra": {
         "drupal-scaffold": {
@@ -133,7 +136,7 @@
             ],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
                 "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
                 "<bg=blue;fg=white>                                                         </>",
                 "",
