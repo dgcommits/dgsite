@@ -1,6 +1,6 @@
 name: gravelle1
 type: theme
-'base theme': stable9
+'base theme': basekit
 version: 1.0.0
 regions:
   header: Header
@@ -34,6 +34,22 @@ libraries-extend:
     - gravelle1/progress
   core/drupal.tablesort:
     - gravelle1/drupal.tablesort
+# Prevent double-loading of base theme CSS/JS. The sub-theme (gravelle1)
+# provides its own compiled assets and components.
+libraries-override:
+  basekit/base: false
+  basekit/messages: false
+  basekit/pushy: false
+  basekit/fonts.typography: false
+  # Redirect BaseKit SDC component libraries to sub-theme CSS outputs
+  basekit/hero_announcement: gravelle1/hero_announcement
+  basekit/hero_headline: gravelle1/hero_headline
+  basekit/media_text: gravelle1/media_text
+  basekit/quote_feature: gravelle1/quote_feature
+  basekit/grid_topics: gravelle1/grid_topics
+  basekit/text_rich: gravelle1/text_rich
+  basekit/media_slider: gravelle1/media_slider
+  basekit/image_slider: gravelle1/image_slider
 description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.2'

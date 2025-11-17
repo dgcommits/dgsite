@@ -1,6 +1,2 @@
-@use 'base' as *;
-.block-type--text_rich {
-  .title h3 { color: $color-1; font-weight: 700; }
-  .content .text { font-size: $font-size-body * 0.95; }
-}
-
+@use '../../scss/_tokens';
+@use '../../../basekit/components/text_rich/text_rich';

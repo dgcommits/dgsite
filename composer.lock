@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "371900790b91bca5ad65cb6ca3f078ce",
+    "content-hash": "a13ed4ba9f961a70d2b65450d06c33d2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -956,7 +956,6 @@
                 "issues": "https://github.com/doctrine/annotations/issues",
                 "source": "https://github.com/doctrine/annotations/tree/2.0.2"
             },
-            "abandoned": true,
             "time": "2024-09-05T10:17:24+00:00"
         },
         {
@@ -1214,6 +1213,72 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/admin_toolbar_tools",
+            "version": "3.6.2",
+            "require": {
+                "drupal/admin_toolbar": "*",
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "3.6.2",
+                    "datestamp": "1753826106",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "adriancid",
+                    "homepage": "https://www.drupal.org/user/1962106"
+                },
+                {
+                    "name": "bolbol",
+                    "homepage": "https://www.drupal.org/user/3400070"
+                },
+                {
+                    "name": "dydave",
+                    "homepage": "https://www.drupal.org/user/467284"
+                },
+                {
+                    "name": "eme",
+                    "homepage": "https://www.drupal.org/user/542492"
+                },
+                {
+                    "name": "fethi.krout",
+                    "homepage": "https://www.drupal.org/user/3206765"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "matio89",
+                    "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "musa.thomas",
+                    "homepage": "https://www.drupal.org/user/1213824"
+                },
+                {
+                    "name": "romainj",
+                    "homepage": "https://www.drupal.org/user/370706"
+                }
+            ],
+            "description": "Adds menu links like Flush cache, Run cron, Run updates, and Logout under Drupal icon.",
+            "homepage": "https://www.drupal.org/project/admin_toolbar",
+            "support": {
+                "source": "https://git.drupalcode.org/project/admin_toolbar"
             }
         },
         {
@@ -1853,17 +1918,17 @@
         },
         {
             "name": "drupal/crop",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/crop.git",
-                "reference": "8.x-2.4"
+                "reference": "8.x-2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/crop-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "be11fad0abf1d53544d35cb4ca6cedd8e91d2542"
+                "url": "https://ftp.drupal.org/files/projects/crop-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "759c8add182d9b74c04a58c26d1c402f9d1653e6"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10 || ^11"
@@ -1871,8 +1936,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1720455738",
+                    "version": "8.x-2.5",
+                    "datestamp": "1763154892",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2287,7 +2352,8 @@
             "homepage": "https://www.drupal.org/project/eva",
             "support": {
                 "source": "https://git.drupalcode.org/project/eva"
-            }
+            },
+            "time": "2025-10-06T12:40:54+00:00"
         },
         {
             "name": "drupal/file_mdm",
@@ -3396,7 +3462,8 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/viewsreference",
                 "issues": "https://www.drupal.org/project/issues/viewsreference"
-            }
+            },
+            "time": "2025-09-15T05:34:40+00:00"
         },
         {
             "name": "drush/drush",
@@ -3829,6 +3896,98 @@
                 "source": "https://github.com/grasmash/yaml-cli/tree/3.2.1"
             },
             "time": "2024-04-23T02:10:57+00:00"
+        },
+        {
+            "name": "gravellian/basekit",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gravellian/basekit.git",
+                "reference": "7251d90f06da132d5d2ab938287e5d4212a736f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit/zipball/7251d90f06da132d5d2ab938287e5d4212a736f8",
+                "reference": "7251d90f06da132d5d2ab938287e5d4212a736f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "default-branch": true,
+            "type": "drupal-theme",
+            "license": [
+                "proprietary"
+            ],
+            "description": "BaseKit Drupal 11 base theme",
+            "time": "2025-11-16T19:15:40+00:00"
+        },
+        {
+            "name": "gravellian/basekit-docs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gravellian/basekit-docs.git",
+                "reference": "5cae0c70cf1a359d4e0341cdfa18e737f52f8890"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/5cae0c70cf1a359d4e0341cdfa18e737f52f8890",
+                "reference": "5cae0c70cf1a359d4e0341cdfa18e737f52f8890",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "gravellian-docs",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Documentation for the BaseKit distribution (installation, recipes, SDCs, sub-theme starter)",
+            "time": "2025-11-16T20:27:41+00:00"
+        },
+        {
+            "name": "gravellian/basekit-recipe",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gravellian/basekit-recipe.git",
+                "reference": "8381255ae46740470adee386361b9a133ee8ac85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit-recipe/zipball/8381255ae46740470adee386361b9a133ee8ac85",
+                "reference": "8381255ae46740470adee386361b9a133ee8ac85",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/admin_toolbar": "^3.6",
+                "drupal/admin_toolbar_tools": "^3.6",
+                "drupal/bg_image_formatter": "^1.18",
+                "drupal/crop": "^2.5",
+                "drupal/easy_breadcrumb": "^2.0",
+                "drupal/eva": "^3.1",
+                "drupal/focal_point": "^2.1",
+                "drupal/inline_svg": "^1.0",
+                "drupal/layout_builder_modal": "^2.0",
+                "drupal/layout_builder_styles": "^2.1",
+                "drupal/paragraphs": "^1.19",
+                "drupal/prism": "^2.2",
+                "drupal/profile": "^1.12",
+                "drupal/superfish": "^1.13",
+                "drupal/svg_image": "^3.2",
+                "drupal/swiper_formatter": "^2.0",
+                "drupal/token": "^1.13"
+            },
+            "default-branch": true,
+            "type": "drupal-recipe",
+            "license": [
+                "proprietary"
+            ],
+            "description": "BaseKit recipes (base + features)",
+            "support": {
+                "source": "https://github.com/gravellian/basekit-recipe/tree/main",
+                "issues": "https://github.com/gravellian/basekit-recipe/issues"
+            },
+            "time": "2025-11-16T21:04:46+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -4512,6 +4671,63 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.2"
             },
             "time": "2025-10-21T19:32:17+00:00"
+        },
+        {
+            "name": "oomphinc/composer-installers-extender",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oomphinc/composer-installers-extender.git",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "composer/installers": "^1.0 || ^2.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^7.2",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "OomphInc\\ComposerInstallersExtender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "email": "stephen@oomphinc.com",
+                    "homepage": "https://github.com/balbuf"
+                },
+                {
+                    "name": "Nathan Dentzau",
+                    "email": "nate@oomphinc.com",
+                    "homepage": "http://oomph.is/ndentzau"
+                }
+            ],
+            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+            "homepage": "http://www.oomphinc.com/",
+            "support": {
+                "issues": "https://github.com/oomphinc/composer-installers-extender/issues",
+                "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
+            },
+            "time": "2021-12-15T12:32:42+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -9928,7 +10144,10 @@
         "drupal/eva": 20,
         "drupal/image_effects": 10,
         "drupal/viewfield": 10,
-        "drupal/viewsreference": 20
+        "drupal/viewsreference": 20,
+        "gravellian/basekit": 20,
+        "gravellian/basekit-docs": 20,
+        "gravellian/basekit-recipe": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

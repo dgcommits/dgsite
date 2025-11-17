@@ -1,10 +1,2 @@
-.image-slider {
-  position: relative;
-  .image-slider__inner {
-    width: 100%;
-  }
-}
-
-.image-slider--main-100-16x9 { }
-.image-slider--main-100-21x9 { }
-
+@use '../../scss/_tokens';
+@use '../../../basekit/components/image_slider/image_slider';

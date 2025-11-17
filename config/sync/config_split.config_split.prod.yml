@@ -1,0 +1,16 @@
+uuid: 2577e11d-4ccf-4458-a8db-8327cd615cf0
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: prod
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/prod
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

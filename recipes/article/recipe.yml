@@ -1,0 +1,16 @@
+name: Article
+description: Article content model (content type, fields, displays, roles, and related views).
+type: recipe
+core_version_requirement: ^11
+
+install:
+  - drupal:node
+  - drupal:field
+  - drupal:text
+  - drupal:image
+  - drupal:taxonomy
+
+config:
+  import:
+    - recipes/article/config
+

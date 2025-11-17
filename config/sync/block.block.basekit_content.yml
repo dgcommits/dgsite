@@ -1,0 +1,22 @@
+uuid: 2148716f-748d-4ff7-aca5-ac07d2b07a1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basekit
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: basekit_content
+theme: basekit
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 78e47b0b-0984-4f33-953e-fb5c481949fa
+langcode: en
+status: true
+dependencies:
+  theme:
+    - basekit
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: basekit_page_title
+theme: basekit
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

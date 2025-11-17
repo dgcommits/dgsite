@@ -1,0 +1,25 @@
+uuid: 1802d8fd-6f29-4aef-a7e9-e29e4e3ef68d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basekit
+_core:
+  default_config_hash: '-OAAZDw1OR_UyAEPEKX0Hu4LaZD149vW9PmMnIC-v0o'
+id: basekit_site_branding
+theme: basekit
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

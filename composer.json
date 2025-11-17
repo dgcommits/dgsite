@@ -8,15 +8,30 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "basekit-recipe": {
+            "type": "vcs",
+            "url": "git@github.com:gravellian/basekit-recipe.git"
+        },
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "1": {
+            "type": "vcs",
+            "url": "git@github.com:gravellian/basekit-docs.git",
+            "no-api": true
+        },
+        "2": {
+            "type": "vcs",
+            "url": "git@github.com:gravellian/basekit.git",
+            "no-api": true
         }
-    ],
+    },
     "require": {
         "composer/installers": "^2.3",
         "drupal/admin_toolbar": "^3.6",
+        "drupal/admin_toolbar_tools": "^3.6",
         "drupal/bg_image_formatter": "^1.18",
         "drupal/block_class": "^4.0",
         "drupal/config_split": "^2.0",
@@ -24,6 +39,7 @@
         "drupal/core-project-message": "^11.2",
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
+        "drupal/crop": "^2.5",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/eva": "3.1.x-dev@dev",
         "drupal/focal_point": "^2.1",
@@ -39,9 +55,13 @@
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drupal/swiper_formatter": "^2.0",
+        "drupal/token": "^1.13",
         "drupal/viewfield": "^3.0@beta",
         "drupal/viewsreference": "2.x-dev@dev",
-        "drush/drush": "^13.6"
+        "drush/drush": "^13.6",
+        "gravellian/basekit": "dev-main",
+        "gravellian/basekit-docs": "dev-main",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -54,12 +74,16 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-recipe-unpack": true,
             "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
             "php-tuf/composer-integration": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": {
+            "gravellian/basekit": "source"
+        }
     },
     "extra": {
         "drupal-scaffold": {
@@ -83,6 +107,9 @@
             "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
+            "web/themes/custom/basekit": [
+                "gravellian/basekit"
+            ],
             "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
             ],
@@ -97,6 +124,9 @@
             ],
             "recipes/{$name}": [
                 "type:drupal-recipe"
+            ],
+            "docs/": [
+                "type:gravellian-docs"
             ]
         },
         "drupal-core-project-message": {
@@ -119,7 +149,10 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-        }
+        },
+        "installer-types": [
+            "gravellian-docs"
+        ]
     },
     "require-dev": {
         "drupal/coder": "^8.3",
