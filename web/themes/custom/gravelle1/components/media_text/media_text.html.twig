@@ -1,7 +1,0 @@
-{{ attach_library('gravelle1/media_text') }}
-{% set vm = props.view_mode|default('default') %}
-{{ include([
-  '@gravelle1/components/media_text/partials/' ~ vm ~ '.html.twig',
-  '@gravelle1/components/media_text/partials/default.html.twig'
-], { props: props }) }}
-

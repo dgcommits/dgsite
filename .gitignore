@@ -7,7 +7,6 @@
 /web/profiles/contrib/
 /web/libraries/
 /web/core/
-/web/modules/custom/
 
 # Ignore configuration files that may contain sensitive information
 /web/sites/*/*services*.yml

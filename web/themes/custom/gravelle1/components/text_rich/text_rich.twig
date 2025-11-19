@@ -1,7 +1,0 @@
-{{ attach_library('gravelle1/text_rich') }}
-{% set vm = props.view_mode|default('default') %}
-{{ include([
-  '@gravelle1/components/text_rich/partials/' ~ vm ~ '.html.twig',
-  '@gravelle1/components/text_rich/partials/default.html.twig'
-], { props: props }) }}
-

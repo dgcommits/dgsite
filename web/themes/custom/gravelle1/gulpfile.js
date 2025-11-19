@@ -19,7 +19,18 @@ const sassTask = () => {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(gulpSass({
-      includePaths: ['scss', '../basekit/scss', '../basekit/components'],
+      // Search SCSS in theme, and BaseKit installed under contrib or custom.
+      includePaths: [
+        'scss',
+        '../../contrib',
+        '../../contrib/basekit',
+        '../../contrib/basekit/scss',
+        '../../contrib/basekit/components',
+        '../../custom',
+        '../../custom/basekit',
+        '../../custom/basekit/scss',
+        '../../custom/basekit/components'
+      ],
       silenceDeprecations: ['legacy-js-api']
     }).on('error', gulpSass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -33,7 +44,17 @@ const componentSassTask = () => {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(gulpSass({
-      includePaths: ['scss', '../basekit/scss', '../basekit/components'],
+      includePaths: [
+        'scss',
+        '../../contrib',
+        '../../contrib/basekit',
+        '../../contrib/basekit/scss',
+        '../../contrib/basekit/components',
+        '../../custom',
+        '../../custom/basekit',
+        '../../custom/basekit/scss',
+        '../../custom/basekit/components'
+      ],
       silenceDeprecations: ['legacy-js-api']
     }).on('error', gulpSass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -43,10 +64,18 @@ const componentSassTask = () => {
 
 // Watch both SCSS sources
 const watchTask = () => {
+  // Watch subtheme SCSS
   gulp.watch('scss/**/*.scss', sassTask);
   gulp.watch('components/**/*.scss', componentSassTask);
+  // Also watch BaseKit sources (contrib or custom install paths) so imports trigger rebuilds.
+  gulp.watch('../../contrib/basekit/scss/**/*.scss', sassTask);
+  gulp.watch('../../contrib/basekit/components/**/*.scss', componentSassTask);
+  gulp.watch('../../custom/basekit/scss/**/*.scss', sassTask);
+  gulp.watch('../../custom/basekit/components/**/*.scss', componentSassTask);
 };
 
 // Default build compiles both
 gulp.task('default', gulp.series(sassTask, componentSassTask));
+// Alias compile -> default for convenience (npm run build passes args to gulp)
+gulp.task('compile', gulp.series(sassTask, componentSassTask));
 gulp.task('watch', watchTask);

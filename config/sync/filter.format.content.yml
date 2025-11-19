@@ -1,23 +1,102 @@
 uuid: 4892e510-1db4-406e-9c8c-6d9adbc47941
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - core.entity_view_mode.media.main_100
+    - core.entity_view_mode.media.main_100_16x9
+    - core.entity_view_mode.media.main_100_21x9
+    - core.entity_view_mode.media.main_100_4x3
+    - core.entity_view_mode.media.main_25
+    - core.entity_view_mode.media.main_25_1x1
+    - core.entity_view_mode.media.main_33
+    - core.entity_view_mode.media.main_33_1x1
+    - core.entity_view_mode.media.main_33_4x3
+    - core.entity_view_mode.media.main_50
+    - core.entity_view_mode.media.main_50_16x9
+    - core.entity_view_mode.media.main_50_1x1
+    - core.entity_view_mode.media.main_50_4x3
+    - core.entity_view_mode.media.main_66
+    - core.entity_view_mode.media.main_66_16x9
+    - core.entity_view_mode.media.main_66_4x3
+  module:
+    - media
+    - prism
 name: Content
 format: content
 weight: 0
 filters:
-  filter_autop:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
     status: true
     weight: 0
     settings: {  }
   filter_html:
+    id: filter_html
+    provider: filter
     status: true
     weight: -10
     settings:
-      allowed_html: '<p> <a> <em> <strong> <ul> <ol> <li> <h2> <h3> <h4> <blockquote> <img> <figure> <figcaption> <br> <span> <code> <pre>'
+      allowed_html: '<br> <p class="fancy title text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
       filter_html_help: false
       filter_html_nofollow: false
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
   filter_url:
+    id: filter_url
+    provider: filter
     status: true
     weight: 0
-    settings: {  }
+    settings:
+      filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        default: default
+        main_100: main_100
+        main_100_16x9: main_100_16x9
+        main_100_21x9: main_100_21x9
+        main_100_4x3: main_100_4x3
+        main_25: main_25
+        main_25_1x1: main_25_1x1
+        main_33: main_33
+        main_33_1x1: main_33_1x1
+        main_33_4x3: main_33_4x3
+        main_50: main_50
+        main_50_16x9: main_50_16x9
+        main_50_1x1: main_50_1x1
+        main_50_4x3: main_50_4x3
+        main_66: main_66
+        main_66_16x9: main_66_16x9
+        main_66_4x3: main_66_4x3
+      allowed_media_types:
+        image: image
+  prism_filter:
+    id: prism_filter
+    provider: prism
+    status: true
+    weight: 0
+    settings:
+      always_include_prism_library: false

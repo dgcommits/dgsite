@@ -1,0 +1,26 @@
+field.formatter.settings.swiper_formatter_responsive_image:
+  type: mapping
+  label: 'Swiper responsive images settings'
+  mapping:
+    responsive_image_style:
+      type: string
+      label: 'Responsive image style'
+    image_link:
+      type: string
+      label: 'Image link'
+    template:
+      type: string
+      label: 'Swiper template'
+    caption:
+      type: string
+      label: 'Caption source'
+    destination:
+      type: string
+      label: 'Destination'
+    swiper_access:
+      type: boolean
+      label: 'Swiper access'
+    custom_link:
+      type: string
+      label: 'Custom link token'
+

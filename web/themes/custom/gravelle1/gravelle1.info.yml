@@ -16,11 +16,9 @@ regions:
   sidebar_second: Sidebar second
   footer: Footer
 libraries:
+  # Load BaseKit base CSS first, then layer gravelle1 overrides.
+  - basekit/base
   - gravelle1/base
-  - gravelle1/messages
-  - gravelle1/pushy
-  - gravelle1/fonts.typography
-  - core/normalize
 libraries-extend:
   user/drupal.user:
     - gravelle1/user
@@ -34,22 +32,15 @@ libraries-extend:
     - gravelle1/progress
   core/drupal.tablesort:
     - gravelle1/drupal.tablesort
-# Prevent double-loading of base theme CSS/JS. The sub-theme (gravelle1)
-# provides its own compiled assets and components.
-libraries-override:
-  basekit/base: false
-  basekit/messages: false
-  basekit/pushy: false
-  basekit/fonts.typography: false
-  # Redirect BaseKit SDC component libraries to sub-theme CSS outputs
-  basekit/hero_announcement: gravelle1/hero_announcement
-  basekit/hero_headline: gravelle1/hero_headline
-  basekit/media_text: gravelle1/media_text
-  basekit/quote_feature: gravelle1/quote_feature
-  basekit/grid_topics: gravelle1/grid_topics
-  basekit/text_rich: gravelle1/text_rich
-  basekit/media_slider: gravelle1/media_slider
-  basekit/image_slider: gravelle1/image_slider
+# When you port a component to the sub-theme and ship your own CSS,
+# you can opt into overrides selectively (leave commented until ready):
+# libraries-override:
+#   basekit/messages: false
+#   basekit/pushy: false
+#   basekit/fonts.typography: false
+#   # Map BaseKit component libraries to sub-theme outputs if you compile per-component CSS
+#   # basekit/hero_headline: gravelle1/hero_headline
+#   # basekit/hero_announcement: gravelle1/hero_announcement
 description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.2'

@@ -1,9 +1,0 @@
-{# Hero Announcement SDC wrapper (component resolver) #}
-
-{{ attach_library('gravelle1/hero_announcement') }}
-
-{% set vm = props.view_mode|default('default') %}
-{{ include([
-  '@gravelle1/components/hero_announcement/partials/' ~ vm ~ '.html.twig',
-  '@gravelle1/components/hero_announcement/partials/default.html.twig'
-], { props: props }) }}

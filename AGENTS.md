@@ -118,3 +118,20 @@ Codex should suggest commit messages in this format:
   3. Run Prettier if configured
   4. Run `lando drush cr` if config/PHP/Twig changed
 - Summarize: which files were changed, commands run, and whether build/lint/tests passed.
+
+## Source‑of‑Truth Repos (Do Not Edit Mirrors)
+
+This site mirrors packages for local development via Composer path repos. Edit only the workspace repos below, NOT their mirrored copies inside this site repo.
+
+- Base theme: edit `../basekit` (NOT `web/themes/contrib/basekit` or `web/themes/custom/basekit`)
+- Recipes: edit `../basekit-recipe` (NOT `recipes/basekit-recipe/...`)
+- Docs: edit `../basekit-docs` (NOT `docs/` in this site)
+
+Update flow when changing the above:
+
+- Commit in the workspace repo (`../basekit`, `../basekit-recipe`, or `../basekit-docs`)
+- In this site: `composer update gravellian/<package> -W`
+- Apply recipes: `cd web && lando php core/scripts/drupal recipe ../recipes/basekit-recipe/recipes/site`
+- Import config: `lando drush cim -y && lando drush updb -y && lando drush cr`
+
+If you need to test locally without pushing, the site uses Composer path repos with `symlink: false` so changes in `../basekit*` can be mirrored into this repo with `composer update`.

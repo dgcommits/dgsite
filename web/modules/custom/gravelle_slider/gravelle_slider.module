@@ -1,0 +1,41 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * Ensure Views Reference inside a custom block receives the current block id
+ * as its contextual argument when none was provided, so multiple blocks on the
+ * same page each pass their own id.
+ */
+function gravelle_slider_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  // Only apply when invoked via Views Reference (field formatter) so we don't
+  // accidentally affect unrelated views.
+  if (empty($view->element['#viewsreference'])) {
+    return;
+  }
+
+  $vr = $view->element['#viewsreference'];
+
+  // Parent entity info is provided by Views Reference lazy builder/formatter.
+  $parent_type = $vr['parent_entity_type'] ?? NULL;
+  $parent_id = $vr['parent_entity_id'] ?? NULL;
+
+  // Respect an explicitly configured argument on the field item.
+  if (!empty($view->args)) {
+    return;
+  }
+
+  // We only care about custom blocks (block_content) that embed views.
+  if ($parent_type === 'block_content' && is_numeric($parent_id)) {
+    // Optional: limit to a specific view/display.
+    // if ($view->storage->id() !== 'block_images' || $display_id !== 'block_1') {
+    //   return;
+    // }
+
+    // Inject the parent block id as the contextual argument.
+    $view->setArguments([(string) $parent_id]);
+  }
+}
+

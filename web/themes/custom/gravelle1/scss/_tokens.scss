@@ -14,4 +14,8 @@
    );
    For now, load defaults without overrides.
 */
-@use '../basekit/scss/base/var/var_default';
+// Import BaseKit default tokens from the contrib basekit theme.
+// Resolve BaseKit tokens via includePaths (contrib or custom install).
+// We import from the BaseKit scss root, not including the package name,
+// so this works with either web/themes/contrib/basekit or custom/basekit.
+@use 'base/var/var_default';

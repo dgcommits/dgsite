@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "761a1aa1225cecf8f55a045c17f04cdf",
+    "content-hash": "1fe98b13e3384c281765129ac70c8599",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3900,27 +3900,23 @@
         {
             "name": "gravellian/basekit",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:gravellian/basekit.git",
-                "reference": "7251d90f06da132d5d2ab938287e5d4212a736f8"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gravellian/basekit/zipball/7251d90f06da132d5d2ab938287e5d4212a736f8",
-                "reference": "7251d90f06da132d5d2ab938287e5d4212a736f8",
-                "shasum": ""
+                "type": "path",
+                "url": "../basekit",
+                "reference": "b6e59dc1075cde08c205f166a4f0bd356c6e5205"
             },
             "require": {
                 "php": ">=8.1"
             },
-            "default-branch": true,
             "type": "drupal-theme",
             "license": [
                 "proprietary"
             ],
             "description": "BaseKit Drupal 11 base theme",
-            "time": "2025-11-16T19:15:40+00:00"
+            "transport-options": {
+                "symlink": false,
+                "relative": true
+            }
         },
         {
             "name": "gravellian/basekit-docs",
@@ -3928,12 +3924,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:gravellian/basekit-docs.git",
-                "reference": "5cae0c70cf1a359d4e0341cdfa18e737f52f8890"
+                "reference": "0afec775ca590bb68bbdf4ed16806256e491a32d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/5cae0c70cf1a359d4e0341cdfa18e737f52f8890",
-                "reference": "5cae0c70cf1a359d4e0341cdfa18e737f52f8890",
+                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/0afec775ca590bb68bbdf4ed16806256e491a32d",
+                "reference": "0afec775ca590bb68bbdf4ed16806256e491a32d",
                 "shasum": ""
             },
             "default-branch": true,
@@ -3942,7 +3938,7 @@
                 "proprietary"
             ],
             "description": "Documentation for the BaseKit distribution (installation, recipes, SDCs, sub-theme starter)",
-            "time": "2025-11-16T20:27:41+00:00"
+            "time": "2025-11-17T20:19:13+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -10101,8 +10097,7 @@
         "drupal/viewfield": 10,
         "drupal/viewsreference": 20,
         "gravellian/basekit": 20,
-        "gravellian/basekit-docs": 20,
-        "gravellian/basekit-recipe": 20
+        "gravellian/basekit-docs": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
