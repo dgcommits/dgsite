@@ -9,28 +9,24 @@
     "chat": "https://www.drupal.org/node/314178"
   },
   "repositories": {
-    "0": {
+    "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
-    "1": {
+    "basekit": {
+      "type": "vcs",
+      "url": "git@github.com:gravellian/basekit.git",
+      "no-api": true
+    },
+    "basekit-recipe": {
+      "type": "vcs",
+      "url": "git@github.com:gravellian/basekit-recipe.git",
+      "no-api": true
+    },
+    "basekit-docs": {
       "type": "vcs",
       "url": "git@github.com:gravellian/basekit-docs.git",
       "no-api": true
-    },
-    "basekit-path": {
-      "type": "path",
-      "url": "../basekit",
-      "options": {
-        "symlink": false
-      }
-    },
-    "basekit-recipe-path": {
-      "type": "path",
-      "url": "../basekit-recipe",
-      "options": {
-        "symlink": false
-      }
     }
   },
   "require": {
