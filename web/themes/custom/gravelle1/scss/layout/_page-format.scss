@@ -1,5 +1,5 @@
-@use '../base' as *;
-
+@use '../_tokens'; // ensures token overrides are applied
+@use 'base' as base; // BaseKit's base module via includePaths
 /********************/
 /* site formatting for handheld sites */
 /********************/
@@ -10,10 +10,10 @@ html {
 }
 
 body {
-  font-weight: $font-weight-body;
-  font-family: $font-body;
-  background-color: rgba($site-bgcolor, 1);
-  color: $color-text;
+  font-weight: base.$font-weight-body;
+  font-family: base.$font-body;
+  background-color: rgba(base.$site-bgcolor, 1);
+  color: base.$color-text;
 }
 
 h2,
@@ -32,7 +32,7 @@ li {
 
 a:link,
 a:visited {
-  color: $color-text;
+  color: base.$color-text;
 }
 
 a:hover {
@@ -61,13 +61,13 @@ table.views-table {
 
   th,
   td {
-    border: $stroke-1 solid $color-1;
+    border: base.$stroke-1 solid base.$color-1;
     padding: 0.5em;
-    font-size: $font-size-body * 0.8;
+    font-size: base.$font-size-body * 0.8;
   }
 
   th {
-    background-color: rgba($color-1, 0.15);
+    background-color: rgba(base.$color-1, 0.15);
     text-align: left;
     font-weight: normal;
   }
@@ -76,7 +76,7 @@ table.views-table {
   }
 
   tr:nth-child(even) td {
-    background-color: rgba($gray, 0.15);
+    background-color: rgba(base.$gray, 0.15);
   }
 
   /* /end - nested content table styles */
@@ -86,12 +86,12 @@ div.geshifilter {
   margin: 0;
   border: none;
   overflow: auto;
-  font-size: $font-size-body * 0.8;
+  font-size: base.$font-size-body * 0.8;
   /* custom */
   padding: 1em;
   border-radius: 0.25em;
   -webkit-border-radius: 1em;
-  background-color: rgba($site-bgcolor, 0.85);
+  background-color: rgba(base.$site-bgcolor, 0.85);
 }
 
 /* style preformatted code blocks with geshi */
@@ -109,13 +109,13 @@ div.geshifilter pre {
 
 #container {
   /* this is the page container */
-  box-shadow: 0 0 0.75em rgba($black, 0.25);
-  background-color: $page-bgcolor;
+  box-shadow: 0 0 0.75em rgba(base.$black, 0.25);
+  background-color: base.$page-bgcolor;
 }
 
 .page-header {
-  border-bottom: $stroke-2 solid rgba($color-2, 1);
-  background-color: $page-bgcolor;
+  border-bottom: base.$stroke-2 solid rgba(base.$color-2, 1);
+  background-color: base.$page-bgcolor;
 }
 
 .page-main {
@@ -128,53 +128,53 @@ div.geshifilter pre {
 }
 
 .utility-belt {
-  background-color: rgba($color-1, 0.05);
-  border-bottom: $stroke-1 solid rgba($color-1, 0.8);
+  background-color: rgba(base.$color-1, 0.05);
+  border-bottom: base.$stroke-1 solid rgba(base.$color-1, 0.8);
 }
 
 .mgr-links {
 }
 
 .page-footer {
-  border-top: $stroke-2 solid rgba($color-2, 1);
+  border-top: base.$stroke-2 solid rgba(base.$color-2, 1);
   padding-top: 4em;
   padding-bottom: 4em;
   text-align: center;
-  background-color: $page-bgcolor;
+  background-color: base.$page-bgcolor;
 }
 
 /* /layout formatting */
 .page-title {
   /* wrap all h1s in page-title class */
   /* Use the h1 color (gold) on the page title element itself to match example site */
-  color: $color-h1;
-  border-bottom: $stroke-2 solid $rule;
+  color: base.$color-h1;
+  border-bottom: base.$stroke-2 solid base.$rule;
   margin-bottom: 1em;
 }
 
 h1 {
   /* font */
-  font-family: $font-heading;
+  font-family: base.$font-heading;
   margin-top: 0;
-  font-weight: $font-weight-h1;
-  font-size: $font-size-h1;
-  color: $color-h1;
-  line-height: $line-height-h1;
+  font-weight: base.$font-weight-h1;
+  font-size: base.$font-size-h1;
+  color: base.$color-h1;
+  line-height: base.$line-height-h1;
   text-align: left;
   letter-spacing: -0.025em;
   word-break: break-word;
   padding: 0.5em 0 0.25em 0;
   margin-bottom: 0;
 
-  @include desktop-small {
-    font-size: $font-size-h1;
+  @include base.desktop-small {
+    font-size: base.$font-size-h1;
     padding: 0.5em 2.4em 0.25em 0;
   }
 }
 
 h1 a:link,
 h1 a:visited {
-  color: $color-1;
+  color: base.$color-1;
   text-decoration: none;
 }
 
@@ -183,11 +183,11 @@ h1 a:hover {
 }
 
 h1 .highlight {
-  color: $color-2;
+  color: base.$color-2;
 }
 
 h1 .name {
-  color: $color-2;
+  color: base.$color-2;
   display: block;
 }
 
@@ -197,8 +197,8 @@ h1 .name {
 .block.page-title.wsubtext p {
   text-align: center;
   font-style: italic;
-  font-size: $font-size-body;
-  color: rgba($gray, 1);
+  font-size: base.$font-size-body;
+  color: rgba(base.$gray, 1);
   line-height: 1em;
   padding-bottom: 1em;
   margin-top: -1em;
@@ -228,21 +228,21 @@ h2.pane-title {
 }
 
 h2 {
-  @include body-h2;
+  @include base.body-h2;
 }
 
 h3 {
-  @include body-h3;
+  @include base.body-h3;
 }
 
 h4 {
-  @include body-h4;
+  @include base.body-h4;
 }
 
 h5 {
-  @include body-h5;
+  @include base.body-h5;
 }
 
 h6 {
-  @include body-h6;
+  @include base.body-h6;
 }

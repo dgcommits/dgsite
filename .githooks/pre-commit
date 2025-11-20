@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Block commits that modify mirrored paths of workspace packages.
+# Edit the source repos instead: ../basekit, ../basekit-recipe, ../basekit-docs
+
+MIRRORED_PATHS=(
+  "recipes/basekit-recipe"
+  "web/themes/contrib/basekit"
+  "web/themes/custom/basekit"
+  "docs"
+)
+
+CHANGED=$(git diff --cached --name-only || true)
+for p in "${MIRRORED_PATHS[@]}"; do
+  if echo "$CHANGED" | grep -E "^${p}(/|$)" >/dev/null 2>&1; then
+    cat <<MSG
+✖ Commit blocked: changes detected under '$p'.
+  These files are mirrored from workspace packages.
+  Please edit the source repo instead and re-run composer update:
+    - ../basekit           (theme)
+    - ../basekit-recipe    (recipes)
+    - ../basekit-docs      (docs)
+MSG
+    exit 1
+  fi
+done
+
+exit 0
+

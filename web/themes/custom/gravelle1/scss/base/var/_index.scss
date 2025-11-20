@@ -1,8 +1,0 @@
-/* base theme variables - forward first */
-@forward 'var_default';
-
-/* other modules that rely on those variables */
-@forward 'mixins';
-@forward 'body-style';
-@forward 'icons';
-@forward 'load-effects';

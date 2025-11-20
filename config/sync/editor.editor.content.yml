@@ -107,6 +107,6 @@ settings:
           label: 'Fancy title'
           element: '<p class="fancy title">'
     media_media:
-      allow_view_mode_override: true
+      allow_view_mode_override: false
 image_upload:
   status: false

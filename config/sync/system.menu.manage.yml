@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: manage
 label: Manage
-description: 'Management links'
+description: 'Menu for management links used by admin views'
 locked: false

@@ -1,4 +1,5 @@
-@use '../base' as *;
+@use '../_tokens'; // ensures token overrides are applied
+@use 'base' as base; // BaseKit's base module via includePaths
 
 /* basic defaults for theme styling */
 
@@ -29,13 +30,13 @@ body * {
 
 .pagep {
   /* set padding for elements that set the site width */
-  padding: 0 $m-pagep;
+  padding: 0 base.$m-pagep;
 }
 
 @media all and (min-width: 768px) {
   /* set for desktop screens */
   .pagep {
-    padding: 0 $d-pagep;
+    padding: 0 base.$d-pagep;
   }
 }
 /* main regions */
@@ -146,7 +147,7 @@ body * {
   position: sticky; /* Allocates space for the element, but moves it with you when you scroll */
   top: 0; /* specifies the start position for the sticky behavior - 0 is pretty common */
   z-index: 2;
-  height: $m-page-header;
+  height: base.$m-page-header;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,7 +164,7 @@ body.menu-open .site-overlay {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  color: $white;
+  color: base.$white;
   border: 0px solid #ccc;
   width: 2.5em;
   height: 2.5em;
@@ -173,11 +174,11 @@ body.menu-open .site-overlay {
 }
 
 .page-header button.menu-btn:hover {
-  background-color: rgba($color-1, 0.75);
+  background-color: rgba(base.$color-1, 0.75);
 }
 
 .page-header button.menu-btn:active {
-  background-color: rgba($color-1, 1);
+  background-color: rgba(base.$color-1, 1);
 }
 
 .page-header .block.menu--main {
@@ -189,8 +190,8 @@ body.menu-open .site-overlay {
 }
 
 .region.region-content {
-  padding-top: $pagepad;
-  padding-bottom: $pagepad;
+  padding-top: base.$pagepad;
+  padding-bottom: base.$pagepad;
 }
 
 .block.block-system-main-block {
@@ -200,12 +201,12 @@ body.menu-open .site-overlay {
 }
 
 .utility-belt {
-  padding-top: $siteg * 0.5;
-  padding-bottom: $siteg * 0.25;
-  margin-right: -$m-pagep;
-  margin-left: -$m-pagep;
-  padding-right: $m-pagep;
-  padding-left: $m-pagep;
+  padding-top: base.$siteg * 0.5;
+  padding-bottom: base.$siteg * 0.25;
+  margin-right: -(base.$m-pagep);
+  margin-left: -(base.$m-pagep);
+  padding-right: base.$m-pagep;
+  padding-left: base.$m-pagep;
   display: none; /* hide on handheld */
 }
 
@@ -219,26 +220,26 @@ body.menu-open .site-overlay {
 }
 
 .region.region-actions {
-  padding-top: $siteg * 0.25;
-  padding-right: $m-pagep;
-  padding-bottom: $siteg * 0.25;
-  padding-left: $m-pagep;
-  margin-right: -$m-pagep;
-  margin-left: -$m-pagep;
+  padding-top: base.$siteg * 0.25;
+  padding-right: base.$m-pagep;
+  padding-bottom: base.$siteg * 0.25;
+  padding-left: base.$m-pagep;
+  margin-right: -(base.$m-pagep);
+  margin-left: -(base.$m-pagep);
 }
 
 .region-highlighted {
-  margin-right: -$m-pagep;
-  margin-left: -$m-pagep;
+  margin-right: -(base.$m-pagep);
+  margin-left: -(base.$m-pagep);
   padding-top: 0;
-  padding-right: $m-pagep;
+  padding-right: base.$m-pagep;
   padding-bottom: 0;
-  padding-left: $m-pagep;
+  padding-left: base.$m-pagep;
 }
 
 .region-highlighted .messages {
-  margin-top: $siteg * 0.5;
-  margin-bottom: $siteg * 0.5;
+  margin-top: base.$siteg * 0.5;
+  margin-bottom: base.$siteg * 0.5;
 }
 
 .region.region-actions .block {
@@ -249,7 +250,7 @@ body.menu-open .site-overlay {
 }
 
 .page-footer {
-  margin: 0 $m-pagep 0 $m-pagep;
+  margin: 0 base.$m-pagep 0 base.$m-pagep;
   margin-top: auto;
   width: 100%;
 }
@@ -266,12 +267,12 @@ body.menu-open .site-overlay {
 a.anchor {
   display: block;
   position: relative;
-  top: -$m-page-header;
+  top: -(base.$m-page-header);
   visibility: hidden;
 }
 
 .pushy {
-  background-color: $site-bgcolor;
+  background-color: base.$site-bgcolor;
 }
 
 .sidebar {
@@ -279,12 +280,12 @@ a.anchor {
   /* begin nested sidebar styles */
 
   h4 {
-    background-color: rgba($color-1, 1);
+    background-color: rgba(base.$color-1, 1);
     margin-bottom: 0;
     padding: 0 1em;
     line-height: 2em;
     vertical-align: middle;
-    color: rgba($white, 1);
+    color: rgba(base.$white, 1);
     font-size: 1em;
   }
 
@@ -301,7 +302,7 @@ a.anchor {
   /* page layout for desktop screens */
 
   .page-header {
-    height: $d-page-header;
+    height: base.$d-page-header;
     position: relative;
     display: flex; /* on desktop flex-items are in columns */
     flex-direction: column;
@@ -327,10 +328,10 @@ a.anchor {
   }
 
   .utility-belt {
-    margin-right: -$d-pagep;
-    margin-left: -$d-pagep;
-    padding-right: $d-pagep;
-    padding-left: $d-pagep;
+    margin-right: -(base.$d-pagep);
+    margin-left: -(base.$d-pagep);
+    padding-right: base.$d-pagep;
+    padding-left: base.$d-pagep;
     display: block; /* show on desktop */
   }
 
@@ -390,17 +391,17 @@ a.anchor {
   /* define child blocks within mgr-links -- assume managemenu and breadcrumb are not present */
 
   .region.region-actions {
-    margin-right: -$d-pagep;
-    margin-left: -$d-pagep;
-    padding-right: $d-pagep;
-    padding-left: $d-pagep;
+    margin-right: -(base.$d-pagep);
+    margin-left: -(base.$d-pagep);
+    padding-right: base.$d-pagep;
+    padding-left: base.$d-pagep;
   }
 
   .region-highlighted {
-    margin-right: -$d-pagep;
-    margin-left: -$d-pagep;
-    padding-right: $d-pagep;
-    padding-left: $d-pagep;
+    margin-right: -(base.$d-pagep);
+    margin-left: -(base.$d-pagep);
+    padding-right: base.$d-pagep;
+    padding-left: base.$d-pagep;
   }
 
   /********************/

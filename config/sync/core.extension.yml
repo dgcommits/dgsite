@@ -3,7 +3,6 @@ _core:
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  announcements_feed: 0
   automated_cron: 0
   bg_image_formatter: 0
   big_pipe: 0
@@ -59,7 +58,9 @@ module:
   responsive_bg_image_formatter: 0
   responsive_favicons: 0
   responsive_image: 0
+  rest: 0
   search: 0
+  serialization: 0
   shortcut: 0
   superfish: 0
   svg_image: 0
@@ -74,6 +75,7 @@ module:
   viewfield: 0
   views_ui: 0
   viewsreference: 0
+  workflows: 0
   pathauto: 1
   views: 10
   paragraphs: 11

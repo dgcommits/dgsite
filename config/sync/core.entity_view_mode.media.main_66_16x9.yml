@@ -1,11 +1,11 @@
-uuid: 9990f100-8d22-4f9a-a3b2-b52ad8d3dbdf
+uuid: 3a793def-24fa-4751-b78b-cf79ada8b1e1
 langcode: en
 status: true
 dependencies:
   module:
     - media
 id: media.main_66_16x9
-label: main_66_16x9
+label: 'Main 66 16x9'
 description: null
 targetEntityType: media
 cache: true

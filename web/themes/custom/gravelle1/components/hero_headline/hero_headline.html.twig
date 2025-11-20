@@ -1,7 +1,0 @@
-{{ attach_library('gravelle1/hero_headline') }}
-{% set vm = props.view_mode|default('default') %}
-{{ include([
-  '@gravelle1/components/hero_headline/partials/' ~ vm ~ '.html.twig',
-  '@gravelle1/components/hero_headline/partials/default.html.twig'
-], { props: props }) }}
-

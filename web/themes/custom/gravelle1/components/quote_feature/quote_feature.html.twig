@@ -1,7 +1,0 @@
-{{ attach_library('gravelle1/quote_feature') }}
-{% set vm = props.view_mode|default('default') %}
-{{ include([
-  '@gravelle1/components/quote_feature/partials/' ~ vm ~ '.html.twig',
-  '@gravelle1/components/quote_feature/partials/default.html.twig'
-], { props: props }) }}
-

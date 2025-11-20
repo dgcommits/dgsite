@@ -1,4 +1,5 @@
-@use '../base' as *;
+@use '../_tokens'; // ensures token overrides are applied
+@use 'base' as base; // BaseKit's base module via includePaths
 /**
  * @file
  * General styles for dropbuttons.
@@ -7,7 +8,7 @@
 .js .dropbutton-widget {
   border: 1px solid #ccc;
   background-color: white;
-  background-color: $page-bgcolor;
+  background-color: base.$page-bgcolor;
 }
 .js .dropbutton-widget:hover {
   border-color: #b8b8b8;

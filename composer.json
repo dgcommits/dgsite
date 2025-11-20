@@ -1,162 +1,167 @@
 {
-    "name": "drupal/recommended-project",
-    "description": "Project template for Drupal projects with a relocated document root",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
-    "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
+  "name": "drupal/recommended-project",
+  "description": "Project template for Drupal projects with a relocated document root",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/drupal",
+  "support": {
+    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+    "chat": "https://www.drupal.org/node/314178"
+  },
+  "repositories": {
+    "0": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "repositories": {
-        "basekit-recipe": {
-            "type": "vcs",
-            "url": "git@github.com:gravellian/basekit-recipe.git"
-        },
-        "0": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "1": {
-            "type": "vcs",
-            "url": "git@github.com:gravellian/basekit-docs.git",
-            "no-api": true
-        },
-        "2": {
-            "type": "vcs",
-            "url": "git@github.com:gravellian/basekit.git",
-            "no-api": true
-        }
+    "1": {
+      "type": "vcs",
+      "url": "git@github.com:gravellian/basekit-docs.git",
+      "no-api": true
     },
-    "require": {
-        "composer/installers": "^2.3",
-        "drupal/admin_toolbar": "^3.6",
-        "drupal/admin_toolbar_tools": "^3.6",
-        "drupal/bg_image_formatter": "^1.18",
-        "drupal/block_class": "^4.0",
-        "drupal/config_split": "^2.0",
-        "drupal/core-composer-scaffold": "^11.2",
-        "drupal/core-project-message": "^11.2",
-        "drupal/core-recipe-unpack": "^11.2",
-        "drupal/core-recommended": "^11.2",
-        "drupal/crop": "^2.5",
-        "drupal/easy_breadcrumb": "^2.0",
-        "drupal/eva": "3.1.x-dev@dev",
-        "drupal/focal_point": "^2.1",
-        "drupal/image_effects": "^4.1@beta",
-        "drupal/inline_svg": "^1.0",
-        "drupal/layout_builder_modal": "^2.0",
-        "drupal/layout_builder_styles": "^2.1",
-        "drupal/paragraphs": "^1.19",
-        "drupal/pathauto": "^1.13",
-        "drupal/prism": "^2.2",
-        "drupal/profile": "^1.12",
-        "drupal/responsive_favicons": "^4.0",
-        "drupal/superfish": "^1.13",
-        "drupal/svg_image": "^3.2",
-        "drupal/swiper_formatter": "^2.0",
-        "drupal/token": "^1.13",
-        "drupal/viewfield": "^3.0@beta",
-        "drupal/viewsreference": "2.x-dev@dev",
-        "drush/drush": "^13.6",
-        "gravellian/basekit": "dev-main",
-        "gravellian/basekit-docs": "dev-main",
-        "oomphinc/composer-installers-extender": "^2.0"
+    "basekit-path": {
+      "type": "path",
+      "url": "../basekit",
+      "options": {
+        "symlink": false
+      }
     },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
-    "config": {
-        "allow-plugins": {
-            "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
-            "drupal/core-recipe-unpack": true,
-            "drupal/core-project-message": true,
-            "oomphinc/composer-installers-extender": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true,
-            "php-tuf/composer-integration": true
-        },
-        "sort-packages": true,
-        "preferred-install": {
-            "gravellian/basekit": "source"
-        }
-    },
-    "extra": {
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            }
-        },
-        "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "web/themes/custom/basekit": [
-                "gravellian/basekit"
-            ],
-            "drush/Commands/contrib/{$name}": [
-                "type:drupal-drush"
-            ],
-            "web/modules/custom/{$name}": [
-                "type:drupal-custom-module"
-            ],
-            "web/profiles/custom/{$name}": [
-                "type:drupal-custom-profile"
-            ],
-            "web/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
-            ],
-            "recipes/{$name}": [
-                "type:drupal-recipe"
-            ],
-            "docs/": [
-                "type:gravellian-docs"
-            ]
-        },
-        "drupal-core-project-message": {
-            "include-keys": [
-                "homepage",
-                "support"
-            ],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
-                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-                "<bg=blue;fg=white>                                                         </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-                "  * Install the site: https://www.drupal.org/docs/installing-drupal",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://www.drupal.org/support",
-                "  * Get involved with the Drupal community:",
-                "      https://www.drupal.org/getting-involved",
-                "  * Remove the plugin that prints this message:",
-                "      composer remove drupal/core-project-message"
-            ]
-        },
-        "installer-types": [
-            "gravellian-docs"
-        ]
-    },
-    "require-dev": {
-        "drupal/coder": "^8.3",
-        "friendsofphp/php-cs-fixer": "^3.84",
-        "squizlabs/php_codesniffer": "^3.13"
+    "basekit-recipe-path": {
+      "type": "path",
+      "url": "../basekit-recipe",
+      "options": {
+        "symlink": false
+      }
     }
+  },
+  "require": {
+    "composer/installers": "^2.3",
+    "drupal/admin_toolbar": "^3.6",
+    "drupal/admin_toolbar_tools": "^3.6",
+    "drupal/bg_image_formatter": "^1.18",
+    "drupal/block_class": "^4.0",
+    "drupal/config_split": "^2.0",
+    "drupal/core-composer-scaffold": "^11.2",
+    "drupal/core-project-message": "^11.2",
+    "drupal/core-recipe-unpack": "^11.2",
+    "drupal/core-recommended": "^11.2",
+    "drupal/crop": "^2.5",
+    "drupal/easy_breadcrumb": "^2.0",
+    "drupal/eva": "3.1.x-dev@dev",
+    "drupal/focal_point": "^2.1",
+    "drupal/image_effects": "^4.1@beta",
+    "drupal/inline_svg": "^1.0",
+    "drupal/layout_builder_modal": "^2.0",
+    "drupal/layout_builder_styles": "^2.1",
+    "drupal/paragraphs": "^1.19",
+    "drupal/pathauto": "^1.13",
+    "drupal/prism": "^2.2",
+    "drupal/profile": "^1.12",
+    "drupal/responsive_favicons": "^4.0",
+    "drupal/superfish": "^1.13",
+    "drupal/svg_image": "^3.2",
+    "drupal/swiper_formatter": "^2.0",
+    "drupal/token": "^1.13",
+    "drupal/viewfield": "^3.0@beta",
+    "drupal/viewsreference": "2.x-dev@dev",
+    "drush/drush": "^13.6",
+    "gravellian/basekit": "dev-main",
+    "gravellian/basekit-docs": "dev-main",
+    "oomphinc/composer-installers-extender": "^2.0"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-recipe-unpack": true,
+      "drupal/core-project-message": true,
+      "oomphinc/composer-installers-extender": true,
+      "phpstan/extension-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "php-http/discovery": true,
+      "php-tuf/composer-integration": true
+    },
+    "sort-packages": true,
+    "preferred-install": {
+      "gravellian/basekit": "source"
+    }
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "web/themes/custom/basekit": [
+        "gravellian/basekit"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "web/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "web/profiles/custom/{$name}": [
+        "type:drupal-custom-profile"
+      ],
+      "web/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ],
+      "recipes/{$name}": [
+        "type:drupal-recipe"
+      ],
+      "docs/": [
+        "type:gravellian-docs"
+      ]
+    },
+    "drupal-core-project-message": {
+      "include-keys": [
+        "homepage",
+        "support"
+      ],
+      "post-create-project-cmd-message": [
+        "<bg=blue;fg=white>                                                         </>",
+        "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+        "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+        "<bg=blue;fg=white>                                                         </>",
+        "",
+        "<bg=yellow;fg=black>Next steps</>:",
+        "  * Install the site: https://www.drupal.org/docs/installing-drupal",
+        "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+        "  * Get support: https://www.drupal.org/support",
+        "  * Get involved with the Drupal community:",
+        "      https://www.drupal.org/getting-involved",
+        "  * Remove the plugin that prints this message:",
+        "      composer remove drupal/core-project-message"
+      ]
+    },
+    "installer-types": [
+      "gravellian-docs"
+    ]
+  },
+  "require-dev": {
+    "drupal/coder": "^8.3",
+    "friendsofphp/php-cs-fixer": "^3.84",
+    "squizlabs/php_codesniffer": "^3.13"
+  }
 }

@@ -1,11 +1,11 @@
-uuid: 9b79789b-534e-48e3-adce-e18081f2a2bd
+uuid: 697255d0-e337-49a6-a174-6d724cbe21ea
 langcode: en
 status: true
 dependencies:
   module:
     - media
 id: media.main_33_4x3
-label: main_33_4x3
+label: 'Main 33 4x3'
 description: null
 targetEntityType: media
 cache: true

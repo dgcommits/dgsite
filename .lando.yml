@@ -32,3 +32,9 @@ tooling:
     service: node
     cmd: npm run watch
     dir: /app/web/themes/custom/gravelle1/
+  recipes-apply:
+    service: appserver
+    cmd: bash /app/scripts/recipes-apply.lando.sh
+  update-basekit:
+    service: appserver
+    cmd: bash -lc 'echo "Run ./scripts/update-basekit_host.sh from project root on host (Composer updates run outside Lando)."'

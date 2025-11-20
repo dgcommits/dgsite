@@ -1,11 +1,11 @@
-uuid: 306af3e5-b2f5-4538-b029-123980a11085
+uuid: bea92175-cdf3-422f-bf72-1be829f07ae7
 langcode: en
 status: true
 dependencies:
   module:
     - media
 id: media.main_25
-label: main_25
+label: 'Main 25'
 description: null
 targetEntityType: media
 cache: true
