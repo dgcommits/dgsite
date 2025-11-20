@@ -3924,12 +3924,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:gravellian/basekit-docs.git",
-                "reference": "0afec775ca590bb68bbdf4ed16806256e491a32d"
+                "reference": "7de3612547a25fe7f56127c8377d62f57411d017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/0afec775ca590bb68bbdf4ed16806256e491a32d",
-                "reference": "0afec775ca590bb68bbdf4ed16806256e491a32d",
+                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/7de3612547a25fe7f56127c8377d62f57411d017",
+                "reference": "7de3612547a25fe7f56127c8377d62f57411d017",
                 "shasum": ""
             },
             "default-branch": true,
@@ -3938,7 +3938,7 @@
                 "proprietary"
             ],
             "description": "Documentation for the BaseKit distribution (installation, recipes, SDCs, sub-theme starter)",
-            "time": "2025-11-17T20:19:13+00:00"
+            "time": "2025-11-19T17:36:36+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
