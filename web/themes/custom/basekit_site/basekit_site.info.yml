@@ -1,0 +1,29 @@
+name: Basekit Site
+type: theme
+base theme: basekit
+core_version_requirement: ^11
+libraries:
+  - basekit_site/base
+regions:
+  header: Header
+  show: Slideshow
+  utility_manage: Manage
+  utility_breadcrumb: Breadcrumb
+  utility_account: Account
+  highlighted: Highlighted
+  help: Help
+  title: Title
+  actions: Page actions
+  content: Content
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  footer: Footer
+# When you port a component to the sub‑theme and ship your own CSS,
+# you can opt into overrides selectively (leave commented until ready):
+# libraries-override:
+#   basekit/messages: false
+#   basekit/pushy: false
+#   basekit/fonts.typography: false
+#   # Map BaseKit component libraries to sub‑theme outputs if you compile per‑component CSS
+#   # basekit/hero_headline: basekit_site/hero_headline
+#   # basekit/hero_announcement: basekit_site/hero_announcement

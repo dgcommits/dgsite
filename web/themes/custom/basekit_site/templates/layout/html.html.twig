@@ -1,0 +1,6 @@
+{#
+  Subtheme HTML wrapper: ensures subtheme libraries are attached.
+  Based on basekit/html.html.twig.
+#}
+{{ attach_library('basekit_site/base') }}
+{{ include('@basekit/layout/html.html.twig') }}
