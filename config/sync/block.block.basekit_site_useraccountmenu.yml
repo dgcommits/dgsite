@@ -1,0 +1,25 @@
+uuid: c2cad388-cda5-450a-98f3-f7b7aac76538
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - basekit_site
+id: basekit_site_useraccountmenu
+theme: basekit_site
+region: utility_account
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

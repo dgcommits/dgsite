@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks for the Basekit Site subtheme.
+ */
+
+/**
+ * Attach the subtheme CSS on every page.
+ */
+function basekit_site_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'basekit_site/base';
+}

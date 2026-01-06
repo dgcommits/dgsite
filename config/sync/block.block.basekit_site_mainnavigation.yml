@@ -1,0 +1,25 @@
+uuid: eb308738-134e-4e83-b63e-6ca38adfa983
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - basekit_site
+id: basekit_site_mainnavigation
+theme: basekit_site
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Sidebar menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

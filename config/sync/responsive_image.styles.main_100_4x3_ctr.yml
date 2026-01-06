@@ -8,8 +8,8 @@ dependencies:
     - image.style.main_100_4x3_ctr_max
     - image.style.main_100_4x3_ctr_med
     - image.style.main_100_4x3_ctr_small
-  theme:
-    - gravelle1
+_core:
+  default_config_hash: 8uk2CW0FcZEJSZhL5yV1bSiS7uWtc6iObKvpXIxHeuo
 id: main_100_4x3_ctr
 label: main_100_4x3_ctr
 image_style_mappings:

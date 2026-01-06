@@ -8,8 +8,8 @@ dependencies:
     - image.style.main_50_max
     - image.style.main_50_med
     - image.style.main_50_small
-  theme:
-    - gravelle1
+_core:
+  default_config_hash: rVxBWFxhqAt3b1oSUhhfCwc_6u9WdsrqaRzhWDspZVk
 id: main_50
 label: main_50
 image_style_mappings:

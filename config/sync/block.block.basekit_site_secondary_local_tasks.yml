@@ -1,0 +1,22 @@
+uuid: bff39ac0-eb63-4e75-9b01-09f57bbd55de
+langcode: en
+status: false
+dependencies:
+  theme:
+    - basekit_site
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: basekit_site_secondary_local_tasks
+theme: basekit_site
+region: actions
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

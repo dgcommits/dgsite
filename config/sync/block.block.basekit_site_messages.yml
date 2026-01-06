@@ -1,0 +1,22 @@
+uuid: 7c622942-071c-4688-b1a3-f78e3f1cf14e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basekit_site
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: basekit_site_messages
+theme: basekit_site
+region: highlighted
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

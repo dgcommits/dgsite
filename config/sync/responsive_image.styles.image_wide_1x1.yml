@@ -4,14 +4,12 @@ status: true
 dependencies:
   config:
     - image.style.image_wide_1x1_handheld
-    - image.style.image_wide_1x1_small
-    - image.style.image_wide_1x1_med
     - image.style.image_wide_1x1_large
     - image.style.image_wide_1x1_max
-  module:
-    - focal_point
-  theme:
-    - gravelle1
+    - image.style.image_wide_1x1_med
+    - image.style.image_wide_1x1_small
+_core:
+  default_config_hash: v9UADm8LQ2NLbfoiJosVyp8nVlxVm8xGRmZToARLOBc
 id: image_wide_1x1
 label: 'Image Wide 1x1'
 image_style_mappings:

@@ -1,0 +1,25 @@
+@use '../_tokens'; // runs your token overrides (or the defaults if unchanged)
+@use '../../contrib/basekit/scss/base' as *; // exposes BaseKit mixins/vars
+
+.block.block-system-branding-block {
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block.block-system-branding-block a.site-logo {
+  display: block;
+  width: 12em !important;
+  padding: 0 0 0.5em;
+  margin: 0 auto;
+  @include desktop-small {
+    width: 18em !important;
+  }
+}
+
+.block.block-system-branding-block a.site-logo svg {
+  width: 100%;
+  height: auto;
+}

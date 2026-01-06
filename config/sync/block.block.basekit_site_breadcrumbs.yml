@@ -1,0 +1,20 @@
+uuid: a7622398-a19a-4a98-962f-4523be9a32fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basekit_site
+id: basekit_site_breadcrumbs
+theme: basekit_site
+region: utility_breadcrumb
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

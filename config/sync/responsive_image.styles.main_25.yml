@@ -8,8 +8,8 @@ dependencies:
     - image.style.main_25_med
     - image.style.main_25_small
     - image.style.main_50_handheld
-  theme:
-    - gravelle1
+_core:
+  default_config_hash: jiOeNFMKz78CY7OiCLJw86-hTgA1x8VydgSWEoQsjuU
 id: main_25
 label: main_25
 image_style_mappings:

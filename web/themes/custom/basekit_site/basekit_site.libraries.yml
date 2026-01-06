@@ -1,0 +1,7 @@
+base:
+  dependencies:
+    - basekit/base
+  css:
+    theme:
+      css/styles.css:
+        weight: 200

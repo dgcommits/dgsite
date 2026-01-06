@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - image.style.main_100_1x1_handheld
     - image.style.main_66_16x9_large
     - image.style.main_66_16x9_max
     - image.style.main_66_16x9_med
     - image.style.main_66_16x9_small
-    - image.style.main_100_1x1_handheld
-  theme:
-    - gravelle1
+_core:
+  default_config_hash: VtZd4A6Ud5yNIONBEUYjXV2ZCcwTbJKmAxQIJLGDziA
 id: main_66_16x9
 label: main_66_16x9
 image_style_mappings:
