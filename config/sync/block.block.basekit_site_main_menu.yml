@@ -1,25 +1,27 @@
-uuid: a23831d3-5c3c-437b-8a62-b006311cf702
+uuid: 7fb5440e-89bb-4274-b3e6-f4fd420e787e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
   module:
     - system
   theme:
-    - gravelle1
-id: gravelle1_mainnavigation
-theme: gravelle1
+    - basekit_site
+_core:
+  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
+id: basekit_site_main_menu
+theme: basekit_site
 region: header
-weight: -5
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Sidebar menu'
+  label: 'Main navigation'
   label_display: '0'
   provider: system
   level: 1
-  depth: null
+  depth: 1
   expand_all_items: false
 visibility: {  }

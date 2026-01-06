@@ -1,4 +1,4 @@
-uuid: 1e8055f1-e6d1-46e8-a496-ca6b6d758a12
+uuid: 1a367a7d-a693-4d8d-b34e-35e572785bf4
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - gravelle1
-id: gravelle1_mainnavigation_2
-theme: gravelle1
+    - basekit_site
+id: basekit_site_mainnavigation_2
+theme: basekit_site
 region: sidebar_first
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -1,17 +1,19 @@
-uuid: b2ce6b2f-f696-4ef2-920b-91c2173e33d2
+uuid: 97489301-a790-4d89-a573-f07e1df282ab
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
   module:
     - system
   theme:
-    - gravelle1
-id: gravelle1_useraccountmenu
-theme: gravelle1
-region: manage
-weight: -6
+    - basekit_site
+_core:
+  default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
+id: basekit_site_account_menu
+theme: basekit_site
+region: header
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -20,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: null
+  depth: 1
   expand_all_items: false
 visibility: {  }

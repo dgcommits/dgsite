@@ -1,6 +1,6 @@
 uuid: e865caee-d5f9-41bb-8b2f-d7df5055593b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -10,7 +10,7 @@ dependencies:
     - basekit
 id: basekit_useraccountmenu
 theme: basekit
-region: manage
+region: header
 weight: -6
 provider: null
 plugin: 'system_menu_block:account'

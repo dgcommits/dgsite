@@ -1,4 +1,4 @@
-uuid: ac3af901-f004-4876-8bc9-71913c9682de
+uuid: 87616ca5-8493-4c25-9786-7da7e8af88b3
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - superfish
   theme:
-    - gravelle1
-id: gravelle1_manage
-theme: gravelle1
-region: manage
-weight: 0
+    - basekit_site
+id: basekit_site_manage
+theme: basekit_site
+region: utility_manage
+weight: -7
 provider: null
 plugin: 'superfish:manage'
 settings:

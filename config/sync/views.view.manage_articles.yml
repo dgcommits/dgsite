@@ -363,7 +363,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'create article content'
       cache:
         type: tag
         options: {  }

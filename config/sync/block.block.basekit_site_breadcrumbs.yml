@@ -1,14 +1,14 @@
-uuid: bc63ef8f-7f54-41b2-aa07-9c3b0df253fc
+uuid: a7622398-a19a-4a98-962f-4523be9a32fd
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - gravelle1
-id: gravelle1_breadcrumbs
-theme: gravelle1
-region: manage
+    - basekit_site
+id: basekit_site_breadcrumbs
+theme: basekit_site
+region: utility_breadcrumb
 weight: -7
 provider: null
 plugin: system_breadcrumb_block

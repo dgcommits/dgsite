@@ -1,6 +1,6 @@
 uuid: 9ab58684-991a-4783-8c77-51c7e4c83ca4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.manage
@@ -10,7 +10,7 @@ dependencies:
     - basekit
 id: basekit_manage
 theme: basekit
-region: manage
+region: header
 weight: 0
 provider: null
 plugin: 'superfish:manage'

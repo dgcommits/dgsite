@@ -4,14 +4,12 @@ status: true
 dependencies:
   config:
     - image.style.image_wide_4x3_handheld
-    - image.style.image_wide_4x3_small
-    - image.style.image_wide_4x3_med
     - image.style.image_wide_4x3_large
     - image.style.image_wide_4x3_max
-  module:
-    - focal_point
-  theme:
-    - gravelle1
+    - image.style.image_wide_4x3_med
+    - image.style.image_wide_4x3_small
+_core:
+  default_config_hash: 2v5wNr94NmQbMOpp3h_SMi0AkaNg_EOrUU_RnqHXyA8
 id: image_wide_4x3
 label: 'Image Wide 4x3'
 image_style_mappings:

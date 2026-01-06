@@ -1,17 +1,17 @@
-uuid: 345b51a5-9d8e-40e2-8493-d6ed26fa6bf6
+uuid: d147c0a2-4647-4cd5-945a-924a0f6de555
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - gravelle1
+    - basekit_site
 _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
-id: gravelle1_content
-theme: gravelle1
+id: basekit_site_content
+theme: basekit_site
 region: content
-weight: -3
+weight: -7
 provider: null
 plugin: system_main_block
 settings:

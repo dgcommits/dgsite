@@ -1,17 +1,17 @@
-uuid: 83f2a25d-5cb3-4500-b5ef-da10f8845890
+uuid: b303b6b4-b7a1-49b1-b67f-49566ffbdde2
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - gravelle1
+    - basekit_site
 _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
-id: gravelle1_help
-theme: gravelle1
-region: content
-weight: -4
+id: basekit_site_help
+theme: basekit_site
+region: help
+weight: -7
 provider: null
 plugin: help_block
 settings:

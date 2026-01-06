@@ -1,6 +1,6 @@
 uuid: e2f91a03-9fae-4b68-a321-410e6f1876e0
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -8,7 +8,7 @@ dependencies:
     - basekit
 id: basekit_breadcrumbs
 theme: basekit
-region: manage
+region: header
 weight: -7
 provider: null
 plugin: system_breadcrumb_block

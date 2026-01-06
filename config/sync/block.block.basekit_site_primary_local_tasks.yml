@@ -1,15 +1,15 @@
-uuid: a9477aa0-9f0c-4ea9-b02d-f3b667cd0f5d
+uuid: 7ea955c6-daba-4985-aa22-2bc951e50eff
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
-    - gravelle1
+    - basekit_site
 _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
-id: gravelle1_primary_local_tasks
-theme: gravelle1
-region: highlighted
-weight: -4
+id: basekit_site_primary_local_tasks
+theme: basekit_site
+region: actions
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

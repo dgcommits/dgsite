@@ -1,4 +1,4 @@
-uuid: 0e3b9254-1238-413c-86ba-5458e85ade1d
+uuid: b0cf2dd4-d428-4691-a588-d68a7fd12b57
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - gravelle1
-id: gravelle1_footer
-theme: gravelle1
+    - basekit_site
+id: basekit_site_footer
+theme: basekit_site
 region: footer
 weight: 0
 provider: null
