@@ -1,0 +1,21 @@
+@use './_tokens'; // runs your token overrides (or the defaults if unchanged)
+@use 'base' as *; // exposes BaseKit mixins/vars
+
+.block-type--hero_headline {
+  &.block-view-mode--default {
+    .block-wrap {
+      .title {
+        h2 {
+          font-family: var(--font-heading-narrow);
+          font-size: $font-size-h2;
+          color: $color-h2;
+        }
+      }
+
+      .media {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

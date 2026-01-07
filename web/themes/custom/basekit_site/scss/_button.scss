@@ -1,0 +1,46 @@
+@use 'base' as *;
+
+button,
+.button a,
+input.button,
+a.button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background: $button-bgcolor;
+  border: $button-border;
+  color: $button-color;
+  padding: $button-pad;
+
+  &:link,
+  &:visited {
+    background: $button-bgcolor;
+    border: $button-border;
+    color: $button-color;
+  }
+
+  &:hover,
+  &:focus {
+    background: $button-hover-bgcolor;
+    border: $button-hover-border;
+    color: $button-hover-color;
+  }
+
+  &:active {
+    background: $button-click-bgcolor;
+    border: $button-click-border;
+    color: $button-click-color;
+  }
+}
+
+/* Keep contextual links using core styles. */
+.contextual button,
+.contextual a,
+.contextual .button,
+.contextual .button a {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: inherit;
+  padding: 0;
+}

@@ -64,7 +64,8 @@
     "drush/drush": "^13.6",
     "gravellian/basekit": "dev-main",
     "gravellian/basekit-docs": "dev-main",
-    "oomphinc/composer-installers-extender": "^2.0"
+    "oomphinc/composer-installers-extender": "^2.0",
+    "wikimedia/composer-merge-plugin": "^2.0"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -78,6 +79,7 @@
       "drupal/core-recipe-unpack": true,
       "drupal/core-project-message": true,
       "oomphinc/composer-installers-extender": true,
+      "wikimedia/composer-merge-plugin": true,
       "phpstan/extension-installer": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "php-http/discovery": true,
@@ -152,6 +154,18 @@
         "  * Remove the plugin that prints this message:",
         "      composer remove drupal/core-project-message"
       ]
+    },
+    "merge-plugin": {
+      "include": [
+        "composer.local.json"
+      ],
+      "recurse": false,
+      "merge-dev": true,
+      "merge-extra": true,
+      "merge-extra-deep": true,
+      "merge-extra-append": true,
+      "replace": false,
+      "ignore-duplicates": false
     },
     "installer-types": [
       "gravellian-docs"

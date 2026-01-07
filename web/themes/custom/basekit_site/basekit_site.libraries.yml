@@ -5,3 +5,10 @@ base:
     theme:
       css/styles.css:
         weight: 200
+      https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Archivo:ital,wght@0,100;0,500;0,800;1,100;1,500;1,800&family=Archivo+Narrow:wght@700&display=swap:
+        type: external
+
+editor-styles:
+  css:
+    theme:
+      css/editor-styles.css: {}

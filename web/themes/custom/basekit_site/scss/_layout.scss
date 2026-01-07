@@ -1,2 +1,97 @@
-/* _layout.scss stub to satisfy starter imports. Add site styles here or remove import. */
+@use './_tokens'; // runs your token overrides (or the defaults if unchanged)
+@use 'base' as *; // exposes BaseKit mixins/vars
 
+:root {
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Archivo', sans-serif;
+  --font-heading-narrow: 'Archivo Narrow', sans-serif;
+}
+
+body {
+  background-color: $site-bgcolor;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--font-body);
+}
+
+#container {
+  background-color: $page-bgcolor;
+}
+
+.page-header {
+  background-color: $page-bgcolor;
+  border-bottom: $stroke-2 solid rgba($brand-accent, 1);
+}
+
+.page-footer {
+  background-color: $page-bgcolor;
+  border-top: $stroke-2 solid rgba($brand-accent, 1);
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.block-page-title-block {
+  h1.page-title {
+    /* font */
+    font-family: var(--font-heading);
+    margin-top: 0;
+    font-weight: $font-weight-h1;
+    font-size: $font-size-h1;
+    color: $brand-accent;
+    line-height: $line-height-h1;
+    text-align: left;
+    letter-spacing: -0.025em;
+    word-break: break-word;
+    padding: 0.5em 0 0 0;
+    margin-bottom: $siteg * 0.5;
+
+    @include desktop-small {
+      padding: 0.5em 2.4em 0.25em 0;
+    }
+
+    a:link,
+    a:visited {
+      color: $brand-primary;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      color: $brand-accent;
+    }
+
+    .name {
+      color: $brand-accent;
+      display: block;
+    }
+  }
+}
+
+h2.pane-title {
+}
+
+.block.section-header,
+.section-header {
+  margin-bottom: 0;
+}
+
+.block.section-header h2,
+.section-header h2 {
+}
+
+.block.section-header h2 a:link,
+.block.section-header h2 a:visited,
+.section-header h2 a:link,
+.section-header h2 a:visited {
+}
+
+.block.section-header h2 a:hover,
+.section-header h2 a:hover {
+}

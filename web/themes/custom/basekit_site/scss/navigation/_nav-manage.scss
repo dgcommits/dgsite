@@ -1,0 +1,42 @@
+@use './_tokens'; // runs your token overrides (or the defaults if unchanged)
+@use 'base' as *; // exposes BaseKit mixins/vars
+
+.menu--manage-secondary {
+  @include nav-horz;
+
+  ul.menu {
+  }
+
+  ul.menu > li.menu-item {
+    margin: 0 0.25em;
+  }
+
+  ul.menu > li.menu-item span,
+  ul.menu > li.menu-item a,
+  ul.menu > li.menu-item a:visited {
+    @include bodytext;
+    & {
+      line-height: $link-height * 0.9;
+      font-size: $m-link-size;
+      background-color: rgba($page-bgcolor, 0.75);
+      color: $color-text;
+      border-color: rgba($site-bgcolor, 0.75);
+      @include desktop-small {
+        font-size: $d-link-size;
+      }
+    }
+  }
+
+  ul.menu > li.menu-item a:hover {
+    background-color: rgba($page-bgcolor, 0.75);
+    color: $text-bright;
+  }
+
+  ul.menu > li.menu-item a:active {
+    color: $text-bright;
+  }
+
+  ul.menu > li.menu-item a.is-active {
+    color: $brand-primary;
+  }
+}

@@ -1,0 +1,42 @@
+@use 'base' as *;
+
+.body-style {
+  --body-style-font-size: #{$font-size-body};
+  --body-style-line-height: #{$line-height-body};
+  --body-style-font-weight: #{$font-weight-body};
+  --body-style-h2-size: #{$font-size-h2};
+  --body-style-h2-line-height: #{$line-height-h2};
+  --body-style-h3-size: #{$font-size-h3};
+  --body-style-h3-line-height: #{$line-height-h3};
+  --body-style-h4-size: #{$font-size-h4};
+  --body-style-h4-line-height: #{$line-height-h4};
+  --body-style-h5-size: #{$font-size-h5};
+  --body-style-h5-line-height: #{$line-height-h5};
+  --body-style-h6-size: #{$font-size-h6};
+  --body-style-h6-line-height: #{$line-height-h6};
+}
+
+.body-style h2 {
+  color: $color-h2;
+}
+
+.body-style h3 {
+  color: $color-h3;
+}
+
+.body-style h4 {
+  color: $color-h4;
+}
+
+.body-style h5 {
+  color: $color-h5;
+}
+
+.body-style h6 {
+  color: $color-h6;
+}
+
+.body-style p,
+.body-style li {
+  color: $color-text;
+}

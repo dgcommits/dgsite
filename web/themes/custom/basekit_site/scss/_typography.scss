@@ -1,0 +1,23 @@
+@use 'base' as *;
+
+.ui-h2 {
+  @include body-h2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.ui-h3 {
+  @include body-h3;
+}
+
+.ui-h4 {
+  @include body-h4;
+}
+
+.ui-h5 {
+  @include body-h5;
+}
+
+.ui-h6 {
+  @include body-h6;
+}

@@ -1,0 +1,6 @@
+@use 'base' as *;
+
+.ck-content,
+.cke_editable {
+  @include bodyStyle;
+}
