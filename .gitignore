@@ -36,6 +36,7 @@ node_modules
 
 # Ignore .env files as they are personal
 /.env
+.lando.local.yml
 
 # Ignore default text files
 /web/INSTALL*.txt

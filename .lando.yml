@@ -6,6 +6,19 @@ config:
 services:
   node:
     type: node:20
+    overrides:
+      volumes:
+        - ../basekit:/basekit
+        - ../basekit-recipe:/basekit-recipe
+        - ../basekit-recipe:/app/basekit-recipe
+        - ../basekit-docs:/basekit-docs
+  appserver:
+    overrides:
+      volumes:
+        - ../basekit:/basekit
+        - ../basekit-recipe:/basekit-recipe
+        - ../basekit-recipe:/app/basekit-recipe
+        - ../basekit-docs:/basekit-docs
 
 tooling:
   node:
