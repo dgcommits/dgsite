@@ -1,17 +1,17 @@
-uuid: fd09e23d-0592-42f3-b0f6-e2a6bc9e8d91
+uuid: 5d7d26db-7dc2-4dd7-9f97-2c74c76a65ae
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.banner_headline
+    - block_content.type.hero_headline
     - field.storage.block_content.field_block_background
   module:
     - image
-id: block_content.banner_headline.field_block_background
+id: block_content.hero_headline.field_block_background
 field_name: field_block_background
 entity_type: block_content
-bundle: banner_headline
-label: 'Block Background'
+bundle: hero_headline
+label: 'Background image'
 description: ''
 required: false
 translatable: false

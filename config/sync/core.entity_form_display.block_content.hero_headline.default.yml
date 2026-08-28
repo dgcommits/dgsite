@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.hero_headline
+    - field.field.block_content.hero_headline.field_block_background
     - field.field.block_content.hero_headline.field_block_icon
     - field.field.block_content.hero_headline.field_block_image
     - field.field.block_content.hero_headline.field_block_link
@@ -20,6 +21,14 @@ targetEntityType: block_content
 bundle: hero_headline
 mode: default
 content:
+  field_block_background:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   field_block_icon:
     type: media_library_widget
     weight: 2
