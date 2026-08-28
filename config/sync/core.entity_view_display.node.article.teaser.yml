@@ -11,6 +11,7 @@ dependencies:
     - node.type.article
   module:
     - svg_image
+    - text
     - user
 _core:
   default_config_hash: O8PxzfG8DOHHRu6M23kwR6TDPq_MNfYQ10Mp367ICUQ
@@ -19,6 +20,14 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
+  field_article_body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_image:
     type: image
     label: hidden
@@ -41,5 +50,4 @@ content:
   links:
     weight: 100
     region: content
-hidden:
-  field_article_body: true
+hidden: {  }
