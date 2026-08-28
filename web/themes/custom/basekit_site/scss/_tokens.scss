@@ -3,14 +3,19 @@ $brand-surface: #635d59;
 $brand-primary: #d5b35b;
 $brand-accent: #3ea0d8;
 $brand-neutral: #a28d7a;
+$brand-secondary: $brand-neutral;
 $brand-light: #f0e5d4;
 
 @forward 'base/var/var_default' with (
-  // colors
-  $brand-bg: $brand-surface,
+  // colors - brand surfaces
+  $brand-deep: $brand-deep,
+  $brand-surface: $brand-surface,
+  // colors - brand accents
   $brand-primary: $brand-primary,
   $brand-accent: $brand-accent,
+  $brand-secondary: $brand-secondary,
   $brand-neutral: $brand-neutral,
+  $brand-light: $brand-light,
   $text-base: $brand-light,
   // layout spacing
   $siteg: 1.2em,
@@ -20,25 +25,25 @@ $brand-light: #f0e5d4;
   $page-bgcolor: $brand-surface,
   $site-bgcolor: $brand-deep,
   // button
-  $button-bgcolor: #3ea0d8,
+  $button-bgcolor: $brand-accent,
   $button-color: #ffffff,
   $button-border: 0.025em solid rgba(transparent, 0),
   $button-pad-top: 0,
   $button-pad-right: 0.75em,
   $button-pad-bottom: 0,
   $button-pad-left: 0.75em,
-  $button-hover-bgcolor: rgba(#d5b35b, 0.5),
+  $button-hover-bgcolor: rgba($brand-primary, 0.5),
   $button-hover-color: #ffffff,
   $button-hover-border: 0.025em solid rgba(transparent, 0),
-  $button-click-bgcolor: #d5b35b,
-  $button-click-color: #4f4a47,
-  $button-click-border: 0.025em solid rgba(#3ea0d8, 1),
+  $button-click-bgcolor: $brand-primary,
+  $button-click-color: $brand-deep,
+  $button-click-border: 0.025em solid rgba($brand-accent, 1),
   // headings
   $font-size-h2: 3.23em,
   $color-h2: $brand-accent,
   $font-weight-h2: 500,
   $line-height-h2: 1.15em,
-  // body-style
+  // body style
   $color-text: $brand-light,
   $font-size-body: 1.7em,
   $line-height-body: 1.35em,
