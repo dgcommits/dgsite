@@ -1,21 +1,13 @@
-@use './_tokens'; // runs your token overrides (or the defaults if unchanged)
-@use 'base' as *; // exposes BaseKit mixins/vars
+@use '../tokens' as site;
+@use 'base' as *;
 
-.block-type--hero_headline {
-  &.block-view-mode--default {
-    .block-wrap {
-      .title {
-        h2 {
-          font-family: var(--font-heading-narrow);
-          font-size: $font-size-h2;
-          color: $color-h2;
-        }
-      }
+.block-type--hero_headline.block-view-mode--default {
+  --hero-headline-icon-width: #{site.$hero-icon-width};
+  --hero-headline-icon-height: #{site.$hero-icon-height};
 
-      .media {
-        width: auto;
-        height: auto;
-      }
-    }
+  .block-wrap .title h2 {
+    font-family: var(--font-heading-narrow);
+    font-size: $font-size-h2;
+    color: site.$hero-heading-color;
   }
 }

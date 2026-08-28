@@ -1,25 +1,13 @@
-@use '../_tokens'; // runs your token overrides (or the defaults if unchanged)
-@use '../../contrib/basekit/scss/base' as *; // exposes BaseKit mixins/vars
+@use '../tokens' as site;
+@use 'base' as *;
 
-.block.block-system-branding-block {
-  text-align: center;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
+// BaseKit owns the branding block's layout; GC only changes logo presentation.
 .block.block-system-branding-block a.site-logo {
-  display: block;
-  width: 12em !important;
+  width: site.$logo-width-mobile;
   padding: 0 0 0.5em;
   margin: 0 auto;
-  @include desktop-small {
-    width: 18em !important;
-  }
-}
 
-.block.block-system-branding-block a.site-logo svg {
-  width: 100%;
-  height: auto;
+  @include desktop-small {
+    width: site.$logo-width-desktop;
+  }
 }

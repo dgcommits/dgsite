@@ -1,10 +1,46 @@
+@use 'sass:color';
+
 $brand-deep: #4f4a47;
 $brand-surface: #635d59;
 $brand-primary: #d5b35b;
-$brand-accent: #3ea0d8;
+// Camel ramp: weight is the amount of white/black added to the base.
+$brand-accent-base: #e0c6b0;
+$brand-accent-tint-amount: 10%;
+$brand-accent-shade-amount: 8%;
+$brand-accent-light: color.mix(
+  white,
+  $brand-accent-base,
+  $brand-accent-tint-amount
+);
+$brand-accent-dark: color.mix(
+  black,
+  $brand-accent-base,
+  $brand-accent-shade-amount
+);
+$brand-accent: $brand-accent-dark;
 $brand-neutral: #a28d7a;
 $brand-secondary: $brand-neutral;
 $brand-light: #f0e5d4;
+
+// Semantic roles and component skin. Keep raw palette values above.
+$on-color: #ffffff;
+// Long-form node copy only; custom blocks retain their existing text palette.
+$prose-text: #e0d9d2;
+// Runtime copy scale uses rem so nested components cannot multiply its size.
+// Keep legacy Sass heading/layout sizes independent of this copy-only scale.
+$body-size: max(18px, 1.85rem);
+$body-small-ratio: 0.85;
+$body-large-ratio: 1.15;
+$body-ui-ratio: 0.65;
+$prose-paragraph-gap: 1em;
+$prose-heading-color: $brand-accent;
+$prose-heading-rule: rgba($brand-accent, 0.45);
+$hero-heading-color: $brand-accent;
+// Preserve the effective BaseKit size; the old width:auto override never won.
+$hero-icon-width: 7em;
+$hero-icon-height: auto;
+$logo-width-mobile: 12em;
+$logo-width-desktop: 18em;
 
 @forward 'base/var/var_default' with (
   // colors - brand surfaces
@@ -26,14 +62,14 @@ $brand-light: #f0e5d4;
   $site-bgcolor: $brand-deep,
   // button
   $button-bgcolor: $brand-accent,
-  $button-color: #ffffff,
+  $button-color: $brand-deep,
   $button-border: 0.025em solid rgba(transparent, 0),
   $button-pad-top: 0,
   $button-pad-right: 0.75em,
   $button-pad-bottom: 0,
   $button-pad-left: 0.75em,
   $button-hover-bgcolor: rgba($brand-primary, 0.5),
-  $button-hover-color: #ffffff,
+  $button-hover-color: $on-color,
   $button-hover-border: 0.025em solid rgba(transparent, 0),
   $button-click-bgcolor: $brand-primary,
   $button-click-color: $brand-deep,

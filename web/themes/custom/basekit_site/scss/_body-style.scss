@@ -1,7 +1,8 @@
 @use 'base' as *;
+@use 'tokens' as site;
 
 .body-style {
-  --body-style-font-size: #{$font-size-body};
+  --body-style-font-size: var(--font-size-body);
   --body-style-line-height: #{$line-height-body};
   --body-style-font-weight: #{$font-weight-body};
   --body-style-h2-size: #{$font-size-h2};
@@ -39,4 +40,66 @@
 .body-style p,
 .body-style li {
   color: $color-text;
+}
+
+// Node prose is deliberately separate from portable custom-block skins.
+// Keep the field's inherited font size so embedded media sizing is unchanged.
+.body-style:is(.field--name-field-page-body, .field--name-field-article-body) {
+  color: site.$prose-text;
+
+  p,
+  li {
+    color: site.$prose-text;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: site.$prose-paragraph-gap;
+  }
+
+  li {
+    margin-bottom: 0.3em;
+  }
+
+  // Nested lists and paragraphs must not compound the body font size.
+  li > p,
+  li > ul,
+  li > ol,
+  blockquote > p {
+    font-size: 1em;
+  }
+
+  li > ul,
+  li > ol {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: site.$prose-heading-color;
+    margin-top: 1.15em;
+    margin-bottom: 0.4em;
+
+    &::after {
+      margin-top: 0.3em;
+      border-bottom: 1px solid site.$prose-heading-rule;
+    }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: site.$prose-heading-color;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
