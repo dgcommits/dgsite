@@ -4456,41 +4456,49 @@
         {
             "name": "gravellian/basekit",
             "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../basekit",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gravellian/basekit.git",
                 "reference": "f32310cfd358e8ecd0cfb253e85bedebac7f6a3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit/zipball/f32310cfd358e8ecd0cfb253e85bedebac7f6a3a",
+                "reference": "f32310cfd358e8ecd0cfb253e85bedebac7f6a3a",
+                "shasum": ""
             },
             "require": {
                 "php": ">=8.1"
             },
+            "default-branch": true,
             "type": "drupal-theme",
             "license": [
                 "proprietary"
             ],
             "description": "BaseKit Drupal 11 base theme",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-08-28T03:51:44+00:00"
         },
         {
             "name": "gravellian/basekit-docs",
             "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../basekit-docs",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:gravellian/basekit-docs.git",
                 "reference": "2c5971f19c60253dd9eea46b5a601203410d28ac"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravellian/basekit-docs/zipball/2c5971f19c60253dd9eea46b5a601203410d28ac",
+                "reference": "2c5971f19c60253dd9eea46b5a601203410d28ac",
+                "shasum": ""
+            },
+            "default-branch": true,
             "type": "gravellian-docs",
             "license": [
                 "proprietary"
             ],
             "description": "Documentation for the BaseKit distribution (installation, recipes, SDCs, sub-theme starter)",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-08-28T03:51:44+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
