@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/bg_image_formatter": {
+      "Drupal 11.4 ImageFormatter constructor compatibility (#3608185)": "https://www.drupal.org/files/issues/2026-07-03/bg_image_formatter-imageformatter-d11.4-fix.patch"
+    }
+  }
+}
