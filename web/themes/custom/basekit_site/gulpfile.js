@@ -2,6 +2,7 @@
 process.env.SASS_SILENCE_DEPRECATIONS = 'legacy-js-api';
 
 const path = require('path');
+const fs = require('fs');
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
@@ -43,7 +44,14 @@ const sassTask = () => {
 
 // Compile component SCSS into the same folder as its source
 const componentSassTask = () => {
-  let stream = gulp.src('components/**/*.scss', { base: 'components' })
+  if (!fs.existsSync(path.resolve(__dirname, 'components'))) {
+    return Promise.resolve();
+  }
+
+  let stream = gulp.src('components/**/*.scss', {
+    allowEmpty: true,
+    base: 'components'
+  })
     .pipe(plumber());
 
   if (!isProd) {

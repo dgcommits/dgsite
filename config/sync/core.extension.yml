@@ -74,6 +74,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
   update: 0
   user: 0
   viewfield: 0
@@ -88,4 +89,6 @@ theme:
   stable9: 0
   basekit: 0
   basekit_site: 0
+  claro: 0
+  gin: 0
 profile: standard

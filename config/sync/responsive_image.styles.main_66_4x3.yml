@@ -8,35 +8,35 @@ dependencies:
     - image.style.main_66_4x3_max
     - image.style.main_66_4x3_med
     - image.style.main_66_4x3_small
-_core:
-  default_config_hash: ycQuk6Of7IKRd3WT0c4Ch5A7p24re9TT15wGPlbUA9I
+  theme:
+    - basekit
 id: main_66_4x3
 label: main_66_4x3
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: main_66_4x3_max
-    breakpoint_id: gravelle1.desktop-max
+    breakpoint_id: basekit.desktop-max
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: main_66_4x3_large
-    breakpoint_id: gravelle1.desktop-large
+    breakpoint_id: basekit.desktop-large
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: main_66_4x3_med
-    breakpoint_id: gravelle1.desktop-medium
+    breakpoint_id: basekit.desktop-medium
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: main_66_4x3_small
-    breakpoint_id: gravelle1.desktop-small
+    breakpoint_id: basekit.desktop-small
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: main_100_1x1_handheld
-    breakpoint_id: gravelle1.handheld
+    breakpoint_id: basekit.handheld
     multiplier: 1x
-breakpoint_group: gravelle1
+breakpoint_group: basekit
 fallback_image_style: '_original image_'

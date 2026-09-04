@@ -4,39 +4,41 @@ status: true
 dependencies:
   config:
     - image.style.image_wide_4x3_handheld
+    - image.style.image_wide_4x3_small
+    - image.style.image_wide_4x3_med
     - image.style.image_wide_4x3_large
     - image.style.image_wide_4x3_max
-    - image.style.image_wide_4x3_med
-    - image.style.image_wide_4x3_small
-_core:
-  default_config_hash: 2v5wNr94NmQbMOpp3h_SMi0AkaNg_EOrUU_RnqHXyA8
+  module:
+    - focal_point
+  theme:
+    - basekit
 id: image_wide_4x3
 label: 'Image Wide 4x3'
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: image_wide_4x3_handheld
-    breakpoint_id: gravelle1.handheld
+    breakpoint_id: basekit.handheld
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: image_wide_4x3_small
-    breakpoint_id: gravelle1.desktop-small
+    breakpoint_id: basekit.desktop-small
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: image_wide_4x3_med
-    breakpoint_id: gravelle1.desktop-medium
+    breakpoint_id: basekit.desktop-medium
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: image_wide_4x3_large
-    breakpoint_id: gravelle1.desktop-large
+    breakpoint_id: basekit.desktop-large
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: image_wide_4x3_max
-    breakpoint_id: gravelle1.desktop-max
+    breakpoint_id: basekit.desktop-max
     multiplier: 1x
-breakpoint_group: gravelle1
+breakpoint_group: basekit
 fallback_image_style: original_image

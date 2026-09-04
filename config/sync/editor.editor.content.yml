@@ -98,15 +98,80 @@ settings:
       properties:
         reversed: true
         startIndex: true
+        styles: false
       multiBlock: true
     ckeditor5_sourceEditing:
-      allowed_tags: {  }
+      allowed_tags:
+        - '<span>'
     ckeditor5_style:
       styles:
         -
-          label: 'Fancy title'
-          element: '<p class="fancy title">'
+          label: 'Font: body'
+          element: '<span class="font-body">'
+        -
+          label: 'Font: heading'
+          element: '<span class="font-heading">'
+        -
+          label: 'Font: condensed heading'
+          element: '<span class="font-heading-narrow">'
+        -
+          label: 'Paragraph: Smallest'
+          element: '<p class="copy-smallest">'
+        -
+          label: 'Paragraph: Smaller'
+          element: '<p class="copy-small">'
+        -
+          label: 'Paragraph: Normal'
+          element: '<p class="copy-normal">'
+        -
+          label: 'Paragraph: Larger'
+          element: '<p class="copy-large">'
+        -
+          label: 'Paragraph: Largest'
+          element: '<p class="copy-largest">'
+        -
+          label: 'Text: Smallest'
+          element: '<span class="copy-smallest">'
+        -
+          label: 'Text: Smaller'
+          element: '<span class="copy-small">'
+        -
+          label: 'Text: Normal'
+          element: '<span class="copy-normal">'
+        -
+          label: 'Text: Larger'
+          element: '<span class="copy-large">'
+        -
+          label: 'Text: Largest'
+          element: '<span class="copy-largest">'
+        -
+          label: 'Color: primary'
+          element: '<span class="text-primary">'
+        -
+          label: 'Color: accent'
+          element: '<span class="text-accent">'
+        -
+          label: 'Color: secondary'
+          element: '<span class="text-secondary">'
+        -
+          label: 'Color: neutral'
+          element: '<span class="text-neutral">'
+        -
+          label: 'Color: light'
+          element: '<span class="text-light">'
+        -
+          label: 'Underline: accent'
+          element: '<span class="underline-accent">'
+        -
+          label: 'Background: light'
+          element: '<span class="surface-light">'
+        -
+          label: 'Background: primary'
+          element: '<span class="surface-primary">'
+        -
+          label: 'Background: accent'
+          element: '<span class="surface-accent">'
     media_media:
-      allow_view_mode_override: false
+      allow_view_mode_override: true
 image_upload:
   status: false
