@@ -1,0 +1,36 @@
+--- a/src/Plugin/Field/FieldFormatter/BgImageFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/BgImageFormatter.php
+@@ -16,6 +16,7 @@
+ use Drupal\Core\Render\RendererInterface;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\Core\Url;
++use Drupal\image\ImageDerivativeUtilities;
+ use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Symfony\Component\HttpFoundation\Request;
+@@ -85,6 +86,7 @@
+     AccountInterface $current_user,
+     EntityStorageInterface $image_style_storage,
+     FileUrlGeneratorInterface $file_url_generator,
++    ImageDerivativeUtilities $image_derivative_utilities,
+     RendererInterface $renderer,
+     Request $request
+   ) {
+@@ -98,7 +100,8 @@
+       $third_party_settings,
+       $current_user,
+       $image_style_storage,
+-      $file_url_generator
++      $file_url_generator,
++      $image_derivative_utilities
+     );
+     $this->renderer = $renderer;
+     $this->request = $request;
+@@ -119,6 +122,7 @@
+         $container->get('current_user'),
+         $container->get('entity_type.manager')->getStorage('image_style'),
+         $container->get('file_url_generator'),
++        $container->get(ImageDerivativeUtilities::class),
+         $container->get('renderer'),
+         $container->get('request_stack')->getCurrentRequest()
+     );
