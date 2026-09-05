@@ -4778,12 +4778,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:gravellian/basekit.git",
-                "reference": "b9b05897b104a9ff743518ea85b6ff1b6311da7e"
+                "reference": "9cd36aa431846b6d513d8ef8ac113814c4ae7575"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gravellian/basekit/zipball/b9b05897b104a9ff743518ea85b6ff1b6311da7e",
-                "reference": "b9b05897b104a9ff743518ea85b6ff1b6311da7e",
+                "url": "https://api.github.com/repos/gravellian/basekit/zipball/9cd36aa431846b6d513d8ef8ac113814c4ae7575",
+                "reference": "9cd36aa431846b6d513d8ef8ac113814c4ae7575",
                 "shasum": ""
             },
             "require": {
@@ -4795,7 +4795,7 @@
                 "proprietary"
             ],
             "description": "BaseKit Drupal 11 base theme",
-            "time": "2026-08-28T17:47:38+00:00"
+            "time": "2026-09-05T15:29:43+00:00"
         },
         {
             "name": "gravellian/basekit-docs",
