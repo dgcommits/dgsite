@@ -1,0 +1,6 @@
+form_ids:
+  - 'webform_submission_*'
+  - 'contact_message_*'
+  - 'contact_*'
+excluded_form_ids: {  }
+show_form_ids: false
